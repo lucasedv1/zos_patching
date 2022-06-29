@@ -1,5 +1,5 @@
 ---
-- name: Change passphrase
+- name: "Change passphrase"
   hosts: all
   collections:
     - ibm.ibm_zos_core
@@ -10,4 +10,4 @@
   tasks:
     - name: Change passphrase
       zos_tso_command:
-           commands: "PASSWORD PHRASE('{{ passphrase_current }}' '{{ passphrase_new }}')"
+        commands: "PASSWORD PHRASE('{{ passphrase_current }}' '{{ passphrase_new }}')"
