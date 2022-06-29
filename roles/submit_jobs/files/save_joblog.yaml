@@ -1,0 +1,27 @@
+- name: Mount savejob JCL
+  template:
+    src: templates/save_joblob.j2
+    dest: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/savejob.jcl
+    mode: u+x
+
+- name: Convert it to EBCDIC
+  zos_encode:
+    src: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/savejob.jcl
+    dest: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/savejob
+    backup: false
+    from_encoding: ISO8859-1
+    to_encoding: IBM-1047
+
+- name: Submit it
+  zos_job_submit:
+    src: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/savejob
+    location: USS
+    max_rc: "{{ max_rc }}"
+    wait: true
+    wait_time_s: 60
+    return_output: true
+
+# - name: Purge save output
+#  zos_operator:
+#    cmd: "\\$PJ(BLDSAVE)"
+#    verbose: true

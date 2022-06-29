@@ -1,0 +1,36 @@
+- name: Send {{ job }} to remote system
+  template:
+    src: "templates/{{ job }}.j2"
+    dest: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/job_tmp.jcl
+    mode: u+x
+
+- name: Convert {{ job }} to EBCDIC
+  zos_encode:
+    src: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/job_tmp.jcl
+    dest: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/"{{ job }}"
+    backup: false
+    from_encoding: ISO8859-1
+    to_encoding: IBM-1047
+
+- name: Submit {{ job }}
+  zos_job_submit:
+    src: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/"{{ job }}"
+    location: USS
+    max_rc: "{{ max_rc }}"
+    wait: true
+    wait_time_s: 1200
+  register: job_result
+
+- name: Save RC
+  set_fact:
+    jobsrc: "{{ jobsrc  + [ 'Job ' + job.ljust(8) + '-' + job_result.jobs.0.ret_code.msg ] }}"
+
+- name: Print sysouts
+  include_tasks: files/jobdd_print.yaml
+  loop: "{{ job_result.jobs.0.ddnames }}"
+  loop_control:
+    loop_var: dd
+
+- name: Save results
+  include_tasks: save_joblog.yaml
+  when: hld is defined

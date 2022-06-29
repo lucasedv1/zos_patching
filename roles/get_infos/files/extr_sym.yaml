@@ -1,0 +1,4 @@
+- name: sym lines
+  set_fact:
+    sym_members: "{{ sym_members + [syms] }} "
+  when: "syms.rfind('(') > 1 and syms[0: 6:] != 'Source'"

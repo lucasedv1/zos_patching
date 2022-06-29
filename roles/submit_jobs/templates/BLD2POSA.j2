@@ -1,0 +1,57 @@
+//BLD2POSA JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},
+//         TIME=NOLIMIT
+/*JOBPARM  S=*,L=9999
+//*
+//******************************************************************
+//*  CHECK IF NEW SYSRES VARIABLE IS CORRECT                       *
+//******************************************************************
+//SYSRCHK  EXEC PGM=IKJEFT01
+//SYSPROC  DD DISP=(OLD,PASS),DSN={{ ds_procs }}
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSTSIN  DD *
+%SYSRCHK {{ new }}
+/*
+//******************************************************************
+//*  COMPARE NEW SYSRES VOLUMES                                    *
+//******************************************************************
+//CMPRA    EXEC PGM=IKJEFT01,REGION=32M,COND=(4,LT),
+//           PARM='ISPSTART CMD(%@VLCOMPR QUIK {{ new }} {{ cur }})' 
+//SYSTSPRT DD  SYSOUT=*
+//FNDBOTH  DD  SYSOUT=*,RECFM=VB,LRECL=255
+//OLDONLY  DD  SYSOUT=*,RECFM=VB,LRECL=255
+//OLDDUP   DD  SYSOUT=*,RECFM=VB,LRECL=255
+//NEWONLY  DD  SYSOUT=*,RECFM=VB,LRECL=255
+//NEWDUP   DD  SYSOUT=*,RECFM=VB,LRECL=255
+//SYSPROC  DD  DISP=SHR,DSN={{ ds_procs }}
+//SYSTSIN  DD  DUMMY 
+//ISPLOG   DD  SYSOUT=*,RECFM=FB,LRECL=121,BLKSIZE=121 
+//ISPPROF  DD  UNIT=VIO,SPACE=(TRK,(1,1,2)),
+//             RECFM=FB,LRECL=80,BLKSIZE=800 
+//ISPPLIB  DD  DISP=SHR,DSN=SYS1.SISPPENU 
+//ISPMLIB  DD  DISP=SHR,DSN=SYS1.SISPMENU 
+//ISPSLIB  DD  DISP=SHR,DSN=SYS1.SISPSENU 
+//ISPTLIB  DD  DISP=(OLD,PASS),DSN=*.ISPPROF,VOL=REF=*.ISPPROF 
+//         DD  DISP=SHR,DSN=SYS1.SISPTENU 
+//SYSPRINT DD  DUMMY
+//SYSIN    DD  UNIT=SYSDA,SPACE=(TRK,(1,1)),
+//             RECFM=FB,LRECL=80,BLKSIZE=800 
+//*
+//******************************************************************
+//*  LIST SMS DATASETS                                             *
+//******************************************************************
+//LISTDSN  EXEC PGM=IKJEFT01,REGION=0M,COND=(4,LT)
+//SYSPROC  DD DISP=(OLD,PASS),DSN={{ ds_procs }}
+//ISPPLIB  DD DSN=SYS1.SISPPENU,DISP=SHR
+//ISPSLIB  DD DSN=SYS1.SISPSENU,DISP=SHR
+//ISPTLIB  DD DSN=SYS1.SISPTENU,DISP=SHR
+//ISPMLIB  DD DSN=SYS1.SISPMENU,DISP=SHR
+//ISPPROF  DD DSN=&&ISPPRO2,UNIT=SYSDA,SPACE=(TRK,(5,1,19)),
+//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=3120)
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//OMVSDSNS DD SYSOUT=*
+//SYSTSIN  DD *
+ISPSTART CMD(%LISTDSN {{ new }})
+/*
+//

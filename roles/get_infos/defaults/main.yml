@@ -1,0 +1,11 @@
+---
+# defaults file for roles/get_infos
+bpx_members: []
+ssn_members: []
+sym_lines: []
+sym_members: []
+jobs_static_preGSD: []
+jobs_static_posGSD: []
+jobs_static_posIPL: []
+pds_check: []
+pds_copy: []

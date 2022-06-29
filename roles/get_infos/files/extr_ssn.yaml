@@ -1,0 +1,4 @@
+- name: ssn member
+  set_fact:
+    ssn_members: "{{ ssn_members + [ssns] }} "
+  when: "ssns.rfind('(') > 1 and ssns[0: 6:] != 'Source' and ssns[4: 11:] != 'default'"

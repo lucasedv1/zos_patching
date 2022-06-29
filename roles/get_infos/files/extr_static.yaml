@@ -1,0 +1,48 @@
+- name: strip
+  set_fact:
+    part1: "{{ staticline[4: staticline.find('='):] }}"
+    part2: "{{ staticline[staticline.find('=')+1: -1:] }}"
+
+- name: extract
+  set_fact:
+    bldkey: "{{ part1[part1.rfind(' ')+1:] | upper }}"
+    bldvalue: "{{ part2[0: part2.find(' '):] | upper }}"
+
+# - name: return
+#   set_fact:
+#     cur: "{{ bldvalue }}"
+#   when: bldkey == "CUR"
+
+- name: return
+  set_fact:
+    hld: "{{ bldvalue }}"
+  when: bldkey == "HLD"
+
+- name: return
+  set_fact:
+    new: "{{ bldvalue }}"
+  when: bldkey == "NEW"
+
+- name: Select
+  block:
+    - name: static preGSD job
+      set_fact:
+        jobs_static_preGSD: "{{ jobs_static_preGSD + [bldvalue] }}"
+      when: bldkey == "PREGSDJOB"
+    - name: static posGSD job
+      set_fact:
+        jobs_static_posGSD: "{{ jobs_static_posGSD + [bldvalue] }}"
+      when: bldkey == "POSGSDJOB"
+    - name: static posIPL
+      set_fact:
+        jobs_static_posIPL: "{{ jobs_static_posIPL + [bldvalue] }}"
+      when: bldkey == "POSIPLJOB"
+    - name: PDS check
+      set_fact:
+        pds_check: "{{ pds_check + [bldvalue] }}"
+      when: bldkey == "PDSCHECK"
+    - name: PDS copy
+      set_fact:
+        pds_copy: "{{ pds_copy + [bldvalue] }}"
+      when: bldkey == "PDSCOPY"
+  when: bldvalue != ""

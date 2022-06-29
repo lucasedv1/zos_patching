@@ -1,0 +1,22 @@
+- name: Check
+  block:
+  - name: Submit {{ job }}
+    zos_job_submit:
+      src: '{{ ds_cntl }}({{ job }})'
+      location: DATA_SET
+      max_rc: "{{ max_rc }}"
+      wait: true
+      wait_time_s: 1200
+    register: job_result
+  - name: Save RC
+    set_fact:
+      jobsrc: "{{ jobsrc  + [ 'Job ' + job.ljust(8) + '-' + job_result.jobs.0.ret_code.msg ] }}"
+  - name: Print sysouts
+    include_tasks: files/jobdd_print.yaml
+    loop: "{{ job_result.jobs.0.ddnames }}"
+    loop_control:
+      loop_var: dd
+  - name: Save results
+    include_tasks: save_joblog.yaml
+    when: hld is defined
+  when: job != " "

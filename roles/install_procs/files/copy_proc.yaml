@@ -1,0 +1,14 @@
+- name: transfer {{ proc }} to remote node
+  copy:
+    src: "{{ proc }}.rexx"
+    dest: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/{{ proc }}.rexx
+    force: true
+    mode: u+x
+
+- name: Copy {{ proc }} to PDS
+  zos_copy:
+    src: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/{{ proc }}.rexx
+    dest: "{{ ds_procs }}({{ proc }})"
+    force: true
+    remote_src: true
+  when: proc != "getdu" and proc != "getsysinfo" and proc != "getsysvar"

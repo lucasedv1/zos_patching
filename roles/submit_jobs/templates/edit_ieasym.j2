@@ -1,0 +1,67 @@
+//BLDCHSYM  JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},REGION=0M
+//*
+//RXCHANGE EXEC PGM=IEBGENER 
+//SYSUT1   DD DATA,DLM=$$ 
+/* REXX */  
+Address 'ISREDIT' 
+"ISREDIT MACRO PROCESS" 
+"ISREDIT FIND SYSNAME({{ sysname }})"
+say "find rc = " rc
+if rc == 0 then do
+   "ISREDIT CHANGE TSID='{{ tsid }}' TSID='{{ tsidi }}' NEXT"
+   say "change next rc = " rc
+   end
+else do
+   "ISREDIT CHANGE TSID='{{ tsid }}' TSID='{{ tsidi }}' FIRST"
+   say "change fisrt rc = " rc
+   end
+"ISREDIT END" 
+say "end rc = " rc
+RETURN 
+$$ 
+//SYSUT2   DD DSN=&&PROCS(RXCHANGE),UNIT=SYSDA,SPACE=(CYL,(1,1,1)), 
+//          DCB=(RECFM=FB,LRECL=80,BLKSIZE=3120),DISP=(,PASS) 
+//SYSPRINT DD SYSOUT=* 
+//SYSIN    DD DUMMY 
+//* 
+//RXEDIT   EXEC PGM=IEBGENER 
+//SYSUT1   DD DATA,DLM=$$ 
+/* REXX */
+say "Dataset =" {{sym_dsn }}
+member = 'IEASYM  '
+Address 'ISPEXEC'
+"LMINIT DATAID(INPUTDD) DATASET('"{{ sym_dsn }}"') ENQ(SHRW)" 
+"LMOPEN DATAID("inputdd") OPTION(INPUT)" 
+"LMMLIST DATAID("inputdd") MEMBER(MEMBER) OPTION(LIST) STATS (NO)"
+if rc == 0 then do
+do while substr(member,1,6) == 'IEASYM'
+   say "Member is :" member
+   if pos(substr(member,7,2) , '{{ sym_suffixes }}') > 0 then
+      "EDIT DATAID("inputdd") MEMBER("member") MACRO(RXCHANGE)"
+   "LMMLIST DATAID("inputdd") MEMBER(MEMBER) OPTION(LIST) STATS (NO)"
+end
+"LMCLOSE DATAID("inputdd")" 
+"LMFREE DATAID("inputdd")" 
+RETURN 
+$$ 
+//SYSUT2   DD DSN=&&PROCS(RXEDIT),DISP=(OLD,PASS) 
+//SYSPRINT DD SYSOUT=* 
+//SYSIN    DD DUMMY 
+//* 
+//IEASYM   EXEC PGM=IKJEFT01,COND=(4,LT) 
+//SYSPROC   DD DISP=(OLD,PASS),DSN=&&PROCS 
+//ISPPLIB  DD DSN=SYS1.SISPPENU,DISP=SHR 
+//ISPSLIB  DD DSN=SYS1.SISPSENU,DISP=SHR 
+//ISPTLIB  DD DSN=SYS1.SISPTENU,DISP=SHR 
+//ISPMLIB  DD DSN=SYS1.SISPMENU,DISP=SHR 
+//ISPPROF  DD DSN=&&ISPPRO2,UNIT=SYSDA,SPACE=(CYL,(5,1,5)), 
+//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=3120) 
+//SYSTSPRT DD SYSOUT=* 
+//SYSPRINT DD SYSOUT=* 
+//STDOUT   DD SYSOUT=* 
+//STDERR   DD SYSOUT=* 
+//SYSTSIN  DD * 
+PROFILE NOPREFIX 
+ISPSTART CMD(%RXEDIT)
+/* 
+//                                                                              

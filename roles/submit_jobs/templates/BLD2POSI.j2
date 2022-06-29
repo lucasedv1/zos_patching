@@ -1,0 +1,58 @@
+//BLD2POSI JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},                                  
+//         TIME=NOLIMIT                   
+/*JOBPARM  S=*,L=9999                                                           
+//*                                                                             
+//   JCLLIB  ORDER={{ ds_cntl }}
+//   INCLUDE MEMBER=BLDINCL                                                     
+//*                                                                             
+//******************************************************************            
+//*  CHECK IF NEW SYSRES VARIABLE IS CORRECT                       *            
+//******************************************************************            
+//SYSRCHK  EXEC PGM=IKJEFT01                                                    
+//SYSPROC  DD DISP=(OLD,PASS),DSN={{ ds_procs }}                       
+//SYSTSPRT DD SYSOUT=*                                                          
+//SYSPRINT DD SYSOUT=*                                                          
+//SYSTSIN  DD *,SYMBOLS=JCLONLY                                                 
+%SYSRCHK {{ new }}
+/*                                                                              
+//******************************************************************            
+//*  CHECK IF TWS EXITS IS INSTALLED AND LIST OPS LEVEL            *            
+//******************************************************************            
+//EXITS    EXEC PGM=IKJEFT01,REGION=0M,COND=(0,NE)                              
+//SYSPROC  DD DISP=(OLD,PASS),DSN={{ ds_procs }}                       
+//ISPPLIB  DD DSN=SYS1.SISPPENU,DISP=SHR                                        
+//ISPSLIB  DD DSN=SYS1.SISPSENU,DISP=SHR                                        
+//ISPTLIB  DD DSN=SYS1.SISPTENU,DISP=SHR                                        
+//ISPMLIB  DD DSN=SYS1.SISPMENU,DISP=SHR                                        
+//ISPPROF  DD DSN=&&ISPPRO2,UNIT=SYSDA,SPACE=(TRK,(5,1,19)),                    
+//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=3120)                              
+//IEFSSNXX DD *
+/*
+{% for lines1 in ssn_members %}
+//         DD DISP=SHR,DSN={{ lines1 }},
+//         UNIT=3390,VOL=SER={{ new }}
+{% endfor %}
+//SYSTSPRT DD SYSOUT=*                                                          
+//SYSPRINT DD SYSOUT=*                                                          
+//SYSTSIN  DD *,SYMBOLS=JCLONLY                                                 
+ISPSTART CMD(%twscheck {{ new }})                                                    
+//*
+{% for lines2 in pds_check %}
+//******************************************************************            
+//*  Compare member of {{ lines2 }}
+//******************************************************************            
+//COMPARE    EXEC PGM=IKJEFT01,REGION=0M,COND=(0,NE)                              
+//SYSPROC  DD DISP=(OLD,PASS),DSN={{ ds_procs }}                       
+//ISPPLIB  DD DSN=SYS1.SISPPENU,DISP=SHR                                        
+//ISPSLIB  DD DSN=SYS1.SISPSENU,DISP=SHR                                        
+//ISPTLIB  DD DSN=SYS1.SISPTENU,DISP=SHR                                        
+//ISPMLIB  DD DSN=SYS1.SISPMENU,DISP=SHR                                        
+//ISPPROF  DD DSN=&&ISPPRO2,UNIT=SYSDA,SPACE=(TRK,(5,1,19)),                    
+//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=3120)                              
+//SYSTSPRT DD SYSOUT=*                                                          
+//SYSPRINT DD SYSOUT=*                                                          
+//SYSTSIN  DD *,SYMBOLS=JCLONLY                                                 
+ISPSTART CMD(%pdscheck {{ new }} {{ lines2 }})                                                    
+//*                                  
+{% endfor %}
+//                                                                              

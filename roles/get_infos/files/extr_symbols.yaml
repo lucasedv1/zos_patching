@@ -1,0 +1,6 @@
+- name: symbols lines
+  set_fact:
+    sym_lines: "{{ sym_lines +
+                [symbs[symbs.find('&'): symbs.find('.'):] +
+                '=' + symbs[symbs.rfind('=')+2:]] }}"
+  when: symbs.find('&') > 0

@@ -1,0 +1,141 @@
+---
+# tasks file for roles/get_infos
+# parameters:
+#   info : 'StaticConfig' - recover infos from BLDINCL member
+#          'IODEV' - IODEF ucb
+#          'LOAD' - load suffix
+#          'OMVS' - OMVS file systems
+#          'SMFID' - smf id
+#          'SYM' - symbols
+#          'SYSCLONE' - system symbol
+#          'SYSNAME' - system symbol
+#          'TSID' - GSD system id
+#          'SSN' - subsystems
+#
+- name: Select
+  block:
+    - name: set initial
+      set_fact:
+        jobs_static_preGSD: []
+        jobs_static_posGSD: []
+        jobs_static_posIPL: []
+        pds_check: []
+        pds_copy: []
+
+    - name: Extract
+      shell: dtail -n -100 '{{ ds_cntl }}(BLDINCL)'|grep =
+      register: get_resc
+
+    - name: Extract static config
+      include_tasks: extr_static.yaml
+      loop: "{{ get_resc.stdout_lines }}"
+      loop_control:
+        loop_var: staticline
+  when: info == "StaticConfig"
+
+- name: Get
+  block:
+    - name: Extract
+      command: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/getsysinfo.rexx {{ info }}
+      register: get_resi
+
+    - name: return
+      set_fact:
+        catvol: "{{ get_resi.stdout_lines.0 }}"
+      when: info == "CATVOL"
+
+    - name: return
+      set_fact:
+        iodev: "{{ get_resi.stdout_lines.0 }}"
+      when: info == "IODEV"
+
+    - name: return
+      set_fact:
+        load_suffix: "{{ get_resi.stdout_lines.0 }}"
+      when: info == "LOAD"
+
+    - name: return
+      include_tasks: extr_bpx.yaml
+      loop: "{{ get_resi.stdout_lines }}"
+      loop_control:
+        loop_var: bpxs
+      when: info == "OMVS"
+
+    - name: return
+      block:
+        - name: Adjust variables
+          set_fact:
+            sysp: "{{ get_resi.stdout_lines.0[get_resi.stdout_lines.0.find('(')+1: get_resi.stdout_lines.0.find(')'):] }}"
+          when: get_resi.stdout_lines.0.find(')') > 0
+        - name: Adjust variables
+          set_fact:
+            sysp: "{{ get_resi.stdout_lines.0 }}"
+          when: get_resi.stdout_lines.0.find(')') < 0
+      when: info == "SYSP"
+
+    - name: return
+      block:
+        - name: adjust variable
+          set_fact:
+            ssn_suffix: "{{ get_resi.stdout_lines.0 }}"
+        - name: Extract ssn members
+          include_tasks: extr_ssn.yaml
+          loop: "{{ get_resi.stdout_lines }}"
+          loop_control:
+            loop_var: ssns
+      when: info == "SSN"
+
+    - name: Extract sym members
+      include_tasks: extr_sym.yaml
+      loop: "{{ get_resi.stdout_lines }}"
+      loop_control:
+        loop_var: syms
+      when: info == "SYM"
+  when: info == "CATVOL" or info == "IODEV" or info ==  "LOAD" or info == 'OMVS' or
+        info == "SSN"    or info == "SYM"   or info == "SYSP"
+
+- name: Select
+  block:
+    - name: Extract
+      command: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/getsysvar.rexx {{ info }}
+      register: get_resv
+
+    - name: return
+      set_fact:
+        smfid: "{{ get_resv.stdout }}"
+      when: info == "SMFID"
+
+    - name: return
+      set_fact:
+        sysclone: "{{ get_resv.stdout }}"
+      when: info == "SYSCLONE"
+
+    - name: return
+      set_fact:
+        sysname: "{{ get_resv.stdout }}"
+      when: info == "SYSNAME"
+
+    - name: return
+      set_fact:
+        cur: "{{ get_resv.stdout }}"
+      when: info == "SYSR1"
+
+    - name: return
+      set_fact:
+        tsid: "{{ get_resv.stdout }}"
+      when: info == "TSID"
+  when: info == "SMFID" or info == "SYSCLONE" or info == "SYSNAME" or info == "SYSR1" or info == "TSID"
+
+- name: Select
+  block:
+    - name: Extract
+      command: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/IPLINFO.rexx {{ info }}
+      register: get_ress
+
+    - name: Extract symbols
+      include_tasks: extr_symbols.yaml
+      loop: "{{ get_ress.stdout_lines }}"
+      loop_control:
+        loop_var: symbs
+      when: info == "SYM"
+  when: info == "SYM"

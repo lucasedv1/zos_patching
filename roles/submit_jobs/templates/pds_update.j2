@@ -1,0 +1,23 @@
+//BLDUPDT  JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},REGION=0M
+//STEP     EXEC PGM=PDSUPDTE,REGION=0M,PARM=UPDATE
+//STEPLIB  DD   DSN={{ ds_load }},DISP=SHR
+//@CNTL    DD   DSN={{ ds_cntl }}.ANSIBLE.RESTORE,DISP=SHR
+//SYSPRINT DD   SYSOUT=*
+//SYSIN DD *
+PARM='(00,Z1),7214P1,&NEW.',<PARM='(00,XN,PN),7866N1,&NEW.',<
+(BRRW1121),<{{ job_accnt }}<
+ORDER5A<ORDER5A {{ ds_prefix }}<
+ORDER5B<ORDER5B {{ ds_prefix }}<
+ORDER5C<ORDER5C {{ ds_prefix }}<
+ORDER5D<ORDER5D {{ ds_prefix }}<
+SMFID=<SMFID={{ smfid }}<
+SYSCLONE=<SYSCLONE={{ sysclone }}<
+SYSNAME=<SYSNAME={{ sysname }}<
+ZOSADMIN.ZZCIRATS.CNTL<{{ ds_cntl }}<
+ZOSADMIN.ZZCIRATS.HOLDCARD<{{ ds_fixcard }}<
+ZOSADMIN.ZZCIRATS.LOAD<{{ ds_load }}<
+ZOSADMIN.ZZCIRATS.PROCS<{{ ds_procs }}<
+ZOSADMIN.ZZCIRATS.ZGSD<{{ ds_hlq1 }}.{{ds_hlq2 }}.ZGSD<
+ZOSADMIN.ZZCIRATS.SYSOUTS<{{ ds_sysouts[0: ds_sysouts.find('.M'):]}}<
+/* 
+// 

@@ -1,0 +1,41 @@
+//BLDREST  JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},REGION=0M
+/*JOBPARM S=*,L=9999
+//TRSMAIN  EXEC PGM=TRSMAIN,PARM='UNPACK'
+//SYSPRINT DD SYSOUT=*
+//INFILE   DD DISP=SHR,DSN={{ ds_prefix }}.{{ group_names.0 }}.ZTERSE
+//OUTFILE  DD DSN={{ ds_prefix }}.{{ group_names.0 }}.ZDUMP,
+//         DISP=(,CATLG),SPACE=(CYL,(2,1)),UNIT=3390
+//RESTORE1  EXEC PGM=ADRDSSU,PARM='SIZE=4096K'
+//SYSPRINT DD SYSOUT=*
+//DUMP     DD DSN={{ ds_prefix }}.{{ group_names.0 }}.ZDUMP,DISP=(OLD,PASS)
+//SYSIN    DD *
+  RESTORE INDD(DUMP) -
+    DATASET(INCL(ZOSADMIN.ZZCIRATS.ZANSIBLE.INSTALL.LOAD, -
+                 ZOSADMIN.ZZCIRATS.ZANSIBLE.INSTALL.PROCS)) -
+    RENUNC((ZOSADMIN.ZZCIRATS.ZANSIBLE.INSTALL.LOAD,        -
+            {{ ds_load }}),          -
+           (ZOSADMIN.ZZCIRATS.ZANSIBLE.INSTALL.PROCS,       -
+            {{ ds_procs }})),        -
+    NULLSTORCLAS NULLMGMTCLAS        -
+    ADMINISTRATOR                    -
+    REPLACEU CATALOG
+/*
+// IF (RESTORE1.RC > 0) THEN
+//RESTORE2  EXEC PGM=ADRDSSU,PARM='SIZE=4096K'
+//SYSPRINT DD SYSOUT=*
+//DUMP     DD DSN={{ ds_prefix }}.{{ group_names.0 }}.ZDUMP,DISP=(OLD,PASS)
+//OUTDD    DD VOL=SER={{ catvol }},UNIT=3390,DISP=OLD
+//SYSIN    DD *
+  RESTORE INDD(DUMP) OUTDD(OUTDD) -
+    DATASET(INCL(ZOSADMIN.ZZCIRATS.ZANSIBLE.INSTALL.LOAD, -
+                 ZOSADMIN.ZZCIRATS.ZANSIBLE.INSTALL.PROCS)) -
+    RENUNC((ZOSADMIN.ZZCIRATS.ZANSIBLE.INSTALL.LOAD,        -
+            {{ ds_load }}),          -
+           (ZOSADMIN.ZZCIRATS.ZANSIBLE.INSTALL.PROCS,       -
+            {{ ds_procs }})),        -
+    NULLSTORCLAS NULLMGMTCLAS        -
+    ADMINISTRATOR                    -
+    REPLACEU CATALOG
+/*
+//         ENDIF
+//

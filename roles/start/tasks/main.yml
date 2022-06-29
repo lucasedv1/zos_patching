@@ -1,0 +1,25 @@
+---
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - June/2021
+# Updates:
+#
+###############################################################################
+# tasks file for roles/initialize
+- name: Create temp
+  file:
+    path: "/tmp/ansible/{{ ansible_user_id|lower }}/cirats"
+    state: directory
+    mode: u+x
+- name: Create alternate sysres mount point
+  file:
+    path: "/tmp/ansible/{{ ansible_user_id|lower }}/asr"
+    state: directory
+    mode: u+x

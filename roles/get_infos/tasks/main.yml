@@ -1,0 +1,20 @@
+---
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - June/2021
+# Updates:
+#
+###############################################################################
+# tasks file for roles/get_infos
+- name: Get
+  include_tasks: files/prepare_vars.yaml
+  loop: "{{ infos }}"
+  loop_control:
+    loop_var: info

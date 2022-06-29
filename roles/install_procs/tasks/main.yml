@@ -1,0 +1,20 @@
+---
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - June/2021
+# Updates:
+#
+###############################################################################
+# tasks file for roles/install_pds_procs
+- name: Install procs on PDS
+  include_tasks: files/copy_proc.yaml
+  loop: "{{ procnames }}"
+  loop_control:
+    loop_var: proc

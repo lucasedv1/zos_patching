@@ -1,0 +1,30 @@
+//BLD2POSH JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},
+//         TIME=NOLIMIT
+/*JOBPARM  S=*,L=9999
+//*
+//*   JCLLIB  ORDER=RTSGM.MAINT.EUE4.CNTL
+//*   INCLUDE MEMBER=BLDINCL
+//*
+//******************************************************************
+//*  CHECK IF NEW SYSRES VARIABLE IS CORRECT                       *
+//******************************************************************
+//SYSRCHK  EXEC PGM=IKJEFT01
+//SYSPROC  DD DISP=SHR,DSN={{ ds_procs }}
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSTSIN  DD *
+%SYSRCHK {{ new }}
+/*
+//**************************************************************
+//* JOB TO EXECUTE IPLCHECK AGAINST CURRENT SYSTEM
+//**************************************************************
+//IPLCHECK EXEC PGM=IPLCHECK,PARM='CURRENT',REGION=100M,COND=(4,LT)
+//SYSPRINT DD SYSOUT=*
+//DUPMEMBR DD SYSOUT=*
+//SYSUDUMP DD SYSOUT=*
+//IPLCKEXC DD SYSOUT=*
+//IPLCKLOG DD SYSOUT=*
+//IPLCKSUM DD SYSOUT=*
+//CHKPOINT DD DUMMY
+//SYSIN    DD DUMMY
+//

@@ -1,0 +1,28 @@
+{{ ansible_managed }}
+//BLDSAVE JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},
+//         REGION=0M,TIME=NOLIMIT 
+/*JOBPARM  S=*,L=9999  
+//*
+//STEP1    EXEC PGM=ISFAFD,REGION=0M
+//SYSUDUMP DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSTSPRT DD SYSOUT=* 
+//SYSOUT   DD SYSOUT=*
+//ISFOUT   DD SYSOUT=*
+//ISFIN    DD *
+ PRE BLD*
+ ST
+ FILTER JobID EQ {{ job_result.jobs.0.job_id }}
+ AFD REFRESH
+ ++S
+ PRINT D
+ ++<='"{{ ds_sysouts }}"'>,
+ <='{{ job_result.jobs.0.job_id }}'>,
+ <='SHR'>
+ PRINT 1 999999
+ PRINT CLOSE 
+ ++AFD PF03
+ ++AFD PF03
+ END
+/*
+//

@@ -1,0 +1,18 @@
+//BLD4IPLD JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},                            
+//         TIME=NOLIMIT                               
+/*JOBPARM  S=*,L=9999                                                           
+//*                                                                                                                                                         
+//******************************************************************            
+//*  Display IPL infos                                             *            
+//******************************************************************            
+//*                                                                             
+//IPLINFO EXEC PGM=IKJEFT01,COND=(4,LT)                                        
+//SYSPROC  DD DISP=(OLD,PASS),DSN={{ ds_procs }}
+//SYSTSPRT DD SYSOUT=*                                                          
+//SYSPRINT DD SYSOUT=*                                                          
+//STDOUT   DD SYSOUT=*                                                          
+//STDERR   DD SYSOUT=*                                                          
+//SYSTSIN  DD *
+%iplinfo ALL 
+/*                                                                              
+//                                                                              

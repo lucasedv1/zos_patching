@@ -1,0 +1,4 @@
+- name: bpx lines
+  set_fact:
+    bpx_members: "{{ bpx_members + [bpxs] }} "
+  when: "bpxs.rfind('(') > 1 and bpxs[0: 6:] != 'Source'"

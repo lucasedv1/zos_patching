@@ -1,0 +1,4 @@
+---
+# defaults file for roles/submit_jobs
+max_rc: 999
+jobsrc: []

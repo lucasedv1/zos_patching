@@ -1,0 +1,11 @@
+//BLDCOPY  JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},REGION=0M
+/*JOBPARM S=*,L=9999
+//STEP1     EXEC PGM=IEBCOPY
+//SYSPRINT  DD  SYSOUT=A
+//DDIN      DD  DISP=SHR,DSN={{ ds_cntl }}.ANSIBLE.RESTORE
+//DDOUT     DD  DISP=SHR,DSN={{ ds_cntl }}
+//SYSUT3    DD  UNIT=SYSDA,SPACE=(CYL,(1,1))
+//SYSIN     DD  *
+GROUPCPY   COPYGRP  INDD=DDIN,OUTDD=DDOUT
+/*
+//

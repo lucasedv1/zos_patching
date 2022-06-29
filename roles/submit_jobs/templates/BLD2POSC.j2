@@ -1,0 +1,31 @@
+//BLD1PREC JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},
+//         REGION=0M,TIME=NOLIMIT,COND=(4,LT)
+/*JOBPARM  S=*,L=9999
+//*
+//******************************************************************
+//*  CHECK IF NEW SYSRES VARIABLE IS CORRECT                       *
+//******************************************************************
+//SYSRCHK  EXEC PGM=IKJEFT01
+//SYSPROC  DD DISP=(OLD,PASS),DSN={{ ds_procs }}
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSTSIN  DD *,SYMBOLS=JCLONLY
+%SYSRCHK {{ new }}
+/*
+//******************************************************************
+//*  COPY LIBRARIES                                                *
+//******************************************************************
+//PARMCOPY EXEC PGM=ADRDSSU,PARM='LINECNT=55',REGION=3M,COND=(4,LT)
+//SYSPRINT DD SYSOUT=*
+//SOURCE   DD VOL=SER=&CUR.,UNIT=3390,DISP=SHR
+//TARGET   DD VOL=SER=&NEW.,UNIT=3390,DISP=SHR
+//SYSIN    DD *
+ COPY INDD(SOURCE) OUTDD(TARGET) -
+      DATASET(INC( -
+{% for lines1 in pds_copy %}
+              {{ lines1 }}, -
+{% endfor %}
+             ))
+    SHR TOL(ENQF) REPLACE ALLD(*) ALLX
+/*
+//

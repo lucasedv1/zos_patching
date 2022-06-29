@@ -1,0 +1,46 @@
+//CLOCKCHG JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},
+//         REGION=0M,TIME=NOLIMIT,COND=(4,LT)
+//*
+//   JCLLIB  ORDER={{ds_cntl }}
+//   INCLUDE MEMBER=BLDINCL                    
+//*       SET  MODE=UPDACT    MODES ARE CHECK, UPDACT OR UPDALT 
+//*       SET  MODE=UPDALT    MODES ARE CHECK, UPDACT OR UPDALT 
+//*       SET  MODE=CHECK     MODES ARE CHECK, UPDACT OR UPDALT 
+//*       SET  REQID=DS       REQIDS ARE 00 OR DS    DS FOR SUMMER 
+//*       SET  REQID=00       REQIDS ARE 00 OR DS    00 FOR STANDARD 
+//* 
+//* REXX   TO CHECK OR IMPLEMENT A CLOCK CHANGE       */                
+//* VALID RETURN CODE ARE:-                           */                
+//*     0  =>  THIS SYSTEM DOES NOT CHANGE TO DAYLIGHT SAVING TIME  
+//*     3  =>  THIS SYSTEM DOES CHANGE TO DAYLIGHT SAVING TIME AND   
+//*             AND IS CURRENTLY SETUP FOR THE REQUIRED TIME ZONE   
+//*     7  =>  THIS SYSTEM IS RUNNING AT THE REQUIRED TIME ZONE AND 
+//*             IEASYS00 IN THE ALTERNATE PARMLIB HAS BEEN UPDATED  
+//*    11  =>  THIS SYSTEM IS RUNNING AT THE REQUIRED TIME ZONE BUT 
+//*             IEASYS00 IN THE ALTERNATE PARMLIB NEEDS UPDATING    
+//*    15  =>  THIS SYSTEM NEEDS AN IPL OR OTHER OPERATOR ACTION TO 
+//*             CHANGE TO THE REQUIRED TIME ZONE                    
+//*    19  =>  IEASYS00 IN THE ACTIVE PARMLIB HAS BEEN CHANGED TO   
+//*             REFLECT THE REQUIRED TIME ZONE                      
+//*    23  =>  IEASYS00 IN THE ACTIVE PARMLIB NEEDS CHANGING TO     
+//*             REFLECT THE REQUIRED TIME ZONE                      
+//*    27  =>  ONLY 1 PARMLIB CHECKED, CHECKING INCOMPLETE,         
+//*             BUT NO ERRORS FOUND                                 
+//*                                                                 
+//*   IF DIFFERENCES FOUND BETWEEN CLOCK MEMBERS , & RETURN CODE    
+//*   IS LESS THAN 30,  30 WILL BE ADDED TO THE FINAL RETURN CODE   
+//*                                                                 
+//CLKCHG  EXEC PGM=TSOBAUTH,PARM='%CLOCKCHG {{ mode }} {{ reqid }} &CUR. &NEW.'
+//STEPLIB  DD  DISP=SHR,DSN=RTAUTH.MVS.LOAD
+//SYSPROC  DD  DISP=SHR,DSN={{ ds_procs }}
+//SYSTSPRT DD  SYSOUT=* 
+//CLOCKLST DD  SYSOUT=*,RECFM=FB,LRECL=80 
+//SYSTSIN  DD  DUMMY
+//*   IEBCOPY DD STATEMENTS                
+//SYSPRINT DD  SYSOUT=*                    
+//SYSUT3   DD  UNIT=SYSDA,SPACE=(TRK,(3,2))
+//SYSUT4   DD  UNIT=SYSDA,SPACE=(TRK,(3,2))
+//SYSIN    DD  *                           
+  C I=PLIB,O=PLIB                       
+/* 
+//

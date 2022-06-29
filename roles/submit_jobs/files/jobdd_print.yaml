@@ -1,0 +1,13 @@
+- name: dd print
+  debug:
+    var: dd.content
+  when: not (dd.ddname == 'JESJCL' or dd.ddname == 'JESYSMSG'
+             or dd.ddname == 'GENPRINT' or dd.ddname == 'SYSUDUMP')
+#  when: jobdd.stepname  == dd.1 and jobdd.ddname == dd.2
+#      - name: Print results
+#        zos_job_output:
+#          job_id: "{{ job_result.jobs.0.job_id }}"
+#          ddname: "{{ dd.2 }}"
+#       register: ddout
+#        shell: pjdd {{ job_result.jobs.0.job_id }} {{ dd.1 }} {{ dd.2 }}
+#          msg: "{{ ddout.stdout_lines }}"

@@ -1,0 +1,36 @@
+//BLD2POSD JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},
+//         TIME=NOLIMIT
+/*JOBPARM  S=*,L=9999
+//*
+//******************************************************************
+//*  CHECK IF NEW SYSRES VARIABLE IS CORRECT                       *
+//******************************************************************
+//SYSRCHK  EXEC PGM=IKJEFT01
+//SYSPROC  DD DISP=(OLD,PASS),DSN={{ ds_procs }}
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSTSIN  DD *
+%SYSRCHK {{ new }}
+/*
+//LISTCAT  EXEC PGM=IDCAMS,REGION=0M
+//SYSPRINT DD SYSOUT=*
+//SYSIN    DD *
+  LISTCAT ENTRIES(SYS1.SYSRES.STATUS) 
+/*
+// IF (LISTCAT.RC = 0) THEN   
+//******************************************************************
+//* UPDATE IPLMON DATASET                                          *
+//******************************************************************
+//IPLMON   EXEC PGM=IEBUPDTE,COND=(4,LT)
+//SYSPRINT DD   SYSOUT=*
+//SYSUT1   DD   DSN=SYS1.SYSRES.STATUS,DISP=SHR,
+//         DCB=(RECFM=FB,LRECL=80,BLKSIZE=3120)
+//SYSUT2   DD   DSN=SYS1.SYSRES.STATUS,DISP=SHR,
+//         DCB=(RECFM=FB,LRECL=80,BLKSIZE=3120)
+//SYSIN    DD   DATA,SYMBOLS=JCLONLY
+./      CHANGE LIST=ALL,SEQFLD=016
+{{ new }} {{ duinfo.stdout[duinfo.stdout.find('Loaded'): duinfo.stdout.rfind(')')+1:] }}
+./      ENDUP
+/*
+//         ENDIF 
+//

@@ -1,0 +1,53 @@
+//BLD2POSJ JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},
+//         TIME=NOLIMIT
+/*JOBPARM  S=*,L=9999
+//*                                                                 
+//******************************************************************
+//*  Check if NEW SYSRES variable is correct                       *
+//******************************************************************
+//SYSRCHK  EXEC PGM=IKJEFT01
+//SYSPROC  DD DISP=SHR,DSN={{ ds_procs }}
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSTSIN  DD *
+%SYSRCHK {{ new }}
+/*                                                                              
+//******************************************************************            
+//*  Mount ALTERNATE ROOT File System                              *            
+//******************************************************************            
+//MOUNT    EXEC PGM=IKJEFT01,REGION=4M,COND=(4,LT)                              
+//SYSTSPRT DD   SYSOUT=*,DCB=(RECFM=VA,LRECL=137,BLKSIZE=141)                   
+//SYSTSIN  DD   *
+  MOUNT FILESYSTEM('OMVS.OPSYS.{{ tsid }}.V{{ new }}.ROOT.ZFS') -
+    TYPE(ZFS) -
+    MODE(READ) -
+    MOUNTPOINT('/tmp/ansible/{{ ansible_user_id|lower }}/asr')
+/*  
+//******************************************************************
+//*  CHECK BPXPRMxx                                                *
+//******************************************************************
+//*                                                                             
+//BPXCHECK EXEC PGM=IKJEFT01,COND=(4,LT)                                        
+//SYSPROC  DD DISP=SHR,DSN={{ ds_procs }}
+//BPXPRMXX DD *
+/*
+{% for lines1 in bpx_members %}
+//         DD DISP=SHR,DSN={{ lines1 }},
+//         UNIT=3390,VOL=SER={{ new }}
+{% endfor %}
+//*
+//SYSTSPRT DD SYSOUT=*                                                          
+//SYSPRINT DD SYSOUT=*                                                          
+//STDOUT   DD SYSOUT=*                                                          
+//STDERR   DD SYSOUT=*                                                          
+//SYSTSIN  DD *
+%omvschk {{ new }}
+/*                                                                              
+//******************************************************************            
+//*  Unmount ALTERNATE ROOT File System                            *            
+//******************************************************************            
+//UNMOUNT EXEC PGM=IKJEFT01,REGION=4M                          
+//SYSTSPRT DD SYSOUT=*,DCB=(RECFM=VA,LRECL=137,BLKSIZE=141)                     
+//SYSTSIN DD *,SYMBOLS=JCLONLY                                                  
+ UNMOUNT FILESYSTEM(OMVS.OPSYS.{{ tsid }}.V{{ new }}.ROOT.ZFS) IMMEDIATE            
+/*                                                                              

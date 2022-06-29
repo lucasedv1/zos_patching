@@ -1,0 +1,32 @@
+//BLD2POSG JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},                                    
+//         TIME=NOLIMIT                               
+/*JOBPARM  S=*,L=9999                                                           
+//*                                                                             
+//******************************************************************            
+//*  CHECK IF NEW SYSRES VARIABLE IS CORRECT                       *            
+//******************************************************************            
+//SYSRCHK  EXEC PGM=IKJEFT01                                                    
+//SYSPROC  DD DISP=SHR,DSN={{ ds_procs }}
+//SYSTSPRT DD SYSOUT=*                                                          
+//SYSPRINT DD SYSOUT=*                                                          
+//SYSTSIN  DD *,SYMBOLS=JCLONLY                                                 
+%SYSRCHK {{ new }}
+/*                                                                              
+//**************************************************************                
+//* JOB TO EXECUTE IPLCHECK AGAINST NEW SYSRES                                 
+//**************************************************************                
+//IPLCHECK EXEC PGM=IPLCHECK,PARM='(00,{{ sysp }}),{{ iodev }}{{ load_suffix }},{{ new }}',
+//         REGION=100M,COND=(4,LT)                                                          
+//SYSPRINT DD SYSOUT=*                                                          
+//DUPMEMBR DD SYSOUT=*                                                          
+//SYSUDUMP DD SYSOUT=*                                                          
+//IPLCKEXC DD SYSOUT=*                                                          
+//IPLCKLOG DD SYSOUT=*                                                          
+//IPLCKSUM DD SYSOUT=*                                                          
+//CHKPOINT DD DUMMY                                                             
+//SYSIN    DD *
+{% for line in sym_lines %}
+SYMBOL={{ line }}
+{% endfor %}
+/*                                                                              
+//                                                                              

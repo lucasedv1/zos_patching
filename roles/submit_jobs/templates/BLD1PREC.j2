@@ -1,0 +1,276 @@
+//BLD1PREC JOB {{ job_accnt }}CLASS={{ jobclass }},MSGCLASS={{ msgclass }},
+//         REGION=0M,TIME=NOLIMIT,COND=(4,LT)
+/*JOBPARM S=*,L=9999
+//*
+//   EXPORT SYMLIST=(SMPCSI)
+//   SET  SMPCSI=SMPE.{{ tsid }}.V{{ cur }}.GLOBAL.CSI
+//   SET  FIXRPT1={{ ds_prefix }}.ZGSD.TEMP
+//   SET  FIXRPTD={{ ds_prefix }}.ZGSD.LSTDU.#{{ hld }}
+//   SET  FIXRPT2={{ ds_prefix }}.ZGSD.TEMP2
+//   SET  FIXRPT3={{ ds_prefix }}.ZGSD.TEMP2.OUTPUT
+//   SET  FIXRPT4={{ ds_prefix }}.ZGSD.ORDER.OUTPUT
+//   SET  FIXRPT5={{ ds_prefix }}.ZGSD.ORDER.OUTPUT2
+//   SET  FIXRPT6={{ ds_prefix }}.ZGSD.ORDER.OUTPUT3
+//*
+//******************************************************************
+//*  CHECK IF NEW SYSRES VARIABLE IS CORRECT                       *
+//******************************************************************
+//SYSRCHK  EXEC PGM=IKJEFT01
+//SYSPROC  DD DISP=SHR,DSN={{ ds_procs }}
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSTSIN  DD *
+%SYSRCHK {{ new }}
+/*
+//*********************************************************
+//* DELETE OLD REPORTS
+//*********************************************************
+//DELETE1  EXEC PGM=IEFBR14
+//REPORT1  DD DISP=(MOD,DELETE),DSNAME=&FIXRPT1,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT1B DD DISP=(MOD,DELETE),DSNAME=&FIXRPT2,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT1C DD DISP=(MOD,DELETE),DSNAME=&FIXRPT3,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT1D DD DISP=(MOD,DELETE),DSNAME=&FIXRPT4,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT1E DD DISP=(MOD,DELETE),DSNAME=&FIXRPT5,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT1F DD DISP=(MOD,DELETE),DSNAME=&FIXRPT6,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT3  DD DISP=(MOD,DELETE),
+//         DSNAME={{ ds_prefix }}.ZGSD.ORDER.#{{ hld }},
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT4  DD DISP=(MOD,DELETE),
+//         DSNAME={{ ds_prefix }}.ZGSD.STATUS.#{{ hld }},
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORTD  DD DISP=(MOD,DELETE),
+//         DSNAME=&FIXRPTD,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT7  DD DISP=(MOD,DELETE),
+//         DSNAME={{ ds_prefix }}.ZGSD.STATUS.OUTPUT,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//*********************************************************
+//* REMOVE OLD EYE-CATCHER HOLDCARDS
+//*********************************************************
+//SMPE1    EXEC PGM=GIMSMP,PARM=''
+//SMPCSI   DD DISP=SHR,DSN=&SMPCSI
+//SMPHOLD  DD *
+  ++RELEASE(HBB7750) FMID(HBB7750) FIXCAT REASON(VERSION) .
+  ++RELEASE(HBB7760) FMID(HBB7760) FIXCAT REASON(VERSION) .
+  ++RELEASE(HBB7770) FMID(HBB7770) FIXCAT REASON(VERSION) .
+  ++RELEASE(HBB7780) FMID(HBB7780) FIXCAT REASON(VERSION) .
+  ++RELEASE(HBB7790) FMID(HBB7790) FIXCAT REASON(VERSION) .
+  ++RELEASE(HBB77A0) FMID(HBB77A0) FIXCAT REASON(VERSION) .
+  ++RELEASE(HBB77B0) FMID(HBB77B0) FIXCAT REASON(VERSION) .
+  ++RELEASE(HBB77C0) FMID(HBB77C0) FIXCAT REASON(VERSION) .
+  ++RELEASE(HBB77D0) FMID(HBB77D0) FIXCAT REASON(VERSION) .
+  ++RELEASE(HBB7750) FMID(HBB7750) FIXCAT REASON(LOG4J##) .     
+  ++RELEASE(HBB7760) FMID(HBB7760) FIXCAT REASON(LOG4J##) .     
+  ++RELEASE(HBB7770) FMID(HBB7770) FIXCAT REASON(LOG4J##) .     
+  ++RELEASE(HBB7780) FMID(HBB7780) FIXCAT REASON(LOG4J##) .     
+  ++RELEASE(HBB7790) FMID(HBB7790) FIXCAT REASON(LOG4J##) .     
+  ++RELEASE(HBB77A0) FMID(HBB77A0) FIXCAT REASON(LOG4J##) .     
+  ++RELEASE(HBB77B0) FMID(HBB77B0) FIXCAT REASON(LOG4J##) .     
+  ++RELEASE(HBB77C0) FMID(HBB77C0) FIXCAT REASON(LOG4J##) .     
+  ++RELEASE(HBB77D0) FMID(HBB77D0) FIXCAT REASON(LOG4J##) .     
+  ++RELEASE(HBGZ100) FMID(HBGZ100) FIXCAT REASON(SN09634) .  
+/*
+//SMPLOG    DD DUMMY
+//SMPOUT    DD SYSOUT=*
+//SMPPTFIN  DD DUMMY
+//SMPRPT    DD SYSOUT=*
+//SMPCNTL   DD *
+  SET BDY(GLOBAL).
+  UPGRADE.
+  RECEIVE HOLDDATA.
+//*********************************************************
+//* run lstdu report for subsystem designation per zone   *
+//*********************************************************
+//IKJEFT01 EXEC PGM=IKJEFT01,DYNAMNBR=999
+//STEPLIB  DD DISP=SHR,DSN={{ ds_load }}
+//REPORT   DD DSN=&FIXRPTD,
+//            DISP=(NEW,CATLG),
+//            DSORG=PS,RECFM=FB,LRECL=169,BLKSIZE=0,
+//            UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//SYSIN    DD DUMMY
+//SYSEXEC  DD DISP=SHR,DSN={{ ds_procs }}
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSUDUMP DD SYSOUT=*
+//SYSTSIN  DD *,SYMBOLS=JCLONLY
+PROFILE NOPREFIX
+LSTDUR &SMPCSI
+/*
+//*********************************************************
+//* receive new ++HOLDCARDs
+//*********************************************************
+//SMPE2    EXEC PGM=GIMSMP,PARM=''
+//SMPCSI   DD DISP=SHR,DSN=&SMPCSI
+//SMPHOLD  DD DISP=SHR,DSN={{ ds_fixcard }}.#2019
+//         DD DISP=SHR,DSN={{ ds_fixcard }}.#2020
+//         DD DISP=SHR,DSN={{ ds_fixcard }}.#{{ hld }}
+//SMPLOG   DD DUMMY
+//SMPOUT   DD SYSOUT=*
+//SMPPTFIN DD DUMMY
+//SMPRPT   DD DISP=(NEW,PASS),DSN=&FIXRPT2,
+//          UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//SMPCNTL  DD *
+  SET BDY(GLOBAL).
+  UPGRADE.
+  RECEIVE HOLDDATA.
+/*
+//*********************************************************
+//* run missingfix report
+//*********************************************************
+//ALLZONES EXEC PGM=GIMSMP,REGION=0M,
+//         PARM='PROCESS=WAIT',
+//         DYNAMNBR=120
+//SMPCSI   DD DISP=SHR,DSN=&SMPCSI
+//SMPRPT   DD SYSOUT=*
+//SMPLOG   DD DUMMY
+//SMPLIST  DD DISP=(,PASS),DSN=&&ZONEINDX,
+//         DSORG=PS,RECFM=FBA,LRECL=121,BLKSIZE=0,
+//         SPACE=(CYL,(5,5)),UNIT=VIO
+//SMPCNTL  DD *
+  SET    BDY (GLOBAL ) .
+  LIST   GLOBALZONE .
+/*
+//TSOB     EXEC PGM=IKJEFT01
+//SYSPROC  DD DISP=SHR,DSN={{ ds_procs }}
+//SMPZONES DD DISP=(OLD,DELETE),DSN=&&ZONEINDX
+//SMPCNTL  DD DISP=(,PASS),DSN=&&SMPCNTL,
+//         DSORG=PS,RECFM=FB,LRECL=80,BLKSIZE=0,
+//         SPACE=(CYL,(5,5)),UNIT=VIO
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSTSIN  DD *
+%zonelist
+/*
+//SMPRPT1  EXEC PGM=GIMSMP,REGION=0M,
+//         PARM='PROCESS=WAIT',
+//         DYNAMNBR=120
+//SMPCSI   DD DISP=SHR,DSN=&SMPCSI
+//SMPRPT   DD DISP=(MOD,CATLG,DELETE),DSNAME=&FIXRPT1,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//SMPLOG   DD DUMMY
+//SMPCNTL  DD DISP=(OLD,DELETE),DSN=&&SMPCNTL
+//*
+//*********************************************************
+//* generate basic ORDER report (make ORDER.OUTPUT)
+//*********************************************************
+//SIALIST  EXEC  PGM=IKJEFT01,DYNAMNBR=50
+//SYSEXEC  DD DISP=SHR,DSN={{ ds_procs }}
+//INDD1    DD  DISP=SHR,DSN=&FIXRPT1
+//INDD2    DD  DISP=SHR,DSN=&FIXRPTD
+//SYSTSPRT DD  SYSOUT=*
+//SYSTSIN  DD  *
+%ORDER5A {{ ds_prefix }}
+/*
+//**********************************************************
+//* generate basic SMPE APAR status list (make TEMP2.OUTPUT)
+//**********************************************************
+//TEMPLST2 EXEC  PGM=IKJEFT01,DYNAMNBR=50
+//SYSEXEC  DD  DISP=SHR,DSN={{ ds_procs }}
+//INDD     DD  DISP=SHR,DSN=&FIXRPT2
+//SYSTSPRT DD  SYSOUT=*
+//SYSTSIN  DD  *
+%ORDER5B {{ ds_prefix }}
+/*
+//**********************************************************
+//* merge TEMP2.OUTPUT and ORDER.OUTPUT (make STATUS.OUTPUT)
+//**********************************************************
+//TEMPLST3 EXEC  PGM=IKJEFT01,DYNAMNBR=50
+//INDD1    DD  DISP=SHR,DSN=&FIXRPT3
+//INDD2    DD  DISP=SHR,DSN=&FIXRPT4
+//SYSEXEC  DD  DISP=SHR,DSN={{ ds_procs }}
+//SYSTSPRT DD  SYSOUT=*
+//SYSTSIN  DD  *
+%ORDER5C {{ ds_prefix }}
+/*
+//*********************************************************
+//* SORT STATUS to make final STATUS.#&HLD
+//*********************************************************
+//SORT1    EXEC PGM=SORT
+//SYSOUT    DD SYSOUT=*
+//SORTIN    DD DISP=SHR,DSN={{ ds_prefix }}.ZGSD.STATUS.OUTPUT
+//SORTOUT   DD DSN={{ ds_prefix }}.ZGSD.STATUS.#{{ hld }},
+//             DISP=(NEW,CATLG,DELETE),
+//             UNIT=SYSDA,
+//             SPACE=(CYL,(1,1),RLSE),
+//             DCB=(RECFM=FB,LRECL=80,BLKSIZE=27920)
+//SYSPRINT  DD SYSOUT=*
+//SYSOUT    DD *
+//SYSIN     DD *
+  SORT FIELDS=(1,18,CH,A)
+/*
+//*********************************************************
+//* SORT ORDER.OUTPUT to make ORDER.OUTPUT2
+//*********************************************************
+//SORT2    EXEC PGM=SORT
+//SYSOUT    DD SYSOUT=*
+//SORTIN    DD DISP=SHR,DSN=&FIXRPT4
+//SORTOUT   DD DSN=&FIXRPT5,
+//             DISP=(NEW,CATLG,DELETE),
+//             UNIT=SYSDA,
+//             SPACE=(CYL,(1,1),RLSE),
+//             DCB=(RECFM=FB,LRECL=80,BLKSIZE=27920)
+//SYSPRINT  DD SYSOUT=*
+//SYSOUT    DD *
+//SYSIN     DD *
+  SORT FORMAT=CH,FIELDS=(70,4,A,22,7,A,1,18,A)
+/*
+//**********************************************************
+//*  STRIP subsystem from ORDER.OUTPUT2 create ORDER.OUTPUT3
+//**********************************************************
+//TEMPLST4 EXEC  PGM=IKJEFT01,DYNAMNBR=50
+//INDD1    DD  DISP=SHR,DSN=&FIXRPT5
+//SYSEXEC  DD  DISP=SHR,DSN={{ ds_procs }}
+//SYSTSPRT DD  SYSOUT=*
+//SYSTSIN  DD  *
+%ORDER5D {{ ds_prefix }}
+/*
+//*********************************************************
+//* copy ORDER.OUTPUT3 to ORDER (final form)
+//*********************************************************
+//COPYIT   EXEC PGM=IEBGENER
+//SYSPRINT DD SYSOUT=*
+//SYSIN    DD DUMMY
+//SYSUT1   DD DISP=SHR,DSN=&FIXRPT6
+//SYSUT2 DD DSN={{ ds_sysouts }}(ORDERPRE),
+//         DISP=SHR
+//*********************************************************
+//* copy ORDER.OUTPUT3 to DULIST
+//*********************************************************
+//COPYIT   EXEC PGM=IEBGENER
+//SYSPRINT DD  SYSOUT=*
+//SYSIN    DD DUMMY
+//SYSUT1   DD DISP=SHR,DSN=&FIXRPTD
+//SYSUT2 DD DSN={{ ds_sysouts }}(DUPRE),
+//         DISP=SHR
+//*********************************************************
+//* cleanup unneeded datasets
+//*********************************************************
+//CLEANUP  EXEC PGM=IEFBR14
+//REPORT1  DD DISP=(MOD,DELETE),DSNAME=&FIXRPT1,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT2  DD DISP=(MOD,DELETE),DSNAME=&FIXRPT2,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT3  DD DISP=(MOD,DELETE),DSNAME=&FIXRPT3,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT4  DD DISP=(MOD,DELETE),DSNAME=&FIXRPT4,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT5  DD DISP=(MOD,DELETE),DSNAME=&FIXRPT5,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT6  DD DISP=(MOD,DELETE),DSNAME=&FIXRPT6,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT7  DD DISP=(MOD,DELETE),
+//         DSNAME={{ ds_prefix }}.ZGSD.STATUS.OUTPUT,
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT8  DD DISP=(MOD,DELETE),
+//         DSNAME={{ ds_prefix }}.ZGSD.LSTDU.#{{ hld }},
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//REPORT9  DD DISP=(MOD,DELETE),
+//         DSNAME={{ ds_prefix }}.ZGSD.STATUS.#{{ hld }},
+//         UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)
+//
