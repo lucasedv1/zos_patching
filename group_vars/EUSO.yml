@@ -1,0 +1,17 @@
+---
+ds_hlq1: RTSGM
+ds_hlq2: MAINT
+ds_prefix: "{{ ds_hlq1 }}.{{ ds_hlq2 }}"          
+ds_cntl : "{{ ds_prefix }}.EUSO.CNTL"
+ds_procs : "{{ ds_prefix }}.PROCS"
+ds_load : "{{ ds_prefix }}.LOAD"
+ds_fixcard: "{{ ds_hlq1 }}.FIXCAT.HOLDCARD"
+ds_sysouts: "{{ ds_hlq1 }}.SYSOUTS.CIRATS.EUSO.M{{ hld }}"
+job_accnt: '(BRRW1121),'
+jobclass: S
+msgclass: X
+jobs_static_pre: ['####REQ4', '####REQ5']
+jobs_static_pos: ['###POS7']
+jobs_static_exi: ['##EXI2', '##EXI3']
+jobs_static_ipl: ['#IPL2', '#IPL3']
+...

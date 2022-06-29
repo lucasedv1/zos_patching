@@ -1,0 +1,17 @@
+---
+ds_hlq1: RTSGM
+ds_hlq2: MAINT
+ds_prefix: "{{ ds_hlq1 }}.{{ ds_hlq2 }}"          
+ds_cntl : "{{ ds_prefix }}.EBI3.CNTL"
+ds_procs : "{{ ds_prefix }}.PROCS"
+ds_load : "{{ ds_prefix }}.LOAD"
+ds_fixcard: "{{ ds_hlq1 }}.FIXCAT.HOLDCARD"
+ds_sysouts: "{{ ds_hlq1 }}.SYSOUTS.CIRATS.EBI3.M{{ hld }}"
+job_accnt: ' '
+jobclass: B
+msgclass: X
+jobs_static_pre: ['####REQ4', '####REQ5']
+jobs_static_pos: [' ']
+jobs_static_exi: ['##EXI1','##EXI2', '##EXI3']
+jobs_static_ipl: ['#IPL2', '#IPL3']
+...
