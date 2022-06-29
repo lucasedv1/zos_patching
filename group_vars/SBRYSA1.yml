@@ -1,0 +1,12 @@
+---
+ds_hlq1: ZOSADMIN
+ds_hlq2: ZZCIRATS
+ds_prefix: "{{ ds_hlq1 }}.{{ ds_hlq2 }}"
+ds_cntl : "{{ ds_prefix }}.CNTL"
+ds_procs : "{{ ds_prefix }}.PROCS"
+ds_load : "{{ ds_prefix }}.LOAD"
+ds_fixcard: "{{ ds_prefix }}.HOLDCARD"
+ds_sysouts: "{{ ds_prefix }}.SYSOUTS.M{{ hld }}"
+job_accnt: (10130MVS),FABIO,
+jobclass: A
+msgclass: H

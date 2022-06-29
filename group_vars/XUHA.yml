@@ -1,0 +1,12 @@
+---
+ds_hlq1: 'RTSGM'
+ds_hlq2: 'MAINT'
+ds_prefix: "{{ ds_hlq1 }}.{{ ds_hlq2 }}"
+ds_cntl: "{{ ds_prefix }}.XUHA.CNTL"
+ds_procs: "{{ ds_prefix }}.PROCS"
+ds_load: "{{ ds_prefix }}.LOAD"
+ds_fixcard: "{{ ds_hlq1 }}.FIXCAT.HOLDCARD"
+ds_sysouts: "{{ ds_hlq1 }}.SYSOUTS.CIRATS.XUHA.M{{ hld }}"
+job_accnt: ' '
+jobclass: A
+msgclass: X

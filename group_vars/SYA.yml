@@ -1,0 +1,12 @@
+---
+ds_hlq1: MVSSPT
+ds_hlq2: ZZCIRATS
+ds_prefix: "{{ ds_hlq1 }}.{{ ds_hlq2 }}"          
+ds_cntl : "{{ ds_prefix }}.SYA.CNTL"
+ds_procs : "{{ ds_prefix }}.PROCS"
+ds_load : "{{ ds_prefix }}.LOAD"
+ds_fixcard: "{{ ds_prefix }}.FIXCAT.HOLDCARD"
+ds_sysouts: "{{ ds_prefix }}.SYSOUTS.CIRATS.SYA.M{{ hld }}"
+job_accnt: ' '
+jobclass: A
+msgclass: X
