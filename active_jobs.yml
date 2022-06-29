@@ -10,4 +10,9 @@
 
   tasks:
     - name: Execute an operator command to show active jobs
-      command: 'd a,ssh*'
+      command: 'd u,all'
+      register: duall
+      
+    - name: Display it
+      debug:
+        var: duall.content
