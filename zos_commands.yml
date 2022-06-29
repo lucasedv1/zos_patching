@@ -1,5 +1,5 @@
 - name: Command to show system symbols
-  command: 'D SYMBOLS'
+  cmd: 'D SYMBOLS'
        
 - name: Display it
   debug:
