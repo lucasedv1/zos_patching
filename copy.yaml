@@ -1,0 +1,78 @@
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+# 
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - October/2020
+#
+###############################################################################
+---
+- name: Step1 - Starts CIRATS new cycle
+  hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: no
+  environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
+
+  tasks:
+    - name: Create temp
+      file:
+        path: /tmp/ansible/cirats
+        state: directory
+
+    - name: Create datasets
+      zos_data_set:
+        batch:
+          - name: '{{ ds_prefix }}.{{ group_names.0 }}.TERSE.MODEL'
+            type: SEQ
+            space_primary: 11
+            space_type: CYL
+            record_format: FB
+            record_length: 1024
+
+          - name: "{{ds_procs }}"
+            state: absent
+
+          - name: "{{ds_load}}"
+            state: absent
+
+          - name: "{{ds_dump }}"
+            state: absent
+
+    - name: Install LOAD and PROCS
+      zos_copy:
+        src: "{{ playbook_dir }}/files/maint_terse.bin"
+        dest: "{{ ds_prefix }}.{{ group_names.0 }}.TERSE"
+        model_ds: "{{ ds_prefix }}.{{ group_names.0 }}.TERSE.MODEL"
+        is_binary: true
+        ignore_sftp_stderr: True
+
+    - name: JOBS loop
+      include_tasks: files/run_dynamic_jobs.yaml
+      loop:
+        - restore
+      loop_control:
+        loop_var: job
+
+    - name: Clean up
+      zos_data_set:
+        batch:
+          - name: "{{ ds_prefix }}.{{ group_names.0 }}.TERSE"
+            state: absent
+
+          - name: "{{ ds_prefix }}.{{ group_names.0 }}.TERSE.MODEL"
+            state: absent
+
+          - name: "{{ds_dump }}"
+            state: absent
+
+    - name: Clean up
+      file:
+        path: /tmp/ansible
+        state: absent
+...

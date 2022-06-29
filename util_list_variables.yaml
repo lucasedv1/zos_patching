@@ -1,0 +1,41 @@
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - October/2020
+# Updates:
+#  May/2021 - redesigned to simplify use
+#  June/2021 - implemented use of roles 
+#
+###############################################################################---
+- name: Util - List host variables
+  hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
+
+  tasks:
+    - name: Get BLDINCL
+      command: dtail -n -100 '{{ds_cntl }}(BLDINCL)'
+      register: bldincl
+
+    - name: Display it
+      debug:
+        var: bldincl.stdout_lines
+
+    - name: Get host vars
+      local_action: 
+        module: shell
+        _raw_params:  "/bin/cat group_vars/{{ group_names.0 }}.yml"
+      register: hvars
+
+    - name: Display it
+      debug:
+        var: hvars.stdout_lines

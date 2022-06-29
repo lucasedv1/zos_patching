@@ -1,0 +1,167 @@
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - October/2020
+# Updates:
+#  May/2021 - redesigned to simplify use
+#  June/2021 - implemented use of roles
+#
+###############################################################################
+---
+- name: Step1 - Starts CIRATS new cycle
+  hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
+
+
+  tasks:
+    - name: Starts
+      include_role:
+        name: start
+
+    - name: Install procs
+      include_role:
+        name: install_procs
+      vars:
+        procnames:
+          - getsysinfo
+          - getsysvar
+
+    - name: Get SYSRES current
+      include_role:
+        name: get_infos
+      vars:
+        infos:
+          - SYSR1
+
+    - name: Adjust variables
+      set_fact:
+        new: "{{ cur[0: 4:] }}{{ sysres_new_suffix }}1 "
+      when: cur[:5 :5] != 'Y'
+
+    - name: Adjust variables
+      set_fact:
+        new: "{{ cur[0: 5:] }}{{ sysres_new_suffix }} "
+      when: cur[:5 :5] == 'Y'
+
+    - name: Display error message
+      debug:
+        msg: "New sysres volser formed {{ new }} is equal current sysres in use {{ cur }}. Verify."
+      when: cur == new
+
+    - name: if OK continue
+      block:
+        - name: Create datasets for cycle {{ hld }}
+          zos_data_set:
+            batch:
+              - name: '{{ ds_sysouts }}'
+                type: PDS
+                space_primary: 5
+                space_type: CYL
+                record_format: FBA
+                record_length: 121
+              - name: '{{ ds_sysouts }}.SYSLOG'
+                type: SEQ
+                space_primary: 12
+                space_type: CYL
+                record_format: VB
+                record_length: 200
+              - name: '{{ ds_prefix }}.{{ group_names.0 }}.ZTERSE.MODEL'
+                type: SEQ
+                space_primary: 11
+                space_type: CYL
+                record_format: FB
+                record_length: 1024
+              - name: '{{ ds_prefix }}.{{ group_names.0 }}.ZTERSE'
+                type: SEQ
+                state: absent
+              - name: '{{ ds_prefix }}.{{ group_names.0 }}.ZDUMP'
+                type: SEQ
+                state: absent
+              - name: '{{ ds_procs }}'
+                type: PDSE
+                state: absent
+              - name: '{{ ds_load }}'
+                type: PDSE
+                state: absent
+
+        - name: Update BLDINCL member
+          zos_lineinfile:
+            src: '{{ ds_cntl }}(BLDINCL)'
+            regexp: '{{ item.From }}'
+            line: '{{ item.To }}'
+          with_items:
+            - {From: 'HLD=', To: '//   SET  HLD={{ hld }}'}
+            - {From: 'CUR=', To: '//   SET  CUR={{ cur }}'}
+            - {From: 'NEW=', To: '//   SET  NEW={{ new }}'}
+
+        - name: Get BLDINCL
+          command: dtail -n -100 '{{ ds_cntl }}(BLDINCL)'
+          register: bldincl
+
+        - name: Display it
+          debug:
+            var: bldincl.stdout_lines
+
+        - name: Get catalog volume in use
+          include_role:
+            name: get_infos
+          vars:
+            infos:
+              - StaticConfig
+              - CATVOL
+
+        - name: transfer terse dataset
+          zos_copy:
+            src: "{{ playbook_dir }}/files/unloads/install_terse.bin"
+            dest: "{{ ds_prefix }}.{{ group_names.0 }}.ZTERSE"
+            model_ds: "{{ ds_prefix }}.{{ group_names.0 }}.ZTERSE.MODEL"
+            is_binary: true
+            ignore_sftp_stderr: true
+            force: true
+
+        - name: unterse and restore it
+          include_role:
+            name: submit_jobs
+          vars:
+            src: D
+            jobnames:
+              - restore
+
+        - name: Clean new sysres related files
+          include_role:
+            name: submit_jobs
+          vars:
+            src: S
+            jobnames: 
+              - '####REQ4'
+              - '####REQ5'
+          when: clean == 'Yes'
+
+        - name: Clean up
+          zos_data_set:
+            batch:
+              - name: "{{ ds_prefix }}.{{ group_names.0 }}.ZTERSE"
+                state: absent
+              - name: "{{ ds_prefix }}.{{ group_names.0 }}.ZTERSE.MODEL"
+                state: absent
+              - name: "{{ ds_prefix }}.{{ group_names.0 }}.ZDUMP"
+                state: absent
+      when: cur != new
+
+    - name: Finish
+      include_role:
+        name: finish
+
+    - name: List RCs
+      debug:
+        var: jobsrc

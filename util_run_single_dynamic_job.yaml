@@ -1,0 +1,126 @@
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - October/2020
+# Updates:
+#  May/2021 - redesigned to simplify use
+#  June/2021 - implemented use of roles 
+#
+###############################################################################
+---
+- hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
+
+  tasks:
+    - name: start
+      include_role:
+        name: start
+
+    - name: Extract jobname
+      set_fact:
+        jobname: "{{ joblist[0: 8:] }}"
+
+    - name: Get system infos
+      include_role:
+        name: get_infos
+      vars:
+        infos:
+          - StaticConfig
+
+    - name: Install procs
+      include_role:
+        name: install_procs
+      vars:
+        procnames:
+          - getdu
+          - getsysinfo
+          - getsysvar
+          - IPLINFO
+
+    - name: Get system infos
+      include_role:
+        name: get_infos
+      vars:
+        infos:
+          - TSID
+      when: jobname == "BLD2POSB"
+
+    - name: Get system infos
+      include_role:
+        name: get_infos
+      vars:
+        infos:
+          - SYSP
+          - IODEV
+          - LOAD
+          - SYM
+      when: jobname == "BLD2POSG"
+
+    - name: Get system infos
+      include_role:
+        name: get_infos
+      vars:
+        infos:
+          - SSN
+      when: jobname == "BLD2POSI"
+
+    - name: Get system infos
+      include_role:
+        name: get_infos
+      vars:
+        infos:
+          - OMVS
+          - SYM
+          - TSID
+      when: jobname == "BLD2POSJ"
+
+    - name: Update GSD info
+      block:
+      - name: Get DU line
+        shell: dgrep ZOS#01T '{{ ds_sysouts }}(DUPOS)'
+        register: duline
+      - name: Execute getdu REXX
+        shell: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/getdu.rexx '{{ duline.stdout }}'
+        register: duinfo
+      - name: Update GSD info
+        zos_lineinfile:
+          src: '{{ds_cntl }}(BLDINCL)'
+          regexp: 'GSD='
+          line: "{{ duinfo.stdout }}"
+      when: jobname == "BLD2POSD"
+
+    - name: Submit dynamic jobs
+      include_role:
+        name: submit_jobs
+      vars:
+        src: D
+        jobnames:
+          - "{{ jobname }}"
+
+    - name: Display ORDERPOS
+      block:
+      - name: Get ORDERPOS
+        command: dtail -n -100 '{{ ds_sysouts }}(ORDERPOS)'
+        register: ddout
+      - name: Print results
+        debug:
+          var: ddout.stdout_lines
+      when: jobname == "BLD2POSB"
+
+    - name: Finish
+      include_role:
+        name: finish
+
+    - name: List RCs
+      debug:
+        var: jobsrc

@@ -1,0 +1,68 @@
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - October/2020
+# Updates:
+#  May/2021 - redesigned to simplify use
+#  June/2021 - implemented use of roles 
+#
+###############################################################################
+---
+- name: Step5 - Pos IPL check
+  hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
+
+  tasks:
+    - name: Starts
+      include_role:
+        name: start
+
+    - name: Get info
+      include_role:
+        name: get_infos
+      vars:
+        infos: 
+          - StaticConfig
+
+    - name: Save IPL infos
+      include_role:
+        name: submit_jobs
+      vars:
+        src: D
+        jobnames:
+          - BLD4IPLD
+
+    - name: Get OMVS mount failures
+      zos_operator:
+        cmd: 'D OMVS,MF=ALL'
+      register: domvs
+
+    - name: Dysplay it
+      debug:
+        var: domvs.content
+
+    - name: JOBS loop
+      include_role:
+        name: submit_jobs
+      vars:
+        src: S
+        jobnames: "{{ jobs_static_posIPL }}"
+      when: jobs_static_posIPL is iterable
+
+    - name: Finish
+      include_role:
+        name: finish
+
+    - name: List RCs
+      debug:
+        var: jobsrc

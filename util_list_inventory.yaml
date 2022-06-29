@@ -1,0 +1,33 @@
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - October/2020
+# Updates:
+#  May/2021 - redesigned to simplify use
+#  June/2021 - implemented use of roles 
+#
+###############################################################################---
+- name: Util - List inventory
+  hosts: localhost
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
+
+  tasks:
+    - name: Get inventory
+      local_action: 
+        module: shell
+        _raw_params:  "/bin/cat hosts_cirats_inventory.yml"
+      register: hvars
+
+    - name: Display it
+      debug:
+        var: hvars.stdout_lines

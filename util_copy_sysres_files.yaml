@@ -1,0 +1,62 @@
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - October/2020
+# Updates:
+#  May/2021 - redesigned to simplify use
+#  June/2021 - implemented use of roles 
+#
+###############################################################################---
+- name: Util - Copy zOS systems files from current to new sysres
+  hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
+
+  tasks:
+    - name: block
+      block:
+      - name: start
+        include_role:
+          name: start
+
+      - name: Install procs
+        include_role:
+          name: install_procs
+        vars:
+          procnames:
+            - getsysinfo
+            - getsysvar
+
+      - name: Get system infos
+        include_role:
+          name: get_infos
+        vars:
+          infos: 
+            - StaticConfig
+            - SYSR1
+
+      - name: JOBS loop
+        include_role:
+          name: submit_jobs
+        vars:
+          src: D
+          jobnames:            
+            - BLDPOSC
+
+      - name: Finish
+        include_role:
+          name: finish
+
+      - name: List RCs
+        debug:
+          var: jobsrc
+      when: continue == 'Yes'

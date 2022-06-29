@@ -1,0 +1,56 @@
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - September/2021
+# Updates:
+#  
+#
+###############################################################################---
+- name: zOS - Clock Change
+  hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
+
+  tasks:
+    - name: start
+      include_role:
+        name: start
+
+    - name: Set variables
+      set_fact:
+        mode: "{{ modelist[0: 6:] }}"
+        reqid: "{{ reqidlist[0: 2:] }}"
+        max_rc: 9999
+
+    - name: Install procs
+      include_role:
+        name: install_procs
+      vars:
+        procnames:
+          - clockchg
+          - oscmd1s
+
+    - name: Submit dynamic jobs
+      include_role:
+        name: submit_jobs
+      vars:
+        src: D
+        jobnames:              
+          - CLOCKCHG
+
+    - name: Finish
+      include_role:
+        name: finish
+
+    - name: List RCs
+      debug:
+        var: jobsrc

@@ -1,0 +1,65 @@
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - October/2020
+# Updates:
+#  May/2021 - redesigned to simplify use
+#  June/2021 - implemented use of roles
+#
+###############################################################################
+---
+- name: Step2 - send HOLDCARD
+  hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
+
+  tasks:
+    - name: start
+      include_role:
+        name: start
+
+    - name: Create model dataset
+      zos_data_set:
+        batch:
+          - name: "{{ ds_fixcard }}.MODEL"
+            type: SEQ
+            space_primary: 5
+            space_secondary: 1
+            space_type: TRK
+            record_format: FB
+            record_length: 80
+            block_size: 27920
+
+          - name: "{{ ds_fixcard }}.#{{ hld }}"
+            state: absent
+
+    - name: transfer {{ ds_fixcard }}.#{{ hld }} dataset
+      zos_copy:
+        src: "{{ playbook_dir }}/files/holdcards/holdcard_#{{ hld }}.txt"
+        dest: "{{ ds_fixcard }}.#{{ hld }}"
+        model_ds: "{{ ds_fixcard }}.MODEL"
+        is_binary: false
+        ignore_sftp_stderr: true
+        force: true
+        encoding:
+          from: ISO8859-1
+          to: IBM-1047 
+
+    - name: Clean up remote
+      zos_data_set:
+        batch:
+          - name: "{{ ds_fixcard }}.MODEL"
+            state: absent
+
+    - name: finish
+      include_role:
+        name: finish

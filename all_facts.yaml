@@ -1,0 +1,25 @@
+---
+- name: phase1_step1
+  hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: yes
+  environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
+
+- name: Fact dump
+  hosts: all
+  tasks:
+  - name: Print all facts
+    debug:
+      var: ansible_facts
+
+#  - name: Find jobs for
+#    find:
+#      paths: "files/{{ group_names.0 }}"
+#      patterns: '####REQ*'
+#    delegate_to: localhost
+#    register: output
+
+#  - debug:
+#      msg: "{{ output.files }}"

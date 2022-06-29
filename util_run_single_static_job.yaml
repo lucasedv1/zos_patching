@@ -1,0 +1,54 @@
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - October/2020
+# Updates:
+#  May/2021 - redesigned to simplify use
+#  June/2021 - implemented use of roles 
+#
+###############################################################################
+---
+- hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
+#  vars_prompt:
+#    - name: jobname
+#      prompt: "Inform job name "
+#      private: no
+
+  tasks:
+    - name: start
+      include_role:
+        name: start
+
+    - name: Get system infos
+      include_role:
+        name: get_infos
+      vars:
+        infos:
+          - StaticConfig
+
+    - name: Submit dynamic jobs
+      include_role:
+        name: submit_jobs
+      vars:
+        src: S
+        jobnames:
+          - "{{ jobname }}"
+
+    - name: Finish
+      include_role:
+        name: finish
+
+    - name: List RCs
+      debug:
+        var: jobsrc

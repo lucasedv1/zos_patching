@@ -1,0 +1,119 @@
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - january/2022
+# Updates:
+#
+###############################################################################
+---
+- name: util - start new year
+  hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
+
+  tasks:
+    - name: start
+      include_role:
+        name: start
+
+    - name: Create model dataset
+      zos_data_set:
+        batch:
+          - name: "{{ ds_fixcard }}.MODEL"
+            type: SEQ
+            space_primary: 5
+            space_secondary: 1
+            space_type: TRK
+            record_format: FB
+            record_length: 80
+            block_size: 27920
+
+          - name: "{{ ds_fixcard }}.#2017"
+            state: absent
+          - name: "{{ ds_fixcard }}.#2018"
+            state: absent
+          - name: "{{ ds_fixcard }}.#2019"
+            state: absent
+          - name: "{{ ds_fixcard }}.#2020"
+            state: absent
+          - name: "{{ ds_fixcard }}.#2021"
+            state: absent
+
+    - name: transfer 2017 holdcard
+      zos_copy:
+        src: "{{ playbook_dir }}/files/holdcards/holdcard_#2017.txt"
+        dest: "{{ ds_fixcard }}.#2017"
+        model_ds: "{{ ds_fixcard }}.MODEL"
+        is_binary: false
+        ignore_sftp_stderr: true
+        force: true
+        encoding:
+          from: ISO8859-1
+          to: IBM-1047 
+
+    - name: transfer 2018 holdcard
+      zos_copy:
+        src: "{{ playbook_dir }}/files/holdcards/holdcard_#2018.txt"
+        dest: "{{ ds_fixcard }}.#2018"
+        model_ds: "{{ ds_fixcard }}.MODEL"
+        is_binary: false
+        ignore_sftp_stderr: true
+        force: true
+        encoding:
+          from: ISO8859-1
+          to: IBM-1047 
+
+    - name: transfer 2019 holdcard
+      zos_copy:
+        src: "{{ playbook_dir }}/files/holdcards/holdcard_#2019.txt"
+        dest: "{{ ds_fixcard }}.#2019"
+        model_ds: "{{ ds_fixcard }}.MODEL"
+        is_binary: false
+        ignore_sftp_stderr: true
+        force: true
+        encoding:
+          from: ISO8859-1
+          to: IBM-1047 
+
+    - name: transfer 2020 holdcard
+      zos_copy:
+        src: "{{ playbook_dir }}/files/holdcards/holdcard_#2020.txt"
+        dest: "{{ ds_fixcard }}.#2020"
+        model_ds: "{{ ds_fixcard }}.MODEL"
+        is_binary: false
+        ignore_sftp_stderr: true
+        force: true
+        encoding:
+          from: ISO8859-1
+          to: IBM-1047 
+
+    - name: transfer 2021 holdcard
+      zos_copy:
+        src: "{{ playbook_dir }}/files/holdcards/holdcard_#2021.txt"
+        dest: "{{ ds_fixcard }}.#2021"
+        model_ds: "{{ ds_fixcard }}.MODEL"
+        is_binary: false
+        ignore_sftp_stderr: true
+        force: true
+        encoding:
+          from: ISO8859-1
+          to: IBM-1047 
+
+    - name: Clean up remote
+      zos_data_set:
+        batch:
+          - name: "{{ ds_fixcard }}.MODEL"
+            state: absent
+
+    - name: finish
+      include_role:
+        name: finish
