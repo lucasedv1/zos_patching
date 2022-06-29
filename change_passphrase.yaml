@@ -6,7 +6,6 @@
   gather_facts: true
   environment: "{{ environment_vars }}"
   connection: ibm.ibm_zos_core.zos_ssh
-
   tasks:
     - name: change_passphrase
       zos_tso_command:
