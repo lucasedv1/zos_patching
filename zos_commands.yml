@@ -10,8 +10,7 @@
 
   tasks:
     - name: Execute an operator command to show active jobs
-      zos_operator:
-        cmd: 'd u,all'
+      cmd: 'd u,all'
       
  
     # ##########################################################################
