@@ -10,7 +10,8 @@
 
   tasks:
     - name: Execute an operator command to show active jobs
-      command: 'd u,all'
+      zos_operator:
+      cmd: 'd u,all'
       register: duall
       
     - name: Display it
