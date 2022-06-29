@@ -1,7 +1,6 @@
 - name: Command to show system symbols
-  zos_operator:
-        cmd: 'D SYMBOLS'
-        register: dsymbols
+  cmd: 'D SYMBOLS'
+  register: dsymbols
       
 - name: Display it
   debug:
