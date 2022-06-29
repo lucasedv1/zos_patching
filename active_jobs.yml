@@ -1,7 +1,7 @@
 ---
 - hosts: all
   collections:
-    - ibm.ibm_zos_core
+    - ibm.ibm_zos_core.zos_operator
   gather_facts: no
   vars:
     tgt_tmp_dir: "/tmp"
