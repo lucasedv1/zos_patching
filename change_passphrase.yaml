@@ -1,14 +1,4 @@
-- name: Change passphrase
-  hosts: all
-  collections:
-    - ibm.ibm_zos_core
-  gather_facts: true
-  environment: "{{ environment_vars }}"
-  connection: ibm.ibm_zos_core.zos_ssh
-  
-  
-  tasks:
-    - name: change_passphrase
+    - name: Execute TSO command to change passphrase
       zos_tso_command:
       commands: 
            - PASSWORD PHRASE
