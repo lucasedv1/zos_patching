@@ -10,4 +10,4 @@
 
   tasks:
     - name: Execute an operator command to show active jobs
-      command: 'd u,all'
+      shell: 'd u,all'
