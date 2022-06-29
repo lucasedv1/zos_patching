@@ -1,5 +1,5 @@
 - name: Command to show system symbols
-  cmd: 'D SYMBOLS'
+  command: 'D SYMBOLS'
   register: dsymbols
       
 - name: Display it
