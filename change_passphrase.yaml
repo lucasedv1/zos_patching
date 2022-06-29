@@ -13,6 +13,8 @@
 #  June/2021 - implemented use of roles 
 #
 ###############################################################################
+
+---
 - name: Change passphrase
   hosts: all
   collections:
