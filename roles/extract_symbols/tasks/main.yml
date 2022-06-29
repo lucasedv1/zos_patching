@@ -1,0 +1,31 @@
+---
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - June/2021
+# Updates:
+#
+###############################################################################
+# tasks file for roles/extract_symbols
+
+- name: Get symbols
+  shell: /tmp/ansible/{{ ansible_user_id|lower }}/cirats/getsysinfo.rexx 'SYM'
+  register: rx_symbols
+
+- name: Extract symbols
+  include_tasks: files/extr_symbols.yaml
+  loop: "{{ rx_symbols.stdout_lines }}"
+  loop_control:
+    loop_var: symbs
+
+- name: Extract sym members
+  include_tasks: files/extr_sym.yaml
+  loop: "{{ rx_symbols.stdout_lines }}"
+  loop_control:
+    loop_var: syms

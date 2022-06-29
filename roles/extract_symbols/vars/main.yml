@@ -1,0 +1,5 @@
+---
+# vars file for roles/extract_symbols
+
+sym_members: []
+symb_lines: []

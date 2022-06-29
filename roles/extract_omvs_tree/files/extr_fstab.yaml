@@ -1,0 +1,6 @@
+- name: tree lines
+  set_fact:
+    fs_table: "{{ fs_table + 
+              [fss[fss.rfind(' ')+1:].ljust(80) +
+               fss[0: fss.find(' '):].ljust(44)] }} "
+  when: "fss[fss.rfind(' ')+1: fss.rfind(' ')+4:] != '/u/' and fss[0: 4:] != '*AMD' and fss[0: 10:] != 'Filesystem'"

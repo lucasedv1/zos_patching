@@ -1,0 +1,29 @@
+---
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# z/OS CIRATS Installation
+#
+# Author:
+#  Benevides Mamede Jr - June/2021
+# Updates:
+#
+###############################################################################
+# tasks file for roles/extract_omvs_tree
+
+- name: Get file systems
+  shell: df -kP 
+  register: df_fs
+
+- name: Contruct fs table
+  include_tasks: files/extr_fstab.yaml
+  loop: "{{ df_fs.stdout_lines }}"
+  loop_control:
+    loop_var: fss
+
+- name: Sort it
+  set_fact:
+    fs_table: "{{ fs_table | sort }}"
