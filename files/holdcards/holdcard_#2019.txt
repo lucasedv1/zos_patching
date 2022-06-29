@@ -1,0 +1,1584 @@
+++HOLD(HJS7790) FMID(HJS7790) FIXCAT CATEGORY (SIA-MVS-2019.01-1 )              
+ REASON(OA56004) RESOLVER(UA97768) CLASS(MJ3Z210)                               
+ .                                                                              
+++HOLD(HJS77A0) FMID(HJS77A0) FIXCAT CATEGORY (SIA-MVS-2019.01-1 )              
+ REASON(OA56004) RESOLVER(UA97766) CLASS(MJ3Z220)                               
+ .                                                                              
+++HOLD(HJS77B0) FMID(HJS77B0) FIXCAT CATEGORY (SIA-MVS-2019.01-1 )              
+ REASON(OA56004) RESOLVER(UA97736) CLASS(MJ3Z230)                               
+ .                                                                              
+++HOLD(HZFS430) FMID(HZFS430) FIXCAT CATEGORY (SIA-MVS-2019.01-2 )              
+ REASON(OA55704) RESOLVER(UA97159) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HZFS420) FMID(HZFS420) FIXCAT CATEGORY (SIA-MVS-2019.01-2 )              
+ REASON(OA55704) RESOLVER(UA97157) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HZFS410) FMID(HZFS410) FIXCAT CATEGORY (SIA-MVS-2019.01-2 )              
+ REASON(OA55704) RESOLVER(UA97156) CLASS(MZOS210)                               
+ .                                                                              
+++HOLD(HJVB601) FMID(HJVB601) FIXCAT CATEGORY (SIA-MVS-2019.01-3 )              
+ REASON(PH05722) RESOLVER(UI59950) CLASS(HJTB601)                               
+ .                                                                              
+++HOLD(HRF7790) FMID(HRF7790) FIXCAT CATEGORY (SIA-MVS-2019.01-6 )              
+ REASON(OA55864) RESOLVER(UA98136) CLASS(LZOS210)                               
+ .                                                                              
+++HOLD(HRF77A0) FMID(HRF77A0) FIXCAT CATEGORY (SIA-MVS-2019.01-6 )              
+ REASON(OA55864) RESOLVER(UA98135) CLASS(LZOS220)                               
+ .                                                                              
+++HOLD(HRF77B0) FMID(HRF77B0) FIXCAT CATEGORY (SIA-MVS-2019.01-6 )              
+ REASON(OA55864) RESOLVER(UA98110) CLASS(LZOS230)                               
+ .                                                                              
+++HOLD(HUN77B0) FMID(HUN77B0) FIXCAT CATEGORY (SIA-MVS-2019.01-7 )              
+ REASON(OA56511) RESOLVER(UA98031) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HXML1A0) FMID(HXML1A0) FIXCAT CATEGORY (SIA-MVS-2019.01-8 )              
+ REASON(OA56607) RESOLVER(UA98244) CLASS(HXML1A0)                               
+ .                                                                              
+++HOLD(HRM77A0) FMID(HRM77A0) FIXCAT CATEGORY (SIA-MVS-2019.01-9 )              
+ REASON(OA56492) RESOLVER(UA98088) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HRM77B0) FMID(HRM77B0) FIXCAT CATEGORY (SIA-MVS-2019.01-9 )              
+ REASON(OA56492) RESOLVER(UA98089) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HIP6230) FMID(HIP6230) FIXCAT CATEGORY (SIA-MVS-2019.01-10)              
+ REASON(PH00025) RESOLVER(UI59314) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HIP6220) FMID(HIP6220) FIXCAT CATEGORY (SIA-MVS-2019.01-10)              
+ REASON(PH00025) RESOLVER(UI59313) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HIP6220) FMID(HIP6220) FIXCAT CATEGORY (SIA-MVS-2019.01-11)              
+ REASON(PH02743) RESOLVER(UI59586) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HIP6230) FMID(HIP6230) FIXCAT CATEGORY (SIA-MVS-2019.01-11)              
+ REASON(PH02743) RESOLVER(UI59587) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HRCC606) FMID(HRCC606) FIXCAT CATEGORY (SIA-MVS-2019.01-12)              
+ REASON(PH05696) RESOLVER(UI60135) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HMS8000) FMID(HMS8000) FIXCAT CATEGORY (SIA-MVS-2019.02-1 )              
+ REASON(PH04032) RESOLVER(UI60623) CLASS(MMQM800)                               
+ .                                                                              
+++HOLD(HANA110) FMID(HANA110) FIXCAT CATEGORY (SIA-MVS-2019.02-2 )              
+ REASON(PH04965) RESOLVER(UI59973) CLASS(HODA110)                               
+ .                                                                              
+++HOLD(HMS9000) FMID(HMS9000) FIXCAT CATEGORY (SIA-MVS-2019.02-3 )              
+ REASON(PH06417) RESOLVER(UI60624) CLASS(MMQM900)                               
+ .                                                                              
+++HOLD(HMS9100) FMID(HMS9100) FIXCAT CATEGORY (SIA-MVS-2019.02-3 )              
+ REASON(PH06417) RESOLVER(UI60625) CLASS(MMQM910)                               
+ .                                                                              
+++HOLD(JCI680L) FMID(JCI680L) FIXCAT CATEGORY (SIA-MVS-2019.02-4 )              
+ REASON(PH07231) RESOLVER(UI60941) CLASS(HCTS510)                               
+ .                                                                              
+++HOLD(JCI690L) FMID(JCI690L) FIXCAT CATEGORY (SIA-MVS-2019.02-4 )              
+ REASON(PH07231) RESOLVER(UI60942) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(JCI700L) FMID(JCI700L) FIXCAT CATEGORY (SIA-MVS-2019.02-4 )              
+ REASON(PH07231) RESOLVER(UI60945) CLASS(HCTS530)                               
+ .                                                                              
+++HOLD(JCI710L) FMID(JCI710L) FIXCAT CATEGORY (SIA-MVS-2019.02-4 )              
+ REASON(PH07231) RESOLVER(UI60949) CLASS(HCTS540)                               
+ .                                                                              
+++HOLD(JCI720L) FMID(JCI720L) FIXCAT CATEGORY (SIA-MVS-2019.02-4 )              
+ REASON(PH07231) RESOLVER(UI60952) CLASS(HCTS550)                               
+ .                                                                              
+++HOLD(HPV77B0) FMID(HPV77B0) FIXCAT CATEGORY (SIA-MVS-2019.02-5 )              
+ REASON(OA56632) RESOLVER(UA98412) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HPV77A0) FMID(HPV77A0) FIXCAT CATEGORY (SIA-MVS-2019.02-5 )              
+ REASON(OA56632) RESOLVER(UA98411) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HJS77A0) FMID(HJS77A0) FIXCAT CATEGORY (SIA-MVS-2019.02-6 )              
+ REASON(OA56080) RESOLVER(UA98272) CLASS(HJ3Z220)                               
+ .                                                                              
+++HOLD(HJS77B0) FMID(HJS77B0) FIXCAT CATEGORY (SIA-MVS-2019.02-6 )              
+ REASON(OA56080) RESOLVER(UA98267) CLASS(HJ3Z230)                               
+ .                                                                              
+++HOLD(HJS7790) FMID(HJS7790) FIXCAT CATEGORY (SIA-MVS-2019.02-6 )              
+ REASON(OA56080) RESOLVER(UA98273) CLASS(HJ3Z210)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.02-7 )              
+ REASON(OA56363) RESOLVER(UA98233) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.02-7 )              
+ REASON(OA56363) RESOLVER(UA98222) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.02-8 )              
+ REASON(OA56648) RESOLVER(UA98246) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.02-8 )              
+ REASON(OA56648) RESOLVER(UA98245) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.02-9 )              
+ REASON(OA56626) RESOLVER(UA98375) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.02-9 )              
+ REASON(OA56626) RESOLVER(UA98376) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(H0GI400) FMID(H0GI400) FIXCAT CATEGORY (SIA-MVS-2019.02-11)              
+ REASON(OA56586) RESOLVER(UA98288) CLASS(HZOSXXX)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.02-12)              
+ REASON(OA56513) RESOLVER(UA98224) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.02-12)              
+ REASON(OA56513) RESOLVER(UA98225) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HJE7790) FMID(HJE7790) FIXCAT CATEGORY (SIA-MVS-2019.02-14)              
+ REASON(OA56024) RESOLVER(UA98296) CLASS(HJ2Z210)                               
+ .                                                                              
+++HOLD(HJE77B0) FMID(HJE77B0) FIXCAT CATEGORY (SIA-MVS-2019.02-14)              
+ REASON(OA56024) RESOLVER(UA98274) CLASS(HJ2Z230)                               
+ .                                                                              
+++HOLD(HJE77A0) FMID(HJE77A0) FIXCAT CATEGORY (SIA-MVS-2019.02-14)              
+ REASON(OA56024) RESOLVER(UA98275) CLASS(HJ2Z220)                               
+ .                                                                              
+++HOLD(HIP6230) FMID(HIP6230) FIXCAT CATEGORY (SIA-MVS-2019.02-15)              
+ REASON(PH04384) RESOLVER(UI60588) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HIP6220) FMID(HIP6220) FIXCAT CATEGORY (SIA-MVS-2019.02-15)              
+ REASON(PH04384) RESOLVER(UI60587) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HRCC502) FMID(HRCC502) FIXCAT CATEGORY (SIA-MVS-2019.02-16)              
+ REASON(PH05663) RESOLVER(UI60727) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HRCC602) FMID(HRCC602) FIXCAT CATEGORY (SIA-MVS-2019.02-17)              
+ REASON(PH06290) RESOLVER(UI60526) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDBCC10) FMID(HDBCC10) FIXCAT CATEGORY (SIA-MVS-2019.03-1 )              
+ REASON(PI82922) RESOLVER(UI58518) CLASS(MDB2C10)                               
+ .                                                                              
+++HOLD(HDBBB10) FMID(HDBBB10) FIXCAT CATEGORY (SIA-MVS-2019.03-1 )              
+ REASON(PI82922) RESOLVER(UI58519) CLASS(MDB2B10)                               
+ .                                                                              
+++HOLD(H238320) FMID(H238320) FIXCAT CATEGORY (SIA-MVS-2019.03-2 )              
+ REASON(PH02539) RESOLVER(UI60137) CLASS(HDQM320)                               
+ .                                                                              
+++HOLD(H238330) FMID(H238330) FIXCAT CATEGORY (SIA-MVS-2019.03-2 )              
+ REASON(PH02539) RESOLVER(UI60138) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(JCI680L) FMID(JCI680L) FIXCAT CATEGORY (SIA-MVS-2019.03-4 )              
+ REASON(PI98914) RESOLVER(UI57499) CLASS(HCTS510)                               
+ .                                                                              
+++HOLD(JCI690L) FMID(JCI690L) FIXCAT CATEGORY (SIA-MVS-2019.03-4 )              
+ REASON(PI98914) RESOLVER(UI57500) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(JCI700L) FMID(JCI700L) FIXCAT CATEGORY (SIA-MVS-2019.03-4 )              
+ REASON(PI98914) RESOLVER(UI57501) CLASS(HCTS530)                               
+ .                                                                              
+++HOLD(JCI710L) FMID(JCI710L) FIXCAT CATEGORY (SIA-MVS-2019.03-4 )              
+ REASON(PI98914) RESOLVER(UI57502) CLASS(HCTS540)                               
+ .                                                                              
+++HOLD(HKLV630) FMID(HKLV630) FIXCAT CATEGORY (SIA-MVS-2019.03-5 )              
+ REASON(OA54964) RESOLVER(UA95518) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HKDS630) FMID(HKDS630) FIXCAT CATEGORY (SIA-MVS-2019.03-6 )              
+ REASON(OA54969) RESOLVER(UA95516) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.03-7 )              
+ REASON(OA56659) RESOLVER(UA98404) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.03-7 )              
+ REASON(OA56659) RESOLVER(UA98403) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HRF77A0) FMID(HRF77A0) FIXCAT CATEGORY (SIA-MVS-2019.03-8 )              
+ REASON(OA56343) RESOLVER(UA98394) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HRF77B0) FMID(HRF77B0) FIXCAT CATEGORY (SIA-MVS-2019.03-8 )              
+ REASON(OA56343) RESOLVER(UA98393) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HRF77A0) FMID(HRF77A0) FIXCAT CATEGORY (SIA-MVS-2019.03-9 )              
+ REASON(OA56339) RESOLVER(UA98409) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HRF77B0) FMID(HRF77B0) FIXCAT CATEGORY (SIA-MVS-2019.03-9 )              
+ REASON(OA56339) RESOLVER(UA98408) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HCM1E10) FMID(HCM1E10) FIXCAT CATEGORY (SIA-MVS-2019.03-10)              
+ REASON(IO26421) RESOLVER(UO01888) CLASS(HZOS210)                               
+ .                                                                              
+++HOLD(HCM1G10) FMID(HCM1G10) FIXCAT CATEGORY (SIA-MVS-2019.03-10)              
+ REASON(IO26421) RESOLVER(UO01887) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HCM1F10) FMID(HCM1F10) FIXCAT CATEGORY (SIA-MVS-2019.03-10)              
+ REASON(IO26421) RESOLVER(UO01889) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HIF7N02) FMID(HIF7N02) FIXCAT CATEGORY (SIA-MVS-2019.03-11)              
+ REASON(OA56642) RESOLVER(UA98481) CLASS(HZOS210)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.03-12)              
+ REASON(OA56616) RESOLVER(UA98513) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.03-12)              
+ REASON(OA56616) RESOLVER(UA98515) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HKCZ100) FMID(HKCZ100) FIXCAT CATEGORY (SIA-MVS-2019.03-15)              
+ REASON(PH04576) RESOLVER(UI61135) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.03-16)              
+ REASON(PH05791) RESOLVER(UI60278) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.03-17)              
+ REASON(PH05793) RESOLVER(UI60277) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HIP6220) FMID(HIP6220) FIXCAT CATEGORY (SIA-MVS-2019.03-18)              
+ REASON(PH06553) RESOLVER(UI60664) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HIP6230) FMID(HIP6230) FIXCAT CATEGORY (SIA-MVS-2019.03-18)              
+ REASON(PH06553) RESOLVER(UI60665) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HHAP85P) FMID(HHAP85P) FIXCAT CATEGORY (SIA-MVS-2019.03-19)              
+ REASON(PH08219) RESOLVER(UI61402) CLASS(MZOSXXX)                               
+ .                                                                              
+++HOLD(HKCZ110) FMID(HKCZ110) FIXCAT CATEGORY (SIA-MVS-2019.03-20)              
+ REASON(PH08801) RESOLVER(UI61488) CLASS(LZOS230)                               
+ .                                                                              
+++HOLD(HMK1500) FMID(HMK1500) FIXCAT CATEGORY (SIA-MVS-2019.04-3 )              
+ REASON(PH02642) RESOLVER(UI61853) CLASS(HIMSF10)                               
+ .                                                                              
+++HOLD(JCI690D) FMID(JCI690D) FIXCAT CATEGORY (SIA-MVS-2019.04-4 )              
+ REASON(PH05342) RESOLVER(UI61962) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(JCI6903) FMID(JCI6903) FIXCAT CATEGORY (SIA-MVS-2019.04-4 )              
+ REASON(PH05342) RESOLVER(UI61963) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(JCI710D) FMID(JCI710D) FIXCAT CATEGORY (SIA-MVS-2019.04-4 )              
+ REASON(PH05342) RESOLVER(UI61964) CLASS(HCTS540)                               
+ .                                                                              
+++HOLD(JCI7103) FMID(JCI7103) FIXCAT CATEGORY (SIA-MVS-2019.04-4 )              
+ REASON(PH05342) RESOLVER(UI61965) CLASS(HCTS540)                               
+ .                                                                              
+++HOLD(JCI680D) FMID(JCI680D) FIXCAT CATEGORY (SIA-MVS-2019.04-4 )              
+ REASON(PH05342) RESOLVER(UI61966) CLASS(HCTS510)                               
+ .                                                                              
+++HOLD(JCI6803) FMID(JCI6803) FIXCAT CATEGORY (SIA-MVS-2019.04-4 )              
+ REASON(PH05342) RESOLVER(UI61967) CLASS(HCTS510)                               
+ .                                                                              
+++HOLD(JCI700D) FMID(JCI700D) FIXCAT CATEGORY (SIA-MVS-2019.04-4 )              
+ REASON(PH05342) RESOLVER(UI61968) CLASS(HCTS530)                               
+ .                                                                              
+++HOLD(JCI7003) FMID(JCI7003) FIXCAT CATEGORY (SIA-MVS-2019.04-4 )              
+ REASON(PH05342) RESOLVER(UI61969) CLASS(HCTS530)                               
+ .                                                                              
+++HOLD(HCI7200) FMID(HCI7200) FIXCAT CATEGORY (SIA-MVS-2019.04-4 )              
+ REASON(PH05342) RESOLVER(UI61970) CLASS(HCTS550)                               
+ .                                                                              
+++HOLD(HSPK120) FMID(HSPK120) FIXCAT CATEGORY (SIA-MVS-2019.04-5 )              
+ REASON(PH08651) RESOLVER(UI61615) CLASS(HODA110)                               
+ .                                                                              
+++HOLD(HJVA800) FMID(HJVA800) FIXCAT CATEGORY (SIA-MVS-2019.04-6 )              
+ REASON(PH09376) RESOLVER(UI61762) CLASS(HJTE800)                               
+ .                                                                              
+++HOLD(HMK1300) FMID(HMK1300) FIXCAT CATEGORY (SIA-MVS-2019.04-7 )              
+ REASON(PH08056) RESOLVER(UI61858) CLASS(HIMSD10)                               
+ .                                                                              
+++HOLD(HMK1400) FMID(HMK1400) FIXCAT CATEGORY (SIA-MVS-2019.04-8 )              
+ REASON(PH08061) RESOLVER(UI61854) CLASS(HIMSE10)                               
+ .                                                                              
+++HOLD(HJVB800) FMID(HJVB800) FIXCAT CATEGORY (SIA-MVS-2019.04-9 )              
+ REASON(PH09473) RESOLVER(UI61763) CLASS(HJTB800)                               
+ .                                                                              
+++HOLD(JCI720L) FMID(JCI720L) FIXCAT CATEGORY (SIA-MVS-2019.04-10)              
+ REASON(PH09517) RESOLVER(UI62103) CLASS(HCTS550)                               
+ .                                                                              
+++HOLD(JCI700L) FMID(JCI700L) FIXCAT CATEGORY (SIA-MVS-2019.04-10)              
+ REASON(PH09517) RESOLVER(UI62104) CLASS(HCTS530)                               
+ .                                                                              
+++HOLD(JCI690L) FMID(JCI690L) FIXCAT CATEGORY (SIA-MVS-2019.04-10)              
+ REASON(PH09517) RESOLVER(UI62105) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(JCI710L) FMID(JCI710L) FIXCAT CATEGORY (SIA-MVS-2019.04-10)              
+ REASON(PH09517) RESOLVER(UI62106) CLASS(HCTS540)                               
+ .                                                                              
+++HOLD(JCI680L) FMID(JCI680L) FIXCAT CATEGORY (SIA-MVS-2019.04-10)              
+ REASON(PH09517) RESOLVER(UI62107) CLASS(HCTS510)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.04-11)              
+ REASON(OA56631) RESOLVER(UA98863) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.04-11)              
+ REASON(OA56631) RESOLVER(UA98860) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.04-12)              
+ REASON(OA56676) RESOLVER(UA98565) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.04-12)              
+ REASON(OA56676) RESOLVER(UA98564) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.04-13)              
+ REASON(OA56696) RESOLVER(UA98526) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.04-13)              
+ REASON(OA56696) RESOLVER(UA98527) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HRM77B0) FMID(HRM77B0) FIXCAT CATEGORY (SIA-MVS-2019.04-14)              
+ REASON(OA56913) RESOLVER(UA98887) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HRM77A0) FMID(HRM77A0) FIXCAT CATEGORY (SIA-MVS-2019.04-14)              
+ REASON(OA56913) RESOLVER(UA98886) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(JCPT421) FMID(JCPT421) FIXCAT CATEGORY (SIA-MVS-2019.04-15)              
+ REASON(OA57026) RESOLVER(UA98809) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(JCPT431) FMID(JCPT431) FIXCAT CATEGORY (SIA-MVS-2019.04-15)              
+ REASON(OA57026) RESOLVER(UA98797) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HCPT430) FMID(HCPT430) FIXCAT CATEGORY (SIA-MVS-2019.04-15)              
+ REASON(OA57026) RESOLVER(UA98796) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HCPT420) FMID(HCPT420) FIXCAT CATEGORY (SIA-MVS-2019.04-15)              
+ REASON(OA57026) RESOLVER(UA98798) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HZFS430) FMID(HZFS430) FIXCAT CATEGORY (SIA-MVS-2019.04-16)              
+ REASON(OA56856) RESOLVER(UA98611) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.04-17)              
+ REASON(OA56194) RESOLVER(UA98658) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.04-17)              
+ REASON(OA56194) RESOLVER(UA98659) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.04-18)              
+ REASON(OA56197) RESOLVER(UA98636) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2210) FMID(HDZ2210) FIXCAT CATEGORY (SIA-MVS-2019.04-18)              
+ REASON(OA56197) RESOLVER(UA98641) CLASS(MZOS210)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.04-18)              
+ REASON(OA56197) RESOLVER(UA98642) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.04-19)              
+ REASON(PH07073) RESOLVER(UI61855) CLASS(LZOS230)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.04-20)              
+ REASON(PH07074) RESOLVER(UI61852) CLASS(LZOS230)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.04-21)              
+ REASON(PH08366) RESOLVER(UI61889) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HSMA220) FMID(HSMA220) FIXCAT CATEGORY (SIA-MVS-2019.04-22)              
+ REASON(PH08812) RESOLVER(UI61729) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HSMA230) FMID(HSMA230) FIXCAT CATEGORY (SIA-MVS-2019.04-22)              
+ REASON(PH08812) RESOLVER(UI61728) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HJVA710) FMID(HJVA710) FIXCAT CATEGORY (SIA-MVS-2019.05-1 )              
+ REASON(PH09601) RESOLVER(UI61958) CLASS(HJTE710)                               
+ .                                                                              
+++HOLD(HJVA700) FMID(HJVA700) FIXCAT CATEGORY (SIA-MVS-2019.05-2 )              
+ REASON(PH10115) RESOLVER(UI62241) CLASS(LJTE700)                               
+ .                                                                              
+++HOLD(HJVA700) FMID(HJVA700) FIXCAT CATEGORY (SIA-MVS-2019.05-3 )              
+ REASON(PH11323) RESOLVER(UI62689) CLASS(HJTE700)                               
+ .                                                                              
+++HOLD(HJVA710) FMID(HJVA710) FIXCAT CATEGORY (SIA-MVS-2019.05-4 )              
+ REASON(PH11441) RESOLVER(UI62722) CLASS(HJTE710)                               
+ .                                                                              
+++HOLD(HSPK120) FMID(HSPK120) FIXCAT CATEGORY (SIA-MVS-2019.05-5 )              
+ REASON(PH08649) RESOLVER(UI62325) CLASS(HODA110)                               
+ .                                                                              
+++HOLD(HJVB710) FMID(HJVB710) FIXCAT CATEGORY (SIA-MVS-2019.05-6 )              
+ REASON(PH09603) RESOLVER(UI61959) CLASS(HJTB710)                               
+ .                                                                              
+++HOLD(HJVB700) FMID(HJVB700) FIXCAT CATEGORY (SIA-MVS-2019.05-7 )              
+ REASON(PH10116) RESOLVER(UI62242) CLASS(LJTB700)                               
+ .                                                                              
+++HOLD(HJVB700) FMID(HJVB700) FIXCAT CATEGORY (SIA-MVS-2019.05-8 )              
+ REASON(PH11324) RESOLVER(UI62690) CLASS(HJTB700)                               
+ .                                                                              
+++HOLD(HJVB710) FMID(HJVB710) FIXCAT CATEGORY (SIA-MVS-2019.05-9 )              
+ REASON(PH11442) RESOLVER(UI62723) CLASS(HJTB710)                               
+ .                                                                              
+++HOLD(HOS2230) FMID(HOS2230) FIXCAT CATEGORY (SIA-MVS-2019.05-10)              
+ REASON(OA56911) RESOLVER(UA99083) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HOS2220) FMID(HOS2220) FIXCAT CATEGORY (SIA-MVS-2019.05-10)              
+ REASON(OA56911) RESOLVER(UA99084) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HCR77C1) FMID(HCR77C1) FIXCAT CATEGORY (SIA-MVS-2019.05-11)              
+ REASON(OA57274) RESOLVER(UA99156) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HCR77D0) FMID(HCR77D0) FIXCAT CATEGORY (SIA-MVS-2019.05-11)              
+ REASON(OA57274) RESOLVER(UA99157) CLASS(HICG7D0)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.05-12)              
+ REASON(OA56389) RESOLVER(UA98904) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HBB77C0) FMID(HBB77C0) FIXCAT CATEGORY (SIA-MVS-2019.05-12)              
+ REASON(OA56389) RESOLVER(UA98899) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.05-12)              
+ REASON(OA56389) RESOLVER(UA98905) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HKY77A0) FMID(HKY77A0) FIXCAT CATEGORY (SIA-MVS-2019.05-13)              
+ REASON(OA56883) RESOLVER(UA99025) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HKY77B0) FMID(HKY77B0) FIXCAT CATEGORY (SIA-MVS-2019.05-13)              
+ REASON(OA56883) RESOLVER(UA99021) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HKY77C0) FMID(HKY77C0) FIXCAT CATEGORY (SIA-MVS-2019.05-13)              
+ REASON(OA56883) RESOLVER(UA99022) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HOPI7A0) FMID(HOPI7A0) FIXCAT CATEGORY (SIA-MVS-2019.05-14)              
+ REASON(OA56872) RESOLVER(UA99105) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HOPI7B0) FMID(HOPI7B0) FIXCAT CATEGORY (SIA-MVS-2019.05-14)              
+ REASON(OA56872) RESOLVER(UA99087) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HCR77D0) FMID(HCR77D0) FIXCAT CATEGORY (SIA-MVS-2019.05-15)              
+ REASON(OA57275) RESOLVER(UA99165) CLASS(HICG7D0)                               
+ .                                                                              
+++HOLD(HCR77C1) FMID(HCR77C1) FIXCAT CATEGORY (SIA-MVS-2019.05-15)              
+ REASON(OA57275) RESOLVER(UA99164) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HCR77B0) FMID(HCR77B0) FIXCAT CATEGORY (SIA-MVS-2019.05-15)              
+ REASON(OA57275) RESOLVER(UA99168) CLASS(HZOSXXX)                               
+ .                                                                              
+++HOLD(HCR77B1) FMID(HCR77B1) FIXCAT CATEGORY (SIA-MVS-2019.05-15)              
+ REASON(OA57275) RESOLVER(UA99169) CLASS(HICG7B1)                               
+ .                                                                              
+++HOLD(HCR77C0) FMID(HCR77C0) FIXCAT CATEGORY (SIA-MVS-2019.05-15)              
+ REASON(OA57275) RESOLVER(UA99171) CLASS(HICG7C0)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.05-16)              
+ REASON(OA56887) RESOLVER(UA98653) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.05-16)              
+ REASON(OA56887) RESOLVER(UA98652) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.05-17)              
+ REASON(PH08357) RESOLVER(UI62308) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.05-18)              
+ REASON(PH08362) RESOLVER(UI62369) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HMFA130) FMID(HMFA130) FIXCAT CATEGORY (SIA-MVS-2019.06-2 )              
+ REASON(PH07186) RESOLVER(UI61377) CLASS(MMFZ130)                               
+ .                                                                              
+++HOLD(HJVA800) FMID(HJVA800) FIXCAT CATEGORY (SIA-MVS-2019.06-3 )              
+ REASON(PH11494) RESOLVER(UI62741) CLASS(HJTE800)                               
+ .                                                                              
+++HOLD(JCI680L) FMID(JCI680L) FIXCAT CATEGORY (SIA-MVS-2019.06-4 )              
+ REASON(PH11833) RESOLVER(UI63152) CLASS(HCTS510)                               
+ .                                                                              
+++HOLD(JCI690L) FMID(JCI690L) FIXCAT CATEGORY (SIA-MVS-2019.06-4 )              
+ REASON(PH11833) RESOLVER(UI63154) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(JCI710L) FMID(JCI710L) FIXCAT CATEGORY (SIA-MVS-2019.06-4 )              
+ REASON(PH11833) RESOLVER(UI63156) CLASS(HCTS540)                               
+ .                                                                              
+++HOLD(JCI700L) FMID(JCI700L) FIXCAT CATEGORY (SIA-MVS-2019.06-4 )              
+ REASON(PH11833) RESOLVER(UI63158) CLASS(HCTS530)                               
+ .                                                                              
+++HOLD(JCI720L) FMID(JCI720L) FIXCAT CATEGORY (SIA-MVS-2019.06-4 )              
+ REASON(PH11833) RESOLVER(UI63160) CLASS(HCTS550)                               
+ .                                                                              
+++HOLD(HMK1400) FMID(HMK1400) FIXCAT CATEGORY (SIA-MVS-2019.06-5 )              
+ REASON(PH04717) RESOLVER(UI63177) CLASS(MIMSE10)                               
+ .                                                                              
+++HOLD(JMK1402) FMID(JMK1402) FIXCAT CATEGORY (SIA-MVS-2019.06-5 )              
+ REASON(PH04717) RESOLVER(UI63178) CLASS(MIMSE10)                               
+ .                                                                              
+++HOLD(HMK1500) FMID(HMK1500) FIXCAT CATEGORY (SIA-MVS-2019.06-6 )              
+ REASON(PH08655) RESOLVER(UI63219) CLASS(MIMSF10)                               
+ .                                                                              
+++HOLD(JMK1502) FMID(JMK1502) FIXCAT CATEGORY (SIA-MVS-2019.06-6 )              
+ REASON(PH08655) RESOLVER(UI63220) CLASS(MIMSF10)                               
+ .                                                                              
+++HOLD(HJVB800) FMID(HJVB800) FIXCAT CATEGORY (SIA-MVS-2019.06-8 )              
+ REASON(PH11528) RESOLVER(UI62742) CLASS(HJTB800)                               
+ .                                                                              
+++HOLD(HVT6240) FMID(HVT6240) FIXCAT CATEGORY (SIA-MVS-2019.06-10)              
+ REASON(OA57373) RESOLVER(UA99204) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HRM77A0) FMID(HRM77A0) FIXCAT CATEGORY (SIA-MVS-2019.06-11)              
+ REASON(OA57219) RESOLVER(UA99389) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HRM77B0) FMID(HRM77B0) FIXCAT CATEGORY (SIA-MVS-2019.06-11)              
+ REASON(OA57219) RESOLVER(UA99390) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HRM77A0) FMID(HRM77A0) FIXCAT CATEGORY (SIA-MVS-2019.06-12)              
+ REASON(OA56116) RESOLVER(UA99265) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HRM77B0) FMID(HRM77B0) FIXCAT CATEGORY (SIA-MVS-2019.06-12)              
+ REASON(OA56116) RESOLVER(UA99266) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HRF77B0) FMID(HRF77B0) FIXCAT CATEGORY (SIA-MVS-2019.06-13)              
+ REASON(OA56690) RESOLVER(UA99422) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HRF77C0) FMID(HRF77C0) FIXCAT CATEGORY (SIA-MVS-2019.06-13)              
+ REASON(OA56690) RESOLVER(UA99423) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HRF77A0) FMID(HRF77A0) FIXCAT CATEGORY (SIA-MVS-2019.06-13)              
+ REASON(OA56690) RESOLVER(UA99424) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.06-14)              
+ REASON(OA56615) RESOLVER(UA99299) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HBB77C0) FMID(HBB77C0) FIXCAT CATEGORY (SIA-MVS-2019.06-14)              
+ REASON(OA56615) RESOLVER(UA99300) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.06-14)              
+ REASON(OA56615) RESOLVER(UA99301) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HKJJ540) FMID(HKJJ540) FIXCAT CATEGORY (SIA-MVS-2019.06-15)              
+ REASON(OA57163) RESOLVER(UA99494) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HBB77C0) FMID(HBB77C0) FIXCAT CATEGORY (SIA-MVS-2019.06-16)              
+ REASON(OA57328) RESOLVER(UA99174) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HRM77A0) FMID(HRM77A0) FIXCAT CATEGORY (SIA-MVS-2019.06-17)              
+ REASON(OA57218) RESOLVER(UA99387) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HRM77B0) FMID(HRM77B0) FIXCAT CATEGORY (SIA-MVS-2019.06-17)              
+ REASON(OA57218) RESOLVER(UA99388) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HRF77A0) FMID(HRF77A0) FIXCAT CATEGORY (SIA-MVS-2019.06-18)              
+ REASON(OA57010) RESOLVER(UA99213) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HRF77B0) FMID(HRF77B0) FIXCAT CATEGORY (SIA-MVS-2019.06-18)              
+ REASON(OA57010) RESOLVER(UA99205) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HRF77C0) FMID(HRF77C0) FIXCAT CATEGORY (SIA-MVS-2019.06-18)              
+ REASON(OA57010) RESOLVER(UA99206) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HXFR2D0) FMID(HXFR2D0) FIXCAT CATEGORY (SIA-MVS-2019.07-1 )              
+ REASON(OA57078) RESOLVER(UA99420) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HXFR2C0) FMID(HXFR2C0) FIXCAT CATEGORY (SIA-MVS-2019.07-1 )              
+ REASON(OA57078) RESOLVER(UA99421) CLASS(HZOSXXX)                               
+ .                                                                              
+++HOLD(HIF7P02) FMID(HIF7P02) FIXCAT CATEGORY (SIA-MVS-2019.07-2 )              
+ REASON(OA56895) RESOLVER(UA98978) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HIF7R02) FMID(HIF7R02) FIXCAT CATEGORY (SIA-MVS-2019.07-2 )              
+ REASON(OA56895) RESOLVER(UA98979) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HIF7R02) FMID(HIF7R02) FIXCAT CATEGORY (SIA-MVS-2019.07-3 )              
+ REASON(OA56893) RESOLVER(UA99107) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HIF7P02) FMID(HIF7P02) FIXCAT CATEGORY (SIA-MVS-2019.07-3 )              
+ REASON(OA56893) RESOLVER(UA99106) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HCI7200) FMID(HCI7200) FIXCAT CATEGORY (SIA-MVS-2019.07-5 )              
+ REASON(PH08621) RESOLVER(UI63468) CLASS(LCTS550)                               
+ .                                                                              
+++HOLD(HANA110) FMID(HANA110) FIXCAT CATEGORY (SIA-MVS-2019.07-6 )              
+ REASON(PH11673) RESOLVER(UI63170) CLASS(HODA110)                               
+ .                                                                              
+++HOLD(HSPK120) FMID(HSPK120) FIXCAT CATEGORY (SIA-MVS-2019.07-7 )              
+ REASON(PH11749) RESOLVER(UI63369) CLASS(HODA110)                               
+ .                                                                              
+++HOLD(HMK1500) FMID(HMK1500) FIXCAT CATEGORY (SIA-MVS-2019.07-8 )              
+ REASON(PH12295) RESOLVER(UI63479) CLASS(LIMSF10)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.07-9 )              
+ REASON(OA57348) RESOLVER(UA99677) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.07-9 )              
+ REASON(OA57348) RESOLVER(UA99676) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.07-9 )              
+ REASON(OA57348) RESOLVER(UA99678) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HBB77C0) FMID(HBB77C0) FIXCAT CATEGORY (SIA-MVS-2019.07-10)              
+ REASON(OA57034) RESOLVER(UA99542) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.07-10)              
+ REASON(OA57034) RESOLVER(UA99582) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.07-10)              
+ REASON(OA57034) RESOLVER(UA99540) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.07-11)              
+ REASON(OA56889) RESOLVER(UA99383) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.07-11)              
+ REASON(OA56889) RESOLVER(UA99384) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.07-11)              
+ REASON(OA56889) RESOLVER(UA99405) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.07-12)              
+ REASON(OA56691) RESOLVER(UA99442) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.07-12)              
+ REASON(OA56691) RESOLVER(UA99443) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.07-12)              
+ REASON(OA56691) RESOLVER(UA99444) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.07-13)              
+ REASON(OA57311) RESOLVER(UA99539) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.07-14)              
+ REASON(OA56921) RESOLVER(UA99437) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.07-14)              
+ REASON(OA56921) RESOLVER(UA99438) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.07-14)              
+ REASON(OA56921) RESOLVER(UA99434) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.07-15)              
+ REASON(OA56585) RESOLVER(UA99653) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.07-15)              
+ REASON(OA56585) RESOLVER(UA99654) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HRSL430) FMID(HRSL430) FIXCAT CATEGORY (SIA-MVS-2019.07-16)              
+ REASON(OA57386) RESOLVER(UA99632) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HRSL420) FMID(HRSL420) FIXCAT CATEGORY (SIA-MVS-2019.07-16)              
+ REASON(OA57386) RESOLVER(UA99633) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HRM77C0) FMID(HRM77C0) FIXCAT CATEGORY (SIA-MVS-2019.07-17)              
+ REASON(OA57387) RESOLVER(UA99604) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HRM77B0) FMID(HRM77B0) FIXCAT CATEGORY (SIA-MVS-2019.07-18)              
+ REASON(OA56825) RESOLVER(UA99482) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HRM77A0) FMID(HRM77A0) FIXCAT CATEGORY (SIA-MVS-2019.07-18)              
+ REASON(OA56825) RESOLVER(UA99481) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HRM77C0) FMID(HRM77C0) FIXCAT CATEGORY (SIA-MVS-2019.07-18)              
+ REASON(OA56825) RESOLVER(UA99480) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HIF7S02) FMID(HIF7S02) FIXCAT CATEGORY (SIA-MVS-2019.07-19)              
+ REASON(OA57709) RESOLVER(UA99577) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HIF7S02) FMID(HIF7S02) FIXCAT CATEGORY (SIA-MVS-2019.07-20)              
+ REASON(OA57706) RESOLVER(UA99751) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.07-21)              
+ REASON(OA56693) RESOLVER(UA99399) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.07-21)              
+ REASON(OA56693) RESOLVER(UA99400) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HSMA23A) FMID(HSMA23A) FIXCAT CATEGORY (SIA-MVS-2019.07-23)              
+ REASON(PH12023) RESOLVER(UI63526) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HSMA23A) FMID(HSMA23A) FIXCAT CATEGORY (SIA-MVS-2019.07-23)              
+ REASON(PH12023) RESOLVER(UI63638) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HSMA22A) FMID(HSMA22A) FIXCAT CATEGORY (SIA-MVS-2019.07-23)              
+ REASON(PH12023) RESOLVER(UI63525) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HSMA24A) FMID(HSMA24A) FIXCAT CATEGORY (SIA-MVS-2019.07-23)              
+ REASON(PH12023) RESOLVER(UI63527) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HSMA24A) FMID(HSMA24A) FIXCAT CATEGORY (SIA-MVS-2019.07-23)              
+ REASON(PH12023) RESOLVER(UI63639) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HHAP90P) FMID(HHAP90P) FIXCAT CATEGORY (SIA-MVS-2019.07-24)              
+ REASON(PH13440) RESOLVER(UI63830) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HSMA230) FMID(HSMA230) FIXCAT CATEGORY (SIA-MVS-2019.08-1 )              
+ REASON(PH10955) RESOLVER(UI63210) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HSMA220) FMID(HSMA220) FIXCAT CATEGORY (SIA-MVS-2019.08-1 )              
+ REASON(PH10955) RESOLVER(UI63212) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HSMA240) FMID(HSMA240) FIXCAT CATEGORY (SIA-MVS-2019.08-1 )              
+ REASON(PH10955) RESOLVER(UI63211) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(H238330) FMID(H238330) FIXCAT CATEGORY (SIA-MVS-2019.08-2 )              
+ REASON(PH09505) RESOLVER(UI63353) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(H238330) FMID(H238330) FIXCAT CATEGORY (SIA-MVS-2019.08-3 )              
+ REASON(PH12693) RESOLVER(UI63354) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HQX77B0) FMID(HQX77B0) FIXCAT CATEGORY (SIA-MVS-2019.08-5 )              
+ REASON(PH10289) RESOLVER(UI63717) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HQX77A0) FMID(HQX77A0) FIXCAT CATEGORY (SIA-MVS-2019.08-5 )              
+ REASON(PH10289) RESOLVER(UI63718) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HMS9000) FMID(HMS9000) FIXCAT CATEGORY (SIA-MVS-2019.08-6 )              
+ REASON(PH11291) RESOLVER(UI63930) CLASS(MMQM900)                               
+ .                                                                              
+++HOLD(HMS9100) FMID(HMS9100) FIXCAT CATEGORY (SIA-MVS-2019.08-6 )              
+ REASON(PH11291) RESOLVER(UI63931) CLASS(MMQM910)                               
+ .                                                                              
+++HOLD(HMS8000) FMID(HMS8000) FIXCAT CATEGORY (SIA-MVS-2019.08-7 )              
+ REASON(PH04852) RESOLVER(UI63968) CLASS(LMQM800)                               
+ .                                                                              
+++HOLD(HCI7000) FMID(HCI7000) FIXCAT CATEGORY (SIA-MVS-2019.08-8 )              
+ REASON(PH09898) RESOLVER(UI64025) CLASS(LCTS530)                               
+ .                                                                              
+++HOLD(HCI7100) FMID(HCI7100) FIXCAT CATEGORY (SIA-MVS-2019.08-8 )              
+ REASON(PH09898) RESOLVER(UI64026) CLASS(LCTS540)                               
+ .                                                                              
+++HOLD(HCI6900) FMID(HCI6900) FIXCAT CATEGORY (SIA-MVS-2019.08-8 )              
+ REASON(PH09898) RESOLVER(UI64027) CLASS(LXXXXXX)                               
+ .                                                                              
+++HOLD(HCI7200) FMID(HCI7200) FIXCAT CATEGORY (SIA-MVS-2019.08-8 )              
+ REASON(PH09898) RESOLVER(UI64028) CLASS(LCTS550)                               
+ .                                                                              
+++HOLD(HCI6800) FMID(HCI6800) FIXCAT CATEGORY (SIA-MVS-2019.08-8 )              
+ REASON(PH09898) RESOLVER(UI64029) CLASS(LCTS510)                               
+ .                                                                              
+++HOLD(HMS8000) FMID(HMS8000) FIXCAT CATEGORY (SIA-MVS-2019.08-9 )              
+ REASON(PH11289) RESOLVER(UI63929) CLASS(MMQM800)                               
+ .                                                                              
+++HOLD(HMS9000) FMID(HMS9000) FIXCAT CATEGORY (SIA-MVS-2019.08-10)              
+ REASON(PH11613) RESOLVER(UI63969) CLASS(LMQM900)                               
+ .                                                                              
+++HOLD(HMS9100) FMID(HMS9100) FIXCAT CATEGORY (SIA-MVS-2019.08-10)              
+ REASON(PH11613) RESOLVER(UI63970) CLASS(LMQM910)                               
+ .                                                                              
+++HOLD(HOS2230) FMID(HOS2230) FIXCAT CATEGORY (SIA-MVS-2019.08-11)              
+ REASON(OA57432) RESOLVER(UA99645) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HOS2220) FMID(HOS2220) FIXCAT CATEGORY (SIA-MVS-2019.08-11)              
+ REASON(OA57432) RESOLVER(UA99646) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HRM77C0) FMID(HRM77C0) FIXCAT CATEGORY (SIA-MVS-2019.08-13)              
+ REASON(OA57203) RESOLVER(UJ00129) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HRM77A0) FMID(HRM77A0) FIXCAT CATEGORY (SIA-MVS-2019.08-13)              
+ REASON(OA57203) RESOLVER(UJ00130) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HRM77B0) FMID(HRM77B0) FIXCAT CATEGORY (SIA-MVS-2019.08-13)              
+ REASON(OA57203) RESOLVER(UJ00131) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.08-14)              
+ REASON(OA56485) RESOLVER(UA99726) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.08-14)              
+ REASON(OA56485) RESOLVER(UA99727) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HCRY740) FMID(HCRY740) FIXCAT CATEGORY (SIA-MVS-2019.08-15)              
+ REASON(OA57521) RESOLVER(UA99493) CLASS(HZOSXXX)                               
+ .                                                                              
+++HOLD(HXFR2D0) FMID(HXFR2D0) FIXCAT CATEGORY (SIA-MVS-2019.08-16)              
+ REASON(OA57585) RESOLVER(UA99891) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HXFR2C0) FMID(HXFR2C0) FIXCAT CATEGORY (SIA-MVS-2019.08-16)              
+ REASON(OA57585) RESOLVER(UA99892) CLASS(HZOSXXX)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.08-17)              
+ REASON(OA56483) RESOLVER(UA99706) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.08-17)              
+ REASON(OA56483) RESOLVER(UA99707) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HXFR2D0) FMID(HXFR2D0) FIXCAT CATEGORY (SIA-MVS-2019.08-18)              
+ REASON(OA57640) RESOLVER(UJ00200) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HXFR2C0) FMID(HXFR2C0) FIXCAT CATEGORY (SIA-MVS-2019.08-18)              
+ REASON(OA57640) RESOLVER(UJ00205) CLASS(HZOSXXX)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.08-19)              
+ REASON(OA57220) RESOLVER(UJ00124) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.08-19)              
+ REASON(OA57220) RESOLVER(UJ00125) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.08-19)              
+ REASON(OA57220) RESOLVER(UJ00127) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.08-20)              
+ REASON(OA56482) RESOLVER(UA99704) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.08-20)              
+ REASON(OA56482) RESOLVER(UA99703) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.08-21)              
+ REASON(OA56486) RESOLVER(UA99730) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.08-21)              
+ REASON(OA56486) RESOLVER(UA99729) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HTE77A0) FMID(HTE77A0) FIXCAT CATEGORY (SIA-MVS-2019.08-22)              
+ REASON(OA57414) RESOLVER(UJ00060) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HTE77B0) FMID(HTE77B0) FIXCAT CATEGORY (SIA-MVS-2019.08-22)              
+ REASON(OA57414) RESOLVER(UJ00058) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HTE77C0) FMID(HTE77C0) FIXCAT CATEGORY (SIA-MVS-2019.08-22)              
+ REASON(OA57414) RESOLVER(UJ00059) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.08-23)              
+ REASON(OA56484) RESOLVER(UA99716) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.08-23)              
+ REASON(OA56484) RESOLVER(UA99715) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HKJJ530) FMID(HKJJ530) FIXCAT CATEGORY (SIA-MVS-2019.08-24)              
+ REASON(OA57815) RESOLVER(UA99839) CLASS(HOMGXXX)                               
+ .                                                                              
+++HOLD(HSMA23A) FMID(HSMA23A) FIXCAT CATEGORY (SIA-MVS-2019.08-25)              
+ REASON(PH07189) RESOLVER(UI64033) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HSMA24E) FMID(HSMA24E) FIXCAT CATEGORY (SIA-MVS-2019.08-26)              
+ REASON(PH12760) RESOLVER(UI64034) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HSMA220) FMID(HSMA220) FIXCAT CATEGORY (SIA-MVS-2019.08-27)              
+ REASON(PH12793) RESOLVER(UI64218) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HSMA240) FMID(HSMA240) FIXCAT CATEGORY (SIA-MVS-2019.08-27)              
+ REASON(PH12793) RESOLVER(UI64217) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HSMA230) FMID(HSMA230) FIXCAT CATEGORY (SIA-MVS-2019.08-27)              
+ REASON(PH12793) RESOLVER(UI64216) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HRCC502) FMID(HRCC502) FIXCAT CATEGORY (SIA-MVS-2019.08-28)              
+ REASON(PH13789) RESOLVER(UI63957) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HRCM502) FMID(HRCM502) FIXCAT CATEGORY (SIA-MVS-2019.08-29)              
+ REASON(PH13790) RESOLVER(UI63958) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HRJS502) FMID(HRJS502) FIXCAT CATEGORY (SIA-MVS-2019.08-30)              
+ REASON(PH13791) RESOLVER(UI63959) CLASS(MCLM502)                               
+ .                                                                              
+++HOLD(HRQM502) FMID(HRQM502) FIXCAT CATEGORY (SIA-MVS-2019.08-31)              
+ REASON(PH13792) RESOLVER(UI63960) CLASS(MCLM502)                               
+ .                                                                              
+++HOLD(HRRM502) FMID(HRRM502) FIXCAT CATEGORY (SIA-MVS-2019.08-32)              
+ REASON(PH13793) RESOLVER(UI63961) CLASS(MCLM502)                               
+ .                                                                              
+++HOLD(HBB7790) FMID(HBB7790) FIXCAT CATEGORY (SIA-MVS-2019.09-1 )              
+ REASON(OA56591) RESOLVER(UA98532) CLASS(MZOS210)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.09-1 )              
+ REASON(OA56591) RESOLVER(UA98530) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.09-1 )              
+ REASON(OA56591) RESOLVER(UA98531) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HBB77C0) FMID(HBB77C0) FIXCAT CATEGORY (SIA-MVS-2019.09-2 )              
+ REASON(OA57234) RESOLVER(UA99557) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.09-2 )              
+ REASON(OA57234) RESOLVER(UA99556) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2210) FMID(HDZ2210) FIXCAT CATEGORY (SIA-MVS-2019.09-3 )              
+ REASON(OA55365) RESOLVER(UA97330) CLASS(HZOS210)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.09-3 )              
+ REASON(OA55365) RESOLVER(UA97331) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.09-3 )              
+ REASON(OA55365) RESOLVER(UA97332) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HQX77B0) FMID(HQX77B0) FIXCAT CATEGORY (SIA-MVS-2019.09-4 )              
+ REASON(PH08858) RESOLVER(UI64585) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HQX77A0) FMID(HQX77A0) FIXCAT CATEGORY (SIA-MVS-2019.09-4 )              
+ REASON(PH08858) RESOLVER(UI64586) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HJVA710) FMID(HJVA710) FIXCAT CATEGORY (SIA-MVS-2019.09-5 )              
+ REASON(PH15364) RESOLVER(UI64848) CLASS(HJTE710)                               
+ .                                                                              
+++HOLD(HJVA800) FMID(HJVA800) FIXCAT CATEGORY (SIA-MVS-2019.09-6 )              
+ REASON(PH15757) RESOLVER(UI64860) CLASS(HJTE800)                               
+ .                                                                              
+++HOLD(HJVB800) FMID(HJVB800) FIXCAT CATEGORY (SIA-MVS-2019.09-7 )              
+ REASON(PH15763) RESOLVER(UI64863) CLASS(HJTB800)                               
+ .                                                                              
+++HOLD(HQX77C0) FMID(HQX77C0) FIXCAT CATEGORY (SIA-MVS-2019.09-8 )              
+ REASON(PH12588) RESOLVER(UI64610) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HJVB710) FMID(HJVB710) FIXCAT CATEGORY (SIA-MVS-2019.09-9 )              
+ REASON(PH15365) RESOLVER(UI64854) CLASS(HJTB710)                               
+ .                                                                              
+++HOLD(HJVA700) FMID(HJVA700) FIXCAT CATEGORY (SIA-MVS-2019.09-10)              
+ REASON(PH15730) RESOLVER(UI64907) CLASS(HJTE700)                               
+ .                                                                              
+++HOLD(HJVB700) FMID(HJVB700) FIXCAT CATEGORY (SIA-MVS-2019.09-11)              
+ REASON(PH15798) RESOLVER(UI64928) CLASS(HJTB700)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.09-12)              
+ REASON(OA56487) RESOLVER(UJ00407) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.09-12)              
+ REASON(OA56487) RESOLVER(UJ00405) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.09-12)              
+ REASON(OA56487) RESOLVER(UJ00404) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.09-13)              
+ REASON(OA57033) RESOLVER(UA99894) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.09-13)              
+ REASON(OA57033) RESOLVER(UA99895) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.09-13)              
+ REASON(OA57033) RESOLVER(UA99896) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.09-14)              
+ REASON(OA56584) RESOLVER(UJ00465) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.09-14)              
+ REASON(OA56584) RESOLVER(UJ00472) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.09-14)              
+ REASON(OA56584) RESOLVER(UJ00473) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.09-15)              
+ REASON(OA56564) RESOLVER(UJ00307) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.09-15)              
+ REASON(OA56564) RESOLVER(UJ00305) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.09-15)              
+ REASON(OA56564) RESOLVER(UJ00306) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HKLV630) FMID(HKLV630) FIXCAT CATEGORY (SIA-MVS-2019.09-16)              
+ REASON(OA56381) RESOLVER(UA98643) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.09-17)              
+ REASON(OA57424) RESOLVER(UJ00255) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HKY77A0) FMID(HKY77A0) FIXCAT CATEGORY (SIA-MVS-2019.09-18)              
+ REASON(OA57011) RESOLVER(UJ00213) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HKY77B0) FMID(HKY77B0) FIXCAT CATEGORY (SIA-MVS-2019.09-18)              
+ REASON(OA57011) RESOLVER(UJ00211) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HKY77C0) FMID(HKY77C0) FIXCAT CATEGORY (SIA-MVS-2019.09-18)              
+ REASON(OA57011) RESOLVER(UJ00212) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.09-19)              
+ REASON(OA56985) RESOLVER(UJ00301) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.09-19)              
+ REASON(OA56985) RESOLVER(UJ00311) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HBB77C0) FMID(HBB77C0) FIXCAT CATEGORY (SIA-MVS-2019.09-19)              
+ REASON(OA56985) RESOLVER(UJ00302) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HCPT430) FMID(HCPT430) FIXCAT CATEGORY (SIA-MVS-2019.09-20)              
+ REASON(OA57048) RESOLVER(UJ00179) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(JCPT421) FMID(JCPT421) FIXCAT CATEGORY (SIA-MVS-2019.09-20)              
+ REASON(OA57048) RESOLVER(UJ00240) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(JCPT431) FMID(JCPT431) FIXCAT CATEGORY (SIA-MVS-2019.09-20)              
+ REASON(OA57048) RESOLVER(UJ00180) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HCPT420) FMID(HCPT420) FIXCAT CATEGORY (SIA-MVS-2019.09-20)              
+ REASON(OA57048) RESOLVER(UJ00239) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.09-21)              
+ REASON(OA57013) RESOLVER(UA99745) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.09-21)              
+ REASON(OA57013) RESOLVER(UA99746) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.09-21)              
+ REASON(OA57013) RESOLVER(UA99747) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HCR77B1) FMID(HCR77B1) FIXCAT CATEGORY (SIA-MVS-2019.09-22)              
+ REASON(OA57863) RESOLVER(UJ00368) CLASS(HICG7B1)                               
+ .                                                                              
+++HOLD(HCR77C0) FMID(HCR77C0) FIXCAT CATEGORY (SIA-MVS-2019.09-22)              
+ REASON(OA57863) RESOLVER(UJ00369) CLASS(HICG7C0)                               
+ .                                                                              
+++HOLD(HCR77C1) FMID(HCR77C1) FIXCAT CATEGORY (SIA-MVS-2019.09-22)              
+ REASON(OA57863) RESOLVER(UJ00366) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HCR77D0) FMID(HCR77D0) FIXCAT CATEGORY (SIA-MVS-2019.09-22)              
+ REASON(OA57863) RESOLVER(UJ00367) CLASS(HICG7D0)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.09-23)              
+ REASON(OA57807) RESOLVER(UJ00032) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.09-23)              
+ REASON(OA57807) RESOLVER(UJ00034) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.09-23)              
+ REASON(OA57807) RESOLVER(UJ00033) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.09-24)              
+ REASON(OA56700) RESOLVER(UJ00470) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HBB77C0) FMID(HBB77C0) FIXCAT CATEGORY (SIA-MVS-2019.09-24)              
+ REASON(OA56700) RESOLVER(UJ00468) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.09-24)              
+ REASON(OA56700) RESOLVER(UJ00467) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.09-25)              
+ REASON(OA57787) RESOLVER(UA99858) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HKCZ120) FMID(HKCZ120) FIXCAT CATEGORY (SIA-MVS-2019.09-26)              
+ REASON(PH12287) RESOLVER(UI64991) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HKCZ110) FMID(HKCZ110) FIXCAT CATEGORY (SIA-MVS-2019.09-27)              
+ REASON(PH12289) RESOLVER(UI64993) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HSMA230) FMID(HSMA230) FIXCAT CATEGORY (SIA-MVS-2019.09-28)              
+ REASON(PH13276) RESOLVER(UI64403) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HSMA220) FMID(HSMA220) FIXCAT CATEGORY (SIA-MVS-2019.09-28)              
+ REASON(PH13276) RESOLVER(UI64407) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HSMA240) FMID(HSMA240) FIXCAT CATEGORY (SIA-MVS-2019.09-28)              
+ REASON(PH13276) RESOLVER(UI64404) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.10-1 )              
+ REASON(OA53716) RESOLVER(UA95334) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.10-1 )              
+ REASON(OA53716) RESOLVER(UA95336) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HDZ2210) FMID(HDZ2210) FIXCAT CATEGORY (SIA-MVS-2019.10-1 )              
+ REASON(OA53716) RESOLVER(UA95335) CLASS(MZOS210)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.10-2 )              
+ REASON(OA57330) RESOLVER(UA99743) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.10-2 )              
+ REASON(OA57330) RESOLVER(UA99735) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.10-2 )              
+ REASON(OA57330) RESOLVER(UA99744) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDBCC10) FMID(HDBCC10) FIXCAT CATEGORY (SIA-MVS-2019.10-3 )              
+ REASON(PH10828) RESOLVER(UI64259) CLASS(MDB2C10)                               
+ .                                                                              
+++HOLD(HDBBB10) FMID(HDBBB10) FIXCAT CATEGORY (SIA-MVS-2019.10-3 )              
+ REASON(PH10828) RESOLVER(UI64262) CLASS(MDB2B10)                               
+ .                                                                              
+++HOLD(HIP6230) FMID(HIP6230) FIXCAT CATEGORY (SIA-MVS-2019.10-4 )              
+ REASON(PH11620) RESOLVER(UI63434) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HIP6220) FMID(HIP6220) FIXCAT CATEGORY (SIA-MVS-2019.10-4 )              
+ REASON(PH11620) RESOLVER(UI63433) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HIP6220) FMID(HIP6220) FIXCAT CATEGORY (SIA-MVS-2019.10-5 )              
+ REASON(PH08062) RESOLVER(UI63344) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HIP6230) FMID(HIP6230) FIXCAT CATEGORY (SIA-MVS-2019.10-5 )              
+ REASON(PH08062) RESOLVER(UI63345) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDBCC10) FMID(HDBCC10) FIXCAT CATEGORY (SIA-MVS-2019.10-6 )              
+ REASON(PH08421) RESOLVER(UI62266) CLASS(HDB2C10)                               
+ .                                                                              
+++HOLD(HDBBB10) FMID(HDBBB10) FIXCAT CATEGORY (SIA-MVS-2019.10-6 )              
+ REASON(PH08421) RESOLVER(UI62268) CLASS(HDB2B10)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.10-7 )              
+ REASON(OA56479) RESOLVER(UA98413) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.10-7 )              
+ REASON(OA56479) RESOLVER(UA98414) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2210) FMID(HDZ2210) FIXCAT CATEGORY (SIA-MVS-2019.10-8 )              
+ REASON(OA56135) RESOLVER(UA98426) CLASS(MZOS210)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.10-8 )              
+ REASON(OA56135) RESOLVER(UA98425) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.10-8 )              
+ REASON(OA56135) RESOLVER(UA98427) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HBB7790) FMID(HBB7790) FIXCAT CATEGORY (SIA-MVS-2019.10-9 )              
+ REASON(OA55459) RESOLVER(UA98282) CLASS(HZOS210)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.10-9 )              
+ REASON(OA55459) RESOLVER(UA98281) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.10-9 )              
+ REASON(OA55459) RESOLVER(UA98280) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HRF77B0) FMID(HRF77B0) FIXCAT CATEGORY (SIA-MVS-2019.10-10)              
+ REASON(OA55950) RESOLVER(UA97801) CLASS(LZOS230)                               
+ .                                                                              
+++HOLD(HRF77A0) FMID(HRF77A0) FIXCAT CATEGORY (SIA-MVS-2019.10-10)              
+ REASON(OA55950) RESOLVER(UA97802) CLASS(LZOS220)                               
+ .                                                                              
+++HOLD(HRF7790) FMID(HRF7790) FIXCAT CATEGORY (SIA-MVS-2019.10-10)              
+ REASON(OA55950) RESOLVER(UA97803) CLASS(LZOS210)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.10-11)              
+ REASON(OA55671) RESOLVER(UA97784) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.10-11)              
+ REASON(OA55671) RESOLVER(UA97785) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HBB7790) FMID(HBB7790) FIXCAT CATEGORY (SIA-MVS-2019.10-11)              
+ REASON(OA55671) RESOLVER(UA97786) CLASS(MZOS210)                               
+ .                                                                              
+++HOLD(JCI680L) FMID(JCI680L) FIXCAT CATEGORY (SIA-MVS-2019.10-12)              
+ REASON(PH04120) RESOLVER(UI59396) CLASS(HCTS510)                               
+ .                                                                              
+++HOLD(JCI690L) FMID(JCI690L) FIXCAT CATEGORY (SIA-MVS-2019.10-12)              
+ REASON(PH04120) RESOLVER(UI59399) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(JCI700L) FMID(JCI700L) FIXCAT CATEGORY (SIA-MVS-2019.10-12)              
+ REASON(PH04120) RESOLVER(UI59403) CLASS(HCTS530)                               
+ .                                                                              
+++HOLD(JCI710L) FMID(JCI710L) FIXCAT CATEGORY (SIA-MVS-2019.10-12)              
+ REASON(PH04120) RESOLVER(UI59406) CLASS(HCTS540)                               
+ .                                                                              
+++HOLD(HJE77A0) FMID(HJE77A0) FIXCAT CATEGORY (SIA-MVS-2019.10-13)              
+ REASON(OA55637) RESOLVER(UA96950) CLASS(MJ2Z220)                               
+ .                                                                              
+++HOLD(HJE77B0) FMID(HJE77B0) FIXCAT CATEGORY (SIA-MVS-2019.10-13)              
+ REASON(OA55637) RESOLVER(UA96851) CLASS(MJ2Z230)                               
+ .                                                                              
+++HOLD(HJE7790) FMID(HJE7790) FIXCAT CATEGORY (SIA-MVS-2019.10-14)              
+ REASON(OA53759) RESOLVER(UA96634) CLASS(HJ2Z210)                               
+ .                                                                              
+++HOLD(HJE77A0) FMID(HJE77A0) FIXCAT CATEGORY (SIA-MVS-2019.10-14)              
+ REASON(OA53759) RESOLVER(UA96633) CLASS(HJ2Z220)                               
+ .                                                                              
+++HOLD(HJE77B0) FMID(HJE77B0) FIXCAT CATEGORY (SIA-MVS-2019.10-14)              
+ REASON(OA53759) RESOLVER(UA96307) CLASS(HJ2Z230)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.10-15)              
+ REASON(OA52893) RESOLVER(UA96867) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.10-15)              
+ REASON(OA52893) RESOLVER(UA96871) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HBB7790) FMID(HBB7790) FIXCAT CATEGORY (SIA-MVS-2019.10-15)              
+ REASON(OA52893) RESOLVER(UA96872) CLASS(MZOS210)                               
+ .                                                                              
+++HOLD(HKLV623) FMID(HKLV623) FIXCAT CATEGORY (SIA-MVS-2019.10-16)              
+ REASON(OA55031) RESOLVER(UA95519) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HVT6210) FMID(HVT6210) FIXCAT CATEGORY (SIA-MVS-2019.10-17)              
+ REASON(OA51220) RESOLVER(UA93576) CLASS(HZOS210)                               
+ .                                                                              
+++HOLD(HVT6220) FMID(HVT6220) FIXCAT CATEGORY (SIA-MVS-2019.10-17)              
+ REASON(OA51220) RESOLVER(UA93577) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HVT6210) FMID(HVT6210) FIXCAT CATEGORY (SIA-MVS-2019.10-18)              
+ REASON(OA51768) RESOLVER(UA93335) CLASS(HZOS210)                               
+ .                                                                              
+++HOLD(HVT6220) FMID(HVT6220) FIXCAT CATEGORY (SIA-MVS-2019.10-18)              
+ REASON(OA51768) RESOLVER(UA93336) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDBAA10) FMID(HDBAA10) FIXCAT CATEGORY (SIA-MVS-2019.10-19)              
+ REASON(PI77678) RESOLVER(UI47493) CLASS(MDB2A10)                               
+ .                                                                              
+++HOLD(HDBBB10) FMID(HDBBB10) FIXCAT CATEGORY (SIA-MVS-2019.10-19)              
+ REASON(PI77678) RESOLVER(UI47494) CLASS(MDB2B10)                               
+ .                                                                              
+++HOLD(HRF7790) FMID(HRF7790) FIXCAT CATEGORY (SIA-MVS-2019.10-20)              
+ REASON(OA50067) RESOLVER(UA81733) CLASS(MZOS210)                               
+ .                                                                              
+++HOLD(HRF7780) FMID(HRF7780) FIXCAT CATEGORY (SIA-MVS-2019.10-20)              
+ REASON(OA50067) RESOLVER(UA81732) CLASS(MZOS1D0)                               
+ .                                                                              
+++HOLD(HRF77A0) FMID(HRF77A0) FIXCAT CATEGORY (SIA-MVS-2019.10-20)              
+ REASON(OA50067) RESOLVER(UA81731) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.10-21)              
+ REASON(OA49513) RESOLVER(UA80642) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2210) FMID(HDZ2210) FIXCAT CATEGORY (SIA-MVS-2019.10-21)              
+ REASON(OA49513) RESOLVER(UA80641) CLASS(HZOS210)                               
+ .                                                                              
+++HOLD(HDZ1D10) FMID(HDZ1D10) FIXCAT CATEGORY (SIA-MVS-2019.10-21)              
+ REASON(OA49513) RESOLVER(UA80640) CLASS(HZOS1D0)                               
+ .                                                                              
+++HOLD(HDZ1D10) FMID(HDZ1D10) FIXCAT CATEGORY (SIA-MVS-2019.10-22)              
+ REASON(OA49712) RESOLVER(UA80668) CLASS(HZOS1D0)                               
+ .                                                                              
+++HOLD(HDZ2210) FMID(HDZ2210) FIXCAT CATEGORY (SIA-MVS-2019.10-22)              
+ REASON(OA49712) RESOLVER(UA80669) CLASS(HZOS210)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.10-22)              
+ REASON(OA49712) RESOLVER(UA80670) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2210) FMID(HDZ2210) FIXCAT CATEGORY (SIA-MVS-2019.10-23)              
+ REASON(OA49511) RESOLVER(UA80793) CLASS(HZOS210)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.10-23)              
+ REASON(OA49511) RESOLVER(UA80794) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ1D10) FMID(HDZ1D10) FIXCAT CATEGORY (SIA-MVS-2019.10-23)              
+ REASON(OA49511) RESOLVER(UA80792) CLASS(HZOS1D0)                               
+ .                                                                              
+++HOLD(HSPK120) FMID(HSPK120) FIXCAT CATEGORY (SIA-MVS-2019.10-24)              
+ REASON(PH15085) RESOLVER(UI65007) CLASS(HODA110)                               
+ .                                                                              
+++HOLD(HSPK120) FMID(HSPK120) FIXCAT CATEGORY (SIA-MVS-2019.10-25)              
+ REASON(PH15215) RESOLVER(UI65177) CLASS(HODA110)                               
+ .                                                                              
+++HOLD(JCI680L) FMID(JCI680L) FIXCAT CATEGORY (SIA-MVS-2019.10-26)              
+ REASON(PH15630) RESOLVER(UI65110) CLASS(MCTS510)                               
+ .                                                                              
+++HOLD(JCI700L) FMID(JCI700L) FIXCAT CATEGORY (SIA-MVS-2019.10-26)              
+ REASON(PH15630) RESOLVER(UI65112) CLASS(MCTS530)                               
+ .                                                                              
+++HOLD(JCI710L) FMID(JCI710L) FIXCAT CATEGORY (SIA-MVS-2019.10-26)              
+ REASON(PH15630) RESOLVER(UI65114) CLASS(MCTS540)                               
+ .                                                                              
+++HOLD(JCI690L) FMID(JCI690L) FIXCAT CATEGORY (SIA-MVS-2019.10-26)              
+ REASON(PH15630) RESOLVER(UI65115) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(JCI720L) FMID(JCI720L) FIXCAT CATEGORY (SIA-MVS-2019.10-26)              
+ REASON(PH15630) RESOLVER(UI65117) CLASS(MCTS550)                               
+ .                                                                              
+++HOLD(HMK1500) FMID(HMK1500) FIXCAT CATEGORY (SIA-MVS-2019.10-27)              
+ REASON(PI89923) RESOLVER(UI65233) CLASS(MIMSF10)                               
+ .                                                                              
+++HOLD(HMK1400) FMID(HMK1400) FIXCAT CATEGORY (SIA-MVS-2019.10-28)              
+ REASON(PH12901) RESOLVER(UI65244) CLASS(MIMSE10)                               
+ .                                                                              
+++HOLD(HQX77B0) FMID(HQX77B0) FIXCAT CATEGORY (SIA-MVS-2019.10-29)              
+ REASON(PH14878) RESOLVER(UI64946) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HQX77C0) FMID(HQX77C0) FIXCAT CATEGORY (SIA-MVS-2019.10-29)              
+ REASON(PH14878) RESOLVER(UI64947) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HQX77A0) FMID(HQX77A0) FIXCAT CATEGORY (SIA-MVS-2019.10-29)              
+ REASON(PH14878) RESOLVER(UI64948) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HBB77C0) FMID(HBB77C0) FIXCAT CATEGORY (SIA-MVS-2019.10-30)              
+ REASON(OA57762) RESOLVER(UJ00584) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.10-30)              
+ REASON(OA57762) RESOLVER(UJ00583) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.10-30)              
+ REASON(OA57762) RESOLVER(UJ00586) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.10-31)              
+ REASON(OA57777) RESOLVER(UJ00643) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.10-31)              
+ REASON(OA57777) RESOLVER(UJ00644) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.10-31)              
+ REASON(OA57777) RESOLVER(UJ00645) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HRF77A0) FMID(HRF77A0) FIXCAT CATEGORY (SIA-MVS-2019.10-32)              
+ REASON(OA57096) RESOLVER(UJ00541) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HRF77B0) FMID(HRF77B0) FIXCAT CATEGORY (SIA-MVS-2019.10-32)              
+ REASON(OA57096) RESOLVER(UJ00540) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HJE77C0) FMID(HJE77C0) FIXCAT CATEGORY (SIA-MVS-2019.10-33)              
+ REASON(OA57344) RESOLVER(UJ00800) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HJE77B0) FMID(HJE77B0) FIXCAT CATEGORY (SIA-MVS-2019.10-33)              
+ REASON(OA57344) RESOLVER(UJ00792) CLASS(HJ2Z230)                               
+ .                                                                              
+++HOLD(HJE77A0) FMID(HJE77A0) FIXCAT CATEGORY (SIA-MVS-2019.10-33)              
+ REASON(OA57344) RESOLVER(UJ00801) CLASS(HJ2Z220)                               
+ .                                                                              
+++HOLD(HRCC606) FMID(HRCC606) FIXCAT CATEGORY (SIA-MVS-2019.10-34)              
+ REASON(PH13670) RESOLVER(UI64745) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HRCM606) FMID(HRCM606) FIXCAT CATEGORY (SIA-MVS-2019.10-35)              
+ REASON(PH13671) RESOLVER(UI64746) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HRJS606) FMID(HRJS606) FIXCAT CATEGORY (SIA-MVS-2019.10-36)              
+ REASON(PH13713) RESOLVER(UI64747) CLASS(HCLM606)                               
+ .                                                                              
+++HOLD(HRQM606) FMID(HRQM606) FIXCAT CATEGORY (SIA-MVS-2019.10-37)              
+ REASON(PH13756) RESOLVER(UI64897) CLASS(HCLM606)                               
+ .                                                                              
+++HOLD(HIP6240) FMID(HIP6240) FIXCAT CATEGORY (SIA-MVS-2019.10-38)              
+ REASON(PH14774) RESOLVER(UI65068) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HIP6230) FMID(HIP6230) FIXCAT CATEGORY (SIA-MVS-2019.10-38)              
+ REASON(PH14774) RESOLVER(UI65067) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HIP6220) FMID(HIP6220) FIXCAT CATEGORY (SIA-MVS-2019.10-38)              
+ REASON(PH14774) RESOLVER(UI65066) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.10-39)              
+ REASON(PH15307) RESOLVER(UI64802) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.10-40)              
+ REASON(PH15306) RESOLVER(UI65190) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HHAP90P) FMID(HHAP90P) FIXCAT CATEGORY (SIA-MVS-2019.10-41)              
+ REASON(PH16282) RESOLVER(UI65333) CLASS(HXXXXXX)                               
+ .                                                                              
+++HOLD(HMK1400) FMID(HMK1400) FIXCAT CATEGORY (SIA-MVS-2019.11-1 )              
+ REASON(PH16569) RESOLVER(UI65900) CLASS(HIMSE10)                               
+ .                                                                              
+++HOLD(HMK1500) FMID(HMK1500) FIXCAT CATEGORY (SIA-MVS-2019.11-2 )              
+ REASON(PH16688) RESOLVER(UI65923) CLASS(HIMSF10)                               
+ .                                                                              
+++HOLD(HDBCC10) FMID(HDBCC10) FIXCAT CATEGORY (SIA-MVS-2019.11-3 )              
+ REASON(PH13240) RESOLVER(UI65792) CLASS(LDB2C10)                               
+ .                                                                              
+++HOLD(HDBBB10) FMID(HDBBB10) FIXCAT CATEGORY (SIA-MVS-2019.11-3 )              
+ REASON(PH13240) RESOLVER(UI65793) CLASS(LDB2B10)                               
+ .                                                                              
+++HOLD(HMK1400) FMID(HMK1400) FIXCAT CATEGORY (SIA-MVS-2019.11-4 )              
+ REASON(PH16023) RESOLVER(UI65924) CLASS(HIMSE10)                               
+ .                                                                              
+++HOLD(HMK1500) FMID(HMK1500) FIXCAT CATEGORY (SIA-MVS-2019.11-5 )              
+ REASON(PH16507) RESOLVER(UI65899) CLASS(HIMSF10)                               
+ .                                                                              
+++HOLD(HXFR2D0) FMID(HXFR2D0) FIXCAT CATEGORY (SIA-MVS-2019.11-6 )              
+ REASON(OA58220) RESOLVER(UJ01208) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HXFR2C0) FMID(HXFR2C0) FIXCAT CATEGORY (SIA-MVS-2019.11-6 )              
+ REASON(OA58220) RESOLVER(UJ01209) CLASS(HZOSXXX)                               
+ .                                                                              
+++HOLD(HOT77B0) FMID(HOT77B0) FIXCAT CATEGORY (SIA-MVS-2019.11-7 )              
+ REASON(OA57350) RESOLVER(UJ00948) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HOT77C0) FMID(HOT77C0) FIXCAT CATEGORY (SIA-MVS-2019.11-7 )              
+ REASON(OA57350) RESOLVER(UJ00949) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HOT77A0) FMID(HOT77A0) FIXCAT CATEGORY (SIA-MVS-2019.11-7 )              
+ REASON(OA57350) RESOLVER(UJ00955) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.11-8 )              
+ REASON(OA56644) RESOLVER(UJ01027) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.11-8 )              
+ REASON(OA56644) RESOLVER(UJ01025) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.11-8 )              
+ REASON(OA56644) RESOLVER(UJ01026) CLASS(MZOS240)                               
+ .                                                                              
+++HOLD(HRM77C0) FMID(HRM77C0) FIXCAT CATEGORY (SIA-MVS-2019.11-9 )              
+ REASON(OA58435) RESOLVER(UJ01182) CLASS(MZOS240)                               
+ .                                                                              
+++HOLD(HRM77A0) FMID(HRM77A0) FIXCAT CATEGORY (SIA-MVS-2019.11-9 )              
+ REASON(OA58435) RESOLVER(UJ01183) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HRM77B0) FMID(HRM77B0) FIXCAT CATEGORY (SIA-MVS-2019.11-9 )              
+ REASON(OA58435) RESOLVER(UJ01184) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HCR77C1) FMID(HCR77C1) FIXCAT CATEGORY (SIA-MVS-2019.11-10)              
+ REASON(OA57702) RESOLVER(UJ01147) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HCR77D0) FMID(HCR77D0) FIXCAT CATEGORY (SIA-MVS-2019.11-10)              
+ REASON(OA57702) RESOLVER(UJ01148) CLASS(MICG7D0)                               
+ .                                                                              
+++HOLD(HCR77D1) FMID(HCR77D1) FIXCAT CATEGORY (SIA-MVS-2019.11-10)              
+ REASON(OA57702) RESOLVER(UJ01149) CLASS(MICG7D0)                               
+ .                                                                              
+++HOLD(HCR77B0) FMID(HCR77B0) FIXCAT CATEGORY (SIA-MVS-2019.11-10)              
+ REASON(OA57702) RESOLVER(UJ01150) CLASS(MZOSXXX)                               
+ .                                                                              
+++HOLD(HCR77B1) FMID(HCR77B1) FIXCAT CATEGORY (SIA-MVS-2019.11-10)              
+ REASON(OA57702) RESOLVER(UJ01151) CLASS(MICG7B1)                               
+ .                                                                              
+++HOLD(HCR77C0) FMID(HCR77C0) FIXCAT CATEGORY (SIA-MVS-2019.11-10)              
+ REASON(OA57702) RESOLVER(UJ01152) CLASS(MICG7C0)                               
+ .                                                                              
+++HOLD(HRM77C0) FMID(HRM77C0) FIXCAT CATEGORY (SIA-MVS-2019.11-11)              
+ REASON(OA58436) RESOLVER(UJ01195) CLASS(MZOS240)                               
+ .                                                                              
+++HOLD(HRM77A0) FMID(HRM77A0) FIXCAT CATEGORY (SIA-MVS-2019.11-11)              
+ REASON(OA58436) RESOLVER(UJ01193) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HRM77B0) FMID(HRM77B0) FIXCAT CATEGORY (SIA-MVS-2019.11-11)              
+ REASON(OA58436) RESOLVER(UJ01194) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HIP6230) FMID(HIP6230) FIXCAT CATEGORY (SIA-MVS-2019.11-12)              
+ REASON(PH13103) RESOLVER(UI65441) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HIP6220) FMID(HIP6220) FIXCAT CATEGORY (SIA-MVS-2019.11-12)              
+ REASON(PH13103) RESOLVER(UI65440) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HIP6240) FMID(HIP6240) FIXCAT CATEGORY (SIA-MVS-2019.11-12)              
+ REASON(PH13103) RESOLVER(UI65442) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HSMA22A) FMID(HSMA22A) FIXCAT CATEGORY (SIA-MVS-2019.11-13)              
+ REASON(PH14555) RESOLVER(UI65745) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HSMA24A) FMID(HSMA24A) FIXCAT CATEGORY (SIA-MVS-2019.11-13)              
+ REASON(PH14555) RESOLVER(UI65891) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HSMA23A) FMID(HSMA23A) FIXCAT CATEGORY (SIA-MVS-2019.11-13)              
+ REASON(PH14555) RESOLVER(UI65746) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HSMA24A) FMID(HSMA24A) FIXCAT CATEGORY (SIA-MVS-2019.11-13)              
+ REASON(PH14555) RESOLVER(UI65747) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HIP6230) FMID(HIP6230) FIXCAT CATEGORY (SIA-MVS-2019.11-14)              
+ REASON(PH14777) RESOLVER(UI65299) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HIP6240) FMID(HIP6240) FIXCAT CATEGORY (SIA-MVS-2019.11-14)              
+ REASON(PH14777) RESOLVER(UI65300) CLASS(MZOS240)                               
+ .                                                                              
+++HOLD(HIP6220) FMID(HIP6220) FIXCAT CATEGORY (SIA-MVS-2019.11-14)              
+ REASON(PH14777) RESOLVER(UI65298) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HSMA230) FMID(HSMA230) FIXCAT CATEGORY (SIA-MVS-2019.11-15)              
+ REASON(PH16148) RESOLVER(UI65773) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HSMA220) FMID(HSMA220) FIXCAT CATEGORY (SIA-MVS-2019.11-15)              
+ REASON(PH16148) RESOLVER(UI65856) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HSMA240) FMID(HSMA240) FIXCAT CATEGORY (SIA-MVS-2019.11-15)              
+ REASON(PH16148) RESOLVER(UI65774) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.11-16)              
+ REASON(PH17748) RESOLVER(UI65815) CLASS(HZOSXXX)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.11-17)              
+ REASON(PH17777) RESOLVER(UI65946) CLASS(HZOSXXX)                               
+ .                                                                              
+++HOLD(HSPK120) FMID(HSPK120) FIXCAT CATEGORY (SIA-MVS-2019.12-1 )              
+ REASON(PH17070) RESOLVER(UI66341) CLASS(HODA110)                               
+ .                                                                              
+++HOLD(HJVB700) FMID(HJVB700) FIXCAT CATEGORY (SIA-MVS-2019.12-2 )              
+ REASON(PH18420) RESOLVER(UI66399) CLASS(MJTB700)                               
+ .                                                                              
+++HOLD(HJVA710) FMID(HJVA710) FIXCAT CATEGORY (SIA-MVS-2019.12-3 )              
+ REASON(PH18662) RESOLVER(UI66427) CLASS(MJTE710)                               
+ .                                                                              
+++HOLD(HJVA800) FMID(HJVA800) FIXCAT CATEGORY (SIA-MVS-2019.12-4 )              
+ REASON(PH19434) RESOLVER(UI66634) CLASS(MJTE800)                               
+ .                                                                              
+++HOLD(HJVA700) FMID(HJVA700) FIXCAT CATEGORY (SIA-MVS-2019.12-5 )              
+ REASON(PH18417) RESOLVER(UI66380) CLASS(MJTE700)                               
+ .                                                                              
+++HOLD(HJVB710) FMID(HJVB710) FIXCAT CATEGORY (SIA-MVS-2019.12-6 )              
+ REASON(PH18665) RESOLVER(UI66460) CLASS(MJTB710)                               
+ .                                                                              
+++HOLD(HZC3000) FMID(HZC3000) FIXCAT CATEGORY (SIA-MVS-2019.12-7 )              
+ REASON(PH19042) RESOLVER(UI66412) CLASS(HCEE300)                               
+ .                                                                              
+++HOLD(HJVB800) FMID(HJVB800) FIXCAT CATEGORY (SIA-MVS-2019.12-8 )              
+ REASON(PH19503) RESOLVER(UI66636) CLASS(MJTB800)                               
+ .                                                                              
+++HOLD(HBB77C0) FMID(HBB77C0) FIXCAT CATEGORY (SIA-MVS-2019.12-9 )              
+ REASON(OA57642) RESOLVER(UJ01197) CLASS(MZOS240)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.12-9 )              
+ REASON(OA57642) RESOLVER(UJ01196) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.12-9 )              
+ REASON(OA57642) RESOLVER(UJ01198) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.12-10)              
+ REASON(OA58239) RESOLVER(UJ01236) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HBB77C0) FMID(HBB77C0) FIXCAT CATEGORY (SIA-MVS-2019.12-10)              
+ REASON(OA58239) RESOLVER(UJ01237) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.12-10)              
+ REASON(OA58239) RESOLVER(UJ01238) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HBB77C0) FMID(HBB77C0) FIXCAT CATEGORY (SIA-MVS-2019.12-11)              
+ REASON(OA58446) RESOLVER(UJ01385) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HRSL440) FMID(HRSL440) FIXCAT CATEGORY (SIA-MVS-2019.12-12)              
+ REASON(OA58364) RESOLVER(UJ01217) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HRSL430) FMID(HRSL430) FIXCAT CATEGORY (SIA-MVS-2019.12-12)              
+ REASON(OA58364) RESOLVER(UJ01216) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HRSL420) FMID(HRSL420) FIXCAT CATEGORY (SIA-MVS-2019.12-12)              
+ REASON(OA58364) RESOLVER(UJ01235) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.12-13)              
+ REASON(OA58264) RESOLVER(UJ01114) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.12-13)              
+ REASON(OA58264) RESOLVER(UJ01116) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.12-13)              
+ REASON(OA58264) RESOLVER(UJ01115) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HDZ2220) FMID(HDZ2220) FIXCAT CATEGORY (SIA-MVS-2019.12-14)              
+ REASON(OA57685) RESOLVER(UJ01140) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HDZ2230) FMID(HDZ2230) FIXCAT CATEGORY (SIA-MVS-2019.12-14)              
+ REASON(OA57685) RESOLVER(UJ01138) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HDZ2240) FMID(HDZ2240) FIXCAT CATEGORY (SIA-MVS-2019.12-14)              
+ REASON(OA57685) RESOLVER(UJ01139) CLASS(MZOS240)                               
+ .                                                                              
+++HOLD(HRM77C0) FMID(HRM77C0) FIXCAT CATEGORY (SIA-MVS-2019.12-15)              
+ REASON(OA57282) RESOLVER(UJ01232) CLASS(MZOS240)                               
+ .                                                                              
+++HOLD(HRM77A0) FMID(HRM77A0) FIXCAT CATEGORY (SIA-MVS-2019.12-15)              
+ REASON(OA57282) RESOLVER(UJ01233) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HRM77B0) FMID(HRM77B0) FIXCAT CATEGORY (SIA-MVS-2019.12-15)              
+ REASON(OA57282) RESOLVER(UJ01234) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HBB77C0) FMID(HBB77C0) FIXCAT CATEGORY (SIA-MVS-2019.12-16)              
+ REASON(OA58351) RESOLVER(UJ01302) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HBB77A0) FMID(HBB77A0) FIXCAT CATEGORY (SIA-MVS-2019.12-16)              
+ REASON(OA58351) RESOLVER(UJ01303) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HBB77B0) FMID(HBB77B0) FIXCAT CATEGORY (SIA-MVS-2019.12-16)              
+ REASON(OA58351) RESOLVER(UJ01301) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HRCC602) FMID(HRCC602) FIXCAT CATEGORY (SIA-MVS-2019.12-17)              
+ REASON(PH13777) RESOLVER(UI66107) CLASS(MXXXXXX)                               
+ .                                                                              
+++HOLD(HRCM602) FMID(HRCM602) FIXCAT CATEGORY (SIA-MVS-2019.12-18)              
+ REASON(PH13778) RESOLVER(UI66108) CLASS(MCLM602)                               
+ .                                                                              
+++HOLD(HRJS602) FMID(HRJS602) FIXCAT CATEGORY (SIA-MVS-2019.12-19)              
+ REASON(PH13780) RESOLVER(UI66110) CLASS(MCLM602)                               
+ .                                                                              
+++HOLD(HRQM602) FMID(HRQM602) FIXCAT CATEGORY (SIA-MVS-2019.12-20)              
+ REASON(PH13782) RESOLVER(UI66112) CLASS(MCLM602)                               
+ .                                                                              
+++HOLD(HRRM602) FMID(HRRM602) FIXCAT CATEGORY (SIA-MVS-2019.12-21)              
+ REASON(PH13784) RESOLVER(UI66114) CLASS(MCLM602)                               
+ .                                                                              
+++HOLD(HSMA22A) FMID(HSMA22A) FIXCAT CATEGORY (SIA-MVS-2019.12-22)              
+ REASON(PH14555) RESOLVER(UI65745) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HSMA24A) FMID(HSMA24A) FIXCAT CATEGORY (SIA-MVS-2019.12-22)              
+ REASON(PH14555) RESOLVER(UI65891) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HSMA23A) FMID(HSMA23A) FIXCAT CATEGORY (SIA-MVS-2019.12-22)              
+ REASON(PH14555) RESOLVER(UI65746) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HSMA24A) FMID(HSMA24A) FIXCAT CATEGORY (SIA-MVS-2019.12-22)              
+ REASON(PH14555) RESOLVER(UI65747) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HSMA234) FMID(HSMA234) FIXCAT CATEGORY (SIA-MVS-2019.12-23)              
+ REASON(PH15051) RESOLVER(UI66416) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HSMA244) FMID(HSMA244) FIXCAT CATEGORY (SIA-MVS-2019.12-23)              
+ REASON(PH15051) RESOLVER(UI66417) CLASS(MZOS240)                               
+ .                                                                              
+++HOLD(HSMA224) FMID(HSMA224) FIXCAT CATEGORY (SIA-MVS-2019.12-23)              
+ REASON(PH15051) RESOLVER(UI66418) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HSMA23A) FMID(HSMA23A) FIXCAT CATEGORY (SIA-MVS-2019.12-24)              
+ REASON(PH15971) RESOLVER(UI66482) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HSMA24E) FMID(HSMA24E) FIXCAT CATEGORY (SIA-MVS-2019.12-25)              
+ REASON(PH15972) RESOLVER(UI66483) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HSMA235) FMID(HSMA235) FIXCAT CATEGORY (SIA-MVS-2019.12-26)              
+ REASON(PH16301) RESOLVER(UI66355) CLASS(MZOS230)                               
+ .                                                                              
+++HOLD(HSMA245) FMID(HSMA245) FIXCAT CATEGORY (SIA-MVS-2019.12-26)              
+ REASON(PH16301) RESOLVER(UI66356) CLASS(MZOS240)                               
+ .                                                                              
+++HOLD(HSMA225) FMID(HSMA225) FIXCAT CATEGORY (SIA-MVS-2019.12-26)              
+ REASON(PH16301) RESOLVER(UI66357) CLASS(MZOS220)                               
+ .                                                                              
+++HOLD(HSMA220) FMID(HSMA220) FIXCAT CATEGORY (SIA-MVS-2019.12-27)              
+ REASON(PH17032) RESOLVER(UI66057) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HSMA240) FMID(HSMA240) FIXCAT CATEGORY (SIA-MVS-2019.12-27)              
+ REASON(PH17032) RESOLVER(UI66056) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HSMA230) FMID(HSMA230) FIXCAT CATEGORY (SIA-MVS-2019.12-27)              
+ REASON(PH17032) RESOLVER(UI66055) CLASS(HZOS230)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.12-28)              
+ REASON(PH17784) RESOLVER(UI66224) CLASS(HZOSXXX)                               
+ .                                                                              
+++HOLD(HWLPEM0) FMID(HWLPEM0) FIXCAT CATEGORY (SIA-MVS-2019.12-28)              
+ REASON(PH17784) RESOLVER(UI66384) CLASS(HZOSXXX)                               
+ .                                                                              
+++HOLD(HSMA224) FMID(HSMA224) FIXCAT CATEGORY (SIA-MVS-2019.12-29)              
+ REASON(PH17916) RESOLVER(UI66327) CLASS(HZOS220)                               
+ .                                                                              
+++HOLD(HSMA244) FMID(HSMA244) FIXCAT CATEGORY (SIA-MVS-2019.12-29)              
+ REASON(PH17916) RESOLVER(UI66325) CLASS(HZOS240)                               
+ .                                                                              
+++HOLD(HSMA234) FMID(HSMA234) FIXCAT CATEGORY (SIA-MVS-2019.12-29)              
+ REASON(PH17916) RESOLVER(UI66324) CLASS(HZOS230)                               
+ .                                                                              
