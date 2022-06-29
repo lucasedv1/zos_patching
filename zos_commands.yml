@@ -1,5 +1,5 @@
 ---
-- hosts: zos_host
+- hosts: all
   collections:
     - ibm.ibm_zos_core
   gather_facts: no
@@ -9,22 +9,11 @@
   environment: "{{ environment_vars }}"
 
   tasks:
-    # ##########################################################################
-    # Fact setting for use by this playbook
-    # ##########################################################################
-    - name: Detecting system name
-      #shell: "uname -a |awk '{print $2}'"
-      command: uname -n
-      register: result
-
-    - name: Setting fact `system_name` for use by this sample
-      set_fact:
-        system_name: "{{ result.stdout }}"
-
-    - name: Fact `system_name` set with value
-      debug:
-        msg: "{{ system_name }}"
-
+    - name: Execute an operator command to show active jobs
+      zos_operator:
+        cmd: 'd u,all'
+      
+ 
     # ##########################################################################
     # Modules zos_operator_action_query, zos_operator
     # ##########################################################################
