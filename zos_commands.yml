@@ -1,7 +1,6 @@
 - name: Command to show system symbols
   command: 'D SYMBOLS'
-  register: dsymbols
-      
+       
 - name: Display it
   debug:
     var: dsymbols.content
