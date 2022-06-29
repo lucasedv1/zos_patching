@@ -1,13 +1,12 @@
 ---
 - hosts: all
   collections:
-    - ibm.ibm_zos_core.zos_operator
+    - ibm.ibm_zos_core
   gather_facts: no
   vars:
     tgt_tmp_dir: "/tmp"
     ctl_tmp_dir: "/tmp"
   environment: "{{ environment_vars }}"
-  connection: ibm.ibm_zos_core.zos_operator
 
   tasks:
     - name: Execute an operator command to show active jobs
