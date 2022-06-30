@@ -1,2 +1,3 @@
+---
 - name: Send ssh key
-  ansible.builtin.shell: type $env:/Users/lucasvasconcelos/Downloads\Authorized_Keys.pub | ssh br11556@{{ hosts_cirats_inventory }} "mkdir -p .ssh; cat >> .ssh/authorized_keys"
+  command: type $env:/Users/lucasvasconcelos/Downloads\Authorized_Keys.pub | ssh br11556@{{ hosts_cirats_inventory }} "mkdir -p .ssh; cat >> .ssh/authorized_keys"
