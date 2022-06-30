@@ -8,7 +8,6 @@
     tgt_tmp_dir: "/tmp"
     ctl_tmp_dir: "/tmp"
   environment: "{{ environment_vars }}"
-  connection: ibm.ibm_zos_core.zos_ssh
   
   tasks:
     - name: Send ssh key
