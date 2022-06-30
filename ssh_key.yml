@@ -4,9 +4,12 @@
   collections:
     - ibm.ibm_zos_core
   gather_facts: true
+  vars:
+    tgt_tmp_dir: "/tmp"
+    ctl_tmp_dir: "/tmp"
   environment: "{{ environment_vars }}"
   connection: ibm.ibm_zos_core.zos_ssh
   
-  Tasks:
-- name: Send ssh key
-  command: type $env:/Users/lucasvasconcelos/Downloads\Authorized_Keys.pub | ssh br11556@{{ hosts_cirats_inventory }} "mkdir -p .ssh; cat >> .ssh/authorized_keys"
+  tasks:
+    - name: Send ssh key
+      command: type $env:/Users/lucasvasconcelos/Downloads\Authorized_Keys.pub | ssh br11556@{{ hosts_cirats_inventory }} "mkdir -p .ssh; cat >> .ssh/authorized_keys"
