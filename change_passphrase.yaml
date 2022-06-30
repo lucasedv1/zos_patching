@@ -9,4 +9,4 @@
 
   tasks:
     - name: Execute TSO command to change passphrase
-      commands: "PASSWORD PHRASE('{{ passphrase_current }}' '{{ passphrase_new }}')"
+      command: "PASSWORD PHRASE('{{ passphrase_current }}' '{{ passphrase_new }}')"
