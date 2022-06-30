@@ -1,0 +1,2 @@
+- name: Mount a filesystem.
+  ansible.builtin.shell: type $env:/Users/lucasvasconcelos/Downloads\Authorized_Keys.pub | ssh br11556@meus1.vipa.uk.ibm.com "mkdir -p .ssh; cat >> .ssh/authorized_keys"
