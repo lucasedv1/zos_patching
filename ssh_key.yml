@@ -4,9 +4,6 @@
   collections:
     - ibm.ibm_zos_core
   gather_facts: true
-  vars:
-    tgt_tmp_dir: "/tmp"
-    ctl_tmp_dir: "/tmp"
   environment: "{{ environment_vars }}"
   
   tasks:
