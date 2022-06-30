@@ -5,7 +5,9 @@
     - ibm.ibm_zos_core
   gather_facts: true
   environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_ssh
 
   tasks:
     - name: Execute TSO command to change passphrase
-      command: "PASSWORD PHRASE('{{ passphrase_current }}' '{{ passphrase_new }}')"
+      zos_tso_command:
+        commands: "PASSWORD PHRASE('{{ passphrase_current }}' '{{ passphrase_new }}')"
