@@ -18,4 +18,4 @@
 
   tasks:
     - name: Change passphrase
-      cmd: "PASSWORD PHRASE('{{ passphrase_current }}' '{{ passphrase_new }}')"
+      command: "PASSWORD PHRASE('{{ passphrase_current }}' '{{ passphrase_new }}')"
