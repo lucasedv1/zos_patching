@@ -10,4 +10,5 @@
   tasks:
     - name: Change passphrase
       zos_tso_command:
-        commands: "PASSWORD PHRASE('{{ passphrase_current }}' '{{ passphrase_new }}')"
+        commands:
+          - PASSWORD PHRASE('{{ passphrase_current }}' '{{ passphrase_new }}')          
