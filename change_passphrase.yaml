@@ -13,13 +13,9 @@
 ---
 - name: Change passphrase
   hosts: all
-  collections:
-    - ibm.ibm_zos_core
   gather_facts: true
   environment: "{{ environment_vars }}"
-  connection: ibm.ibm_zos_core.zos_tso_command
 
   tasks:
     - name: Change passphrase
-      zos_tso_command:
-        commands: "PASSWORD PHRASE('{{ passphrase_current }}' '{{ passphrase_new }}')"
+      cmd: "PASSWORD PHRASE('{{ passphrase_current }}' '{{ passphrase_new }}')"
