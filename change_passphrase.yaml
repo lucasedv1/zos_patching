@@ -12,10 +12,10 @@
 - name: Change passphrase
   hosts: all
   collections:
-   - ibm.ibm_zos_core
+    - ibm.ibm_zos_core.zos_ssh
   gather_facts: true
   environment: "{{ environment_vars }}"
-  connection: ibm.ibm_zos_core.zos_ssh
+  
   tasks:
     - name: Change passphrase
       zos_tso_command:
