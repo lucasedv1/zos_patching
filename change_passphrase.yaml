@@ -8,8 +8,7 @@
 #  Lucas Vasconcelos - July/2022
 # 
 ###############################################################################
----
-- name: Change passphrase
+--- name: Change passphrase
   hosts: all
   collections:
    - ibm.ibm_zos_core
