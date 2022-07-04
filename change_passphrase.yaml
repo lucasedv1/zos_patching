@@ -12,7 +12,7 @@
 - name: Change passphrase
   hosts: all
   collections:
-    - ibm.ibm_zos_core.zos_ssh
+    - ibm.ibm_zos_core
   gather_facts: true
   environment: "{{ environment_vars }}"
   
