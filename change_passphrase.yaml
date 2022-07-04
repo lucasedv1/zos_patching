@@ -16,7 +16,7 @@
     version: 1.4.0-beta.1
     source: https://galaxy.ansible.com
   #collections:
-    - ibm.ibm_zos_core#
+  #  - ibm.ibm_zos_core
   gather_facts: true
   environment: "{{ environment_vars }}"
   connection: ibm.ibm_zos_core.zos_ssh
