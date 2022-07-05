@@ -15,6 +15,7 @@
     - ibm.ibm_zos_core
   gather_facts: true
   environment: "{{ environment_vars }}"
+  connection: ibm.ibm_zos_core.zos_tso_command
   
   tasks:
     - name: Change passphrase
