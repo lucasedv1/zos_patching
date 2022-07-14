@@ -1,5 +1,5 @@
 --- 
- - name: Execute an operator command to show active jobs
+ - name: Execute an operator command to show active tasks
    hosts: all
    collections:
     - ibm.ibm_zos_core
@@ -7,6 +7,6 @@
    environment: "{{ environment_vars }}"
   
    tasks:
-    - name: Execute an operator command to show active jobs
+    - name: Execute an operator command to show active tasks
       zos_operator:
         cmd: 'd a,l'
