@@ -1,0 +1,5 @@
+- name: PRE-CHECK Snapshot
+  hosts: sampleHost
+  gather_facts: no
+  collections:
+    - ibm.ibm_zos_sysauto
