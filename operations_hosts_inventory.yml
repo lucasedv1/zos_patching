@@ -206,6 +206,18 @@ all:
         ZPA2:
           hosts:
             zh301pa2.dal.cpc.ibm.com:
+         ZPB1:
+          hosts:
+            zh302pb1.ash.cpc.ibm.com:
+        ZPB2:
+          hosts:
+            zh302pb2.ash.cpc.ibm.com:
+        ZPB3:
+          hosts:
+            zh302pb3.ash.cpc.ibm.com:
+        ZPB4:
+          hosts:
+            zh302pb4.ash.cpc.ibm.com:  
         ZSB1:
           hosts:
             zh001sb1.ash.cpc.ibm.com:
@@ -254,6 +266,12 @@ all:
         ZTD2:
           hosts:
             zh104td2.ash.cpc.ibm.com:
+        ZPW1:
+          hosts:
+            zh352pw1.ash.cpc.ibm.com:
+        ZPW2:
+          hosts:
+            zh352pw2.ash.cpc.ibm.com:  
     zos_us_1:
       children:
         EDF7:
