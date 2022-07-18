@@ -206,7 +206,7 @@ all:
         ZPA2:
           hosts:
             zh301pa2.dal.cpc.ibm.com:
-         ZPB1:
+        ZPB1:
           hosts:
             zh302pb1.ash.cpc.ibm.com:
         ZPB2:
