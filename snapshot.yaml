@@ -1,5 +1,11 @@
-- name: PRE-CHECK Snapshot
-  hosts: sampleHost
-  gather_facts: no
+--- 
+- name: Change passphrase
+  hosts: all
   collections:
     - ibm.ibm_zos_sysauto
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  
+  tasks:
+    - name: PRE-CHECK Snapshot
+      system_automation: SNAPSHOT SYS=netid STORE CPMA(change_number) REASON(change_description)
