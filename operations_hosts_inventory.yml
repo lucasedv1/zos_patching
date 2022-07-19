@@ -542,3 +542,27 @@ all:
         AAAP:
            hosts:
              aazp.au.ibm.com:    
+        MVSS:
+           hosts:
+             mvss.mul.ie.ibm.com:  
+        MVSY:
+           hosts:
+             mvsy.mul.ie.ibm.com:  
+        MVSV:
+           hosts:
+             mvsv.mul.ie.ibm.com:  
+        MVSW:
+           hosts:
+             mvsw.mul.ie.ibm.com:  
+        MVSZ:
+           hosts:
+             mvsz.mul.ie.ibm.com:  
+        MVS7:
+           hosts:
+             mvs7.mul.ie.ibm.com:  
+        MVS8:
+           hosts:
+             mvs8.mul.ie.ibm.com:  
+        MVSL:
+           hosts:
+             mvsl.mul.ie.ibm.com:  
