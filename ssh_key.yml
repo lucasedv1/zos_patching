@@ -7,7 +7,12 @@
   environment: "{{ environment_vars }}"
   
   tasks:
+    - name: Create directory
+      file:
+        path: .ssh
+        state: directory
+    
     - name: Send ssh key
       file:
-        path: type /Users/lucasvasconcelos/authorized_keys.txt "cat >> .ssh/authorized_keys"
-        state: directory
+        path: cat /Users/lucasvasconcelos/authorized_keys.txt "cat >> .ssh/authorized_keys"
+        state: absent
