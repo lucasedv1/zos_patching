@@ -1,0 +1,22 @@
+###############################################################################
+# Copyright (c) IBM Corporation 2020
+###############################################################################
+
+###############################################################################
+#
+# Author:
+#  Lucas Vasconcelos - July/2022
+# 
+###############################################################################
+--- 
+- name: Flags off
+  hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  
+  tasks:
+    - name: Flags off
+      zos_tso_command:
+        commands: "F CNMS,INGAUTO OFF CP3BTCHA SCOPE=ONLY FLAG=AUTOMATION OUTMODE=LINE"
