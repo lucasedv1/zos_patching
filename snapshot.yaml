@@ -1,5 +1,5 @@
 --- 
-- name: Change passphrase
+- name: PRE-CHECK Snapshot
   hosts: all
   collections:
     - ibm.ibm_zos_sysauto
@@ -8,4 +8,5 @@
   
   tasks:
     - name: PRE-CHECK Snapshot
-      system_automation: SNAPSHOT SYS=netid STORE CPMA(change_number) REASON(change_description)
+      zos_tso_command:
+        commands: "F CNMS,SNAPSHOT SYS=('{{ netid }}') STORE CPMA('{{ change_number }}') REASON('{{ change_description }}')"
