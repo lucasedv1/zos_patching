@@ -9,5 +9,5 @@
   tasks:
     - name: Send ssh key
       file:
-        path: cat /Users/lucasvasconcelos/authorized_keys.txt | ssh br11556@{{ operations_hosts_inventory }} "mkdir -p .ssh; cat >> .ssh/authorized_keys"
+        path: type /Users/lucasvasconcelos/authorized_keys.txt "cat >> .ssh/authorized_keys"
         state: directory
