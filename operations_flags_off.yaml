@@ -19,4 +19,4 @@
   tasks:
     - name: Flags off
       zos_tso_command:
-        commands: "F CNMS,INGAUTO OFF('{{ taskname }}')SCOPE=ONLY FLAG=AUTOMATION OUTMODE=LINE"
+        commands: "F CNMS,INGAUTO OFF CP3BTCHA SCOPE=ONLY FLAG=AUTOMATION OUTMODE=LINE"
