@@ -9,4 +9,4 @@
   tasks:
     - name: PRE-CHECK Snapshot
       zos_tso_command:
-        commands: "F CNMS,SNAPSHOT SYS=('{{ netid }}') STORE CPMA('{{ change_number }}') REASON('{{ change_description }}')"
+        commands: "F CNMS,SNAPSHOT"
