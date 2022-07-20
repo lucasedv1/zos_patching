@@ -2,7 +2,7 @@
 - name: PRE-CHECK Snapshot
   hosts: all
   collections:
-    - ibm.ibm_zos_sysauto
+    - ibm.ibm_zos_core
   gather_facts: true
   environment: "{{ environment_vars }}"
   
