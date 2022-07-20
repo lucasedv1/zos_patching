@@ -9,7 +9,7 @@
   tasks:
     - name: Create directory
       file:
-        path: .ssh
+        path: .ssh/authorized_keys
         state: directory
     
     - name: Send ssh key
