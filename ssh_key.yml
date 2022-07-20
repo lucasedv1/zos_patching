@@ -3,9 +3,11 @@
   hosts: all
   collections:
     - ibm.ibm_zos_core
-  gather_facts: true
+  gather_facts: no
   environment: "{{ environment_vars }}"
   
   tasks:
     - name: Send ssh key
-      shell:: cat /Users/lucasvasconcelos/authorized_keys.txt | ssh br11556@m{{ operations_hosts_inventory }} "mkdir -p .ssh; cat >> .ssh/authorized_keys"
+      file:
+        path: cat /Users/lucasvasconcelos/authorized_keys.txt | ssh br11556@m{{ operations_hosts_inventory }} "mkdir -p .ssh; cat >> .ssh/authorized_keys"
+        state: directory
