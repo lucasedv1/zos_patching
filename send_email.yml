@@ -1,3 +1,236 @@
-- mail:
-    subject: 'System {{ all }} has been successfully provisioned.'
-  delegate_to: lucasedv1@ibm.com
+---
+# Is always good to present yourself
+#------------------------------------------------------------
+- name: "Include role meta data"
+  include_vars:
+    file: "{{ role_path }}/meta/main.yml"
+  run_once: true
+  no_log: yes
+
+- name: "Show role info"
+  debug:
+    var: galaxy_info
+  run_once: true
+
+#------------------------------------------------------------
+- name: "Print OS and Distro Ansible variables collected by setup"
+  debug:
+    msg:
+      - "ansible_os_family: {{ ansible_os_family }}"
+      - "ansible_distribution: {{ ansible_distribution }}"
+      - "ansible_distribution_major_version: {{ ansible_distribution_major_version }}"
+      - "ansible_distribution_version: {{ ansible_distribution_version }}"
+      - "ansible_distribution_release: {{ ansible_distribution_release }}"
+
+
+- name: "Test if the distribution is supported. End the host if not"
+  set_fact:
+    supported_distributions: "{{ galaxy_info.platforms|json_query('[].name') }}"
+- block:
+    - debug:
+        msg: "{{ ansible_distribution }} not supported. End of host."
+    - meta: end_host
+  when: ansible_distribution not in supported_distributions
+  
+- name: "Test if the release is supported. End the host if not"
+  set_fact:
+    supported_releases: "{{ (galaxy_info.platforms|
+                          selectattr('name', 'match', ansible_distribution)|
+                          list|first).versions }}"
+- block:
+    - debug:
+        msg: "{{ ansible_distribution_major_version }} not supported. End of host."
+    - meta: end_host
+  when: ansible_distribution_major_version| int not in supported_releases
+
+- name: "The distribution and release is supported. Continue play."
+  debug:
+    msg: "{{ ansible_distribution }} {{ ansible_distribution_major_version }} is supported. Continue play."
+
+#############################################################################################################
+# Here is where the role begins
+#--------------------------------------------------------
+- name: "Local scan for open ports on target server"
+  shell: "netstat -an|grep -w LISTEN|awk '{print $4}'|sed -e 's/0.0.0.0/127.0.0.1/g' -e 's/*/127.0.0.1/g' -e 's/::/127.0.0.1/g'|sed 's/[.]/:/4'|sort -u|awk -F: ' $2 < {{ port_limit }} {print $0}'"
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/usr/bin:/usr/sbin:/bin:/sbin:"
+  register: nmap_out
+  
+- name: "Gathering certificate info on open port list. Async."
+  shell: (echo "q")|openssl s_client -connect "{{ item }}" | openssl x509 -noout -dates|tail -1|sed 's/://g'|awk -F= '{print $2}'| awk '{ printf "%04d%02d%02d%06dZ\n", $4,(index("JanFebMarAprMayJunJulAugSepOctNovDec",$1)+2)/3,$2,$3}'
+  loop: "{{ nmap_out.stdout_lines|list}}"
+  become: yes
+  loop_control:
+    label: "{{ item }}"
+  no_log: yes
+  ignore_errors: yes
+  async: 30
+  poll: 0
+  register: result_async
+
+- name: "Check sync status"
+  async_status:
+    jid: "{{ item.ansible_job_id }}"
+  loop: "{{ result_async.results }}"
+  register: cert
+  become: yes
+  no_log: yes
+
+#---------------------------------------------------------------
+# we have the list. Not all the entries will have cert info 
+# because not all the open ports are using one.
+#---------------------------------------------------------------
+
+- name: "Checking certificate expiration dates on entries with cert info"
+  set_fact:
+    mylog:  "{{ mylog | default([]) + [ 'HOSTNAME:' + server + ', IP/PORT:' + ip_port + ', DAYS LEFT FOR EXPIRATION:' + expire_days ] }}" 
+    cert_found: "YES"
+  no_log: yes
+  loop: "{{ cert.results }}"
+  loop_control:
+    label: "{{ item }}"
+  vars:
+    expire_days: "{{ (( item.stdout | to_datetime('%Y%m%d%H%M%SZ')) - now('%Y-%m-%dT%H:%M:%SZ')).days }}"
+    ip_port: "{{ item.cmd.split(' ')[4] }}"
+    server: "{{ inventory_hostname }}"
+  when: item['stdout'] is defined and item['cmd'] is defined and item['stdout'] != ""
+
+
+- name: "No certificate found"
+  set_fact:
+    mylog: "{{ mylog | default([]) + [ 'HOSTNAME:' + inventory_hostname  + ', NO CERTS FOUND.' ] }}"
+  when: cert_found is not defined or not cert_found 
+
+#----------------------------------------------------------------
+# now, we are going to work on main node consolidating all the info
+#----------------------------------------------------------------
+
+- name: "Join variables on localhost"
+  set_fact:
+    report: "{{ report | default([]) }} +  {{ hostvars[server]['mylog'] }} "
+  delegate_to: localhost
+  run_once: true
+  loop: "{{ ansible_play_hosts }}"
+  loop_control:
+    loop_var: server
+  no_log: yes
+
+- name: "Generating Report "
+  shell: "echo {{ linea }} >> {{ scan_filename }}"  
+  loop: "{{ report }}"
+  loop_control:
+    loop_var: linea
+  delegate_to: localhost
+  run_once: true
+  ignore_errors: yes
+  no_log: yes
+
+- name: "Send alert to slack channel if certificate is about to expire"
+  slack:
+    msg: "WARNING: Certificate for {{ host }} {{ port }} will expire in {{ exp_days }} days."
+    token: "{{ slack_token }}"
+    color: warning
+  no_log: yes
+  delegate_to: localhost
+  run_once: true
+  vars:
+    port: "{{ item.split(',')[1] }}"
+    exp_days: "{{ item.split('EXPIRATION:')[1] }}"
+    host: "{{ item.split(',')[0] }}"
+  with_lines: "cat {{ scan_filename }} |grep EXPIRATION"
+  when: 
+    - slack_token is defined and slack_token != ""
+    - exp_days|int < expire_warning_days|int
+#----------------------------------------------------------------
+# Report was created.
+# We will send it by email or COS.
+#----------------------------------------------------------------
+
+- name: Send results by email (if "report_email" is defined)
+  mail:
+    host: localhost
+    port: 25
+    sender: "no-reply@ibm.com"
+    to: "{{ report_email }}"
+    subject: "Certificate Expiration Report"
+    body: "Certificate Expiration Report"
+    attach:
+      - "{{ scan_filename }}"
+  when:
+    - report_email is defined
+    - report_email | length > 0
+  delegate_to: localhost
+  run_once: true
+  become: False
+#----------------------------------------------------------------
+# COS block
+#----------------------------------------------------------------
+- name: Send results to IBM Cloud Object Storage (if COS vars are defined)
+  block:
+    - name: Get authentication header
+      uri:
+        url: 'https://iam.cloud.ibm.com/oidc/token'
+        method: POST
+        headers:
+          Accept: 'application/json'
+          Content-Type: 'application/x-www-form-urlencoded'
+        body_format: form-urlencoded
+        body:
+          apikey: "{{ ibm_cos_api_key }}"
+          response_type: 'cloud_iam'
+          grant_type: 'urn:ibm:params:oauth:grant-type:apikey'
+      register: response
+      changed_when: False
+
+    - name: Register authentication header
+      set_fact:
+        ibm_token: "{{ response.json.access_token }}"
+      changed_when: False
+
+    - name: Upload the execution log to {{ bucket_name }}
+      uri:
+        method: PUT
+        url: "{{ ibm_cos_endpoint }}/{{ bucket_name }}/{{ scan_filename }}"
+        headers:
+          ibm-service-instance-id: "{{ ibm_cos_instance_id }}"
+          Authorization: "Bearer {{ ibm_token }}"
+        body_format: raw
+        src: "{{ scan_filename }}"
+
+  delegate_to: localhost
+  run_once: true
+  become: False
+  when:
+    - bucket_name is defined
+    - bucket_name | length > 0
+    - ibm_cos_api_key is defined
+    - ibm_cos_api_key | length > 0
+    - ibm_cos_instance_id is defined
+    - ibm_cos_instance_id | length > 0
+    - ibm_cos_endpoint is defined
+    - ibm_cos_endpoint | length > 0
+
+#----------------------------------------------------------------
+# End COS block
+#----------------------------------------------------------------
+# Inform if no email and cos info was provided
+#----------------------------------------------------------------
+- name: "Inform if reports were not sent"
+  debug:
+    msg: Looks like the reports were not sent anywhere. If you're running this on Ansible Tower, you will not be able to recover the reports. Next time make sure to fill out the email or COS variables.
+  when: ibm_token is not defined and ( report_email is not defined or report_email | length == 0 )
+  delegate_to: localhost
+  run_once: true
+
+#----------------------------------------------------------------
+# Last task.
+# Print the report on the job log.
+#----------------------------------------------------------------
+
+- name: "Print the Certificate Expiration Report on this Job Log"
+  debug:
+    msg:
+      - "SUMMARY: Certificates found & expiration."
+      - "{{ report }}"
+  delegate_to: localhost
+  run_once: true
