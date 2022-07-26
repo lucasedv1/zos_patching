@@ -1,0 +1,3 @@
+- mail:
+    subject: 'System {{ ansible_hostname }} has been successfully provisioned.'
+  delegate_to: lucasedv1@ibm.com
