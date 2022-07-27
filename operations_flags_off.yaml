@@ -18,5 +18,5 @@
   
   tasks:
     - name: Flags off
-      zos_tso_command:
+      zos_operator:
         commands: "F CNMS,INGAUTO OFF CP3BTCHA SCOPE=ONLY FLAG=AUTOMATION OUTMODE=LINE"
