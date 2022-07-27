@@ -580,10 +580,7 @@ all:
              sbrysv1.ash.cpc.ibm.com:
         L1@@:
            hosts:
-             sbrysl1.ash.cpc.ibm.com:  
-        SY1:
-           hosts:
-             pkmfgmc1.pok.ibm.com:
+             sbrysl1.ash.cpc.ibm.com:
         SY2:
            hosts:
              pkmfgmc.pok.ibm.com:
@@ -656,9 +653,6 @@ all:
         SYE:
           hosts:
             pkedps1.pok.ibm.com:  
-        SYM:
-          hosts:
-            pkedvs2.pok.ibm.com: 
         N2PE:
           hosts:
             gdltsoe.pok.ibm.com:
