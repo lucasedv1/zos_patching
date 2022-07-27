@@ -9,4 +9,4 @@
   tasks:
     - name: PRE-CHECK Snapshot
       zos_operator:
-        cmd: "/SNAPSHOT SYS=SYSS"
+        cmd: "/SNAPSHOT SYS=SYSS STORE CPMA(000000) REASON(testtesttest)"
