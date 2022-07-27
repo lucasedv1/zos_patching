@@ -9,4 +9,4 @@
   tasks:
     - name: PRE-CHECK Snapshot
       zos_operator:
-        cmd: "/F CNMS,INGLKUP"
+        cmd: "d o"
