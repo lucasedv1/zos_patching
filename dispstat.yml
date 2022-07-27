@@ -1,0 +1,12 @@
+--- 
+- name: DISPSTAT
+  hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: true
+  environment: "{{ environment_vars }}"
+  
+  tasks:
+    - name: DISPSTAT
+      zos_operator:
+        cmd: "/dispstat"
