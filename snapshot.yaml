@@ -8,5 +8,5 @@
   
   tasks:
     - name: PRE-CHECK Snapshot
-      zos_tso_command:
+      zos_operator:
         commands: "F CNMS,SNAPSHOT"
