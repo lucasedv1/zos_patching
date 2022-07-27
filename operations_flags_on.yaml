@@ -18,5 +18,5 @@
   
   tasks:
     - name: Flags on
-      zos_tso_command:
+      zos_operator:
         commands: "F CNMS,INGAUTO ON('{{ taskname }}')SCOPE=ONLY FLAG=AUTOMATION OUTMODE=LINE"
