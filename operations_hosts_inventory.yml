@@ -494,54 +494,6 @@ all:
         ZTH1:
           hosts:
             zh108th1.ash.cpc.ibm.com:
-        AAA1:
-           hosts:
-             aaa1.au.ibm.com:
-        AAAH:
-           hosts:
-             aaah.au.ibm.com:    
-        AAAN:
-          hosts:
-            aaan.au.ibm.com:  
-        AAAS:
-          hosts:
-            aaas.au.ibm.com:   
-        AAIA:
-          hosts:
-            aaia.au.ibm.com:    
-        AAIB:
-           hosts:
-             aaib.au.ibm.com:
-        AAIR:
-           hosts:
-             aaar.au.ibm.com:    
-        AAZC:
-          hosts:
-            aazc.au.ibm.com:  
-        AAZD:
-          hosts:
-            aazd.au.ibm.com:   
-        AAZE:
-          hosts:
-            aaze.au.ibm.com:     
-        AAZG:
-           hosts:
-             aazg.au.ibm.com:
-        AAZL:
-           hosts:
-             aazl.au.ibm.com:    
-        AAZU:
-          hosts:
-            aazu.au.ibm.com:  
-        AAZV:
-          hosts:
-            aazv.au.ibm.com:   
-        AAZK:
-          hosts:
-            aazk.au.ibm.com:    
-        AAAP:
-           hosts:
-             aazp.au.ibm.com:    
         MVSS:
            hosts:
              mvss.mul.ie.ibm.com:  
