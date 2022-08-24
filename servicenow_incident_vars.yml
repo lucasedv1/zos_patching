@@ -1,0 +1,11 @@
+---
+#snow_record variables
+ 
+sn_username: lucasedv1
+sn_password: @EspiruletasFlamejantes12
+sn_instance: ibm
+ 
+#data variables
+ 
+sn_severity: 3
+sn_priority: 3
