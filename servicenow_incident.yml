@@ -1,6 +1,6 @@
 ---
 - name: Create ticket with notes
-  hosts: meus1.vipa.uk.ibm.com
+  hosts: all
   gather_facts: no
   connection: local
 
