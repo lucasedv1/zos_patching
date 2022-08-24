@@ -1,17 +1,17 @@
 ---
 - name: Create ticket with notes
-  hosts: EUS1
+  hosts: meus1.vipa.uk.ibm.com
   gather_facts: no
   connection: local
 
   tasks:
   - name: include vars
-    include_vars: change_request_vars.yml
+    include_vars: servicenow_incident_vars.yml
 
-  - name: Create a change request
+  - name: Create an Incidentt
     snow_record:
       state: present
-      table: change_request
+      table: incidents
       username: "{{ sn_username }}"
       password: "{{ sn_password }}"
       instance: "{{ sn_instance }}"
